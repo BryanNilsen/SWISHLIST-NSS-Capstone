@@ -9,10 +9,19 @@
 }
 
 .nav_item {
+  transition: all .2s ease-in-out;
   color: gray;
-  margin-right: 20px;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 5px 10px;
+  text-decoration: none;
 }
 
 .nav_item:hover {
-  color: rgb(255, 123, 0);
+  color: #111;
+  background: rgb(255, 123, 0);
+}
+
+a.visited {
+  color: white;
 }

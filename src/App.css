@@ -1,20 +1,28 @@
 body {
   background: #111;
+  color: gray;
 }
 
 .logo {
   font-size: 2.5em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: oblique;
-  text-align: center;
+  /* text-align: center; */
 
 }
 
-.logo_white {
+.center {
+  text-align: center;
+}
+.text_white {
   color: white;
 }
 
-.logo_orange {
+.oblique {
+  font-style: oblique;
+}
+
+.text_orange {
   color: rgb(255, 123, 0);
 }
 

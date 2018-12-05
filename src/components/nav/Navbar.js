@@ -9,20 +9,23 @@ export default class Navbar extends Component {
     return (
       <React.Fragment>
         <nav className="nav">
-          <h1 className="logo"><span className="logo_orange">swish</span><span className="logo_white">list</span></h1>
-          <p>logout / inspiration</p>
+          <h1 className="logo"><span className="text_orange">swish</span><span className="text_white">list</span></h1>
+          <p>
+            <Link className="nav_item" to="/">logout</Link>
+            <Link className="nav_item" to="/inspire">inspiration</Link></p>
+
           <ul className="nav_ul">
-            <li className="nav_item">
-              <Link to="/newlist">NEW LIST</Link>
+            <li>
+              <Link className="nav_item" to="/newlist">NEW LIST</Link>
             </li>
-            <li className="nav_item">
-              <Link to="/viewlists">VIEW LISTS</Link>
+            <li>
+              <Link className="nav_item" to="/viewlists">VIEW LISTS</Link>
             </li>
-            <li className="nav_item">
-              <Link to="/stats">STATS</Link>
+            <li>
+              <Link className="nav_item" to="/stats">STATS</Link>
             </li>
-            <li className="nav_item">
-              <Link to="/profile">PROFILE</Link>
+            <li>
+              <Link className="nav_item" to="/profile">PROFILE</Link>
             </li>
           </ul>
         </nav>

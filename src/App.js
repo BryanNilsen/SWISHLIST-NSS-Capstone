@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Swishlist from './components/Swishlist'
+import Welcome from './components/authentication/Welcome'
 export default class App extends Component {
 
   state = {
@@ -18,12 +19,13 @@ export default class App extends Component {
     return (
       <React.Fragment>
         <div>
-        <h1>this app component will maintain current user state and render either:</h1>
+        <p>this app component will maintain current user state and render either:</p>
         <div>
           <h1>welcome component</h1>
+          <Welcome />
         </div>
         <div>
-          <h1>- or -</h1>
+          <p>- or -</p>
         </div>
         <div>
           <h1>swishlist component</h1>
