@@ -1,0 +1,27 @@
+.nav {
+  color: whitesmoke;
+  border: 1px solid orange;
+}
+
+.nav_ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav_item {
+  transition: all .2s ease-in-out;
+  color: gray;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.nav_item:hover {
+  color: #111;
+  background: rgb(255, 123, 0);
+}
+
+a.visited {
+  color: white;
+}

@@ -9,7 +9,7 @@ export default class ShotMap extends Component {
         <div className="court_wrapper">
 
           {/* court image */}
-          <img src="/images/swishlist_court.svg"></img>
+          <img src="/images/swishlist_court.svg" alt="shooting locations map"></img>
 
           {/* <!-- begin court text overlay div --> */}
           <div className="court_text">
