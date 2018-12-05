@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-
-class App extends Component {
+import New from './components/workouts/New'
+export default class App extends Component {
 
   state = {
     currentUser: ""
@@ -9,7 +9,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
+        <div>
         <h1>this app component will maintain current user state and render either:</h1>
         <div>
           <h1>welcome component</h1>
@@ -19,11 +20,10 @@ class App extends Component {
         </div>
         <div>
           <h1>swishlist component</h1>
+          <New />
         </div>
       </div>
-
+      </React.Fragment>
     );
   }
 }
-
-export default App;
