@@ -1,0 +1,18 @@
+.nav {
+  color: whitesmoke;
+  border: 1px solid orange;
+}
+
+.nav_ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav_item {
+  color: gray;
+  margin-right: 20px;
+}
+
+.nav_item:hover {
+  color: rgb(255, 123, 0);
+}

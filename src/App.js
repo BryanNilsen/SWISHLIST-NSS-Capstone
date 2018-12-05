@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import New from './components/workouts/New'
+import Swishlist from './components/Swishlist'
 export default class App extends Component {
 
   state = {
     currentUser: ""
+  }
+
+  isAuthenticated = () => (sessionStorage.getItem("userId") !== null || localStorage.getItem("userId") !== null)
+
+  getCurrentUser = () => {
+    const currentUser = +sessionStorage.getItem("userId") || +localStorage.getItem("userId")
+    return currentUser
   }
 
   render() {
@@ -20,7 +27,7 @@ export default class App extends Component {
         </div>
         <div>
           <h1>swishlist component</h1>
-          <New />
+          <Swishlist />
         </div>
       </div>
       </React.Fragment>
