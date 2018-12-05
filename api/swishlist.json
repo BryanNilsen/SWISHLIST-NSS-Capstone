@@ -17,8 +17,9 @@
     {
       "id": 1,
       "userId": 1,
-      "date": "",
-      "gym": "Franklin YMCA"
+      "date": "10/27/18",
+      "gym": "Franklin YMCA",
+      "notes": "Lifted weights before shooting. Felt good today"
     }
   ],
   "swishlists": [
