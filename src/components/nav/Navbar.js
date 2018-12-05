@@ -12,7 +12,7 @@ export default class Navbar extends Component {
           <h1 className="logo"><span className="text_orange">swish</span><span className="text_white">list</span></h1>
           <p>
             <Link className="nav_item" to="/">logout</Link>
-            <Link className="nav_item" to="/inspire">inspiration</Link></p>
+            <Link className="nav_item" to="/motivation">motivation</Link></p>
 
           <ul className="nav_ul">
             <li>
