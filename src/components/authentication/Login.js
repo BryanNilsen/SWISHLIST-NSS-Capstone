@@ -8,8 +8,6 @@ export default class Login extends Component {
   render() {
     return (
       <React.Fragment>
-        <p>this will be the login form</p>
-
         <div className="">
           <h2>SIGN IN</h2>
 
@@ -28,7 +26,7 @@ export default class Login extends Component {
           <button className="" type="submit" onClick="">Sign in</button>
         </div>
         <div className="">
-        <p>First Time Here?</p>
+          <p>First Time Here?</p>
           <button>REGISTER</button>
         </div>
       </React.Fragment>

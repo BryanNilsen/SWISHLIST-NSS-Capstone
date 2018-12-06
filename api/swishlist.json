@@ -1,19 +1,46 @@
 {
-  "users":[
+  "users": [
     {
-    "id": 1,
-    "email": "bryan@bryan.com",
-    "password": "bryan",
-    "firstName": "Bryan",
-    "lastName": "Nilsen",
-    "username": "Beezy",
-    "city": "Nashville",
-    "age": "43",
-    "height": 77,
-    "photoURL": "https://media.licdn.com/dms/image/C5603AQGPEAmnWv-Y5Q/profile-displayphoto-shrink_200_200/0?e=1549497600&v=beta&t=08xuCkMojUACN8jSTBKMk5RUx6MmJiLXnkuNMaoaYx4"
+      "id": 1,
+      "email": "bryan@bryan.com",
+      "password": "bryan",
+      "firstName": "Bryan",
+      "lastName": "Nilsen",
+      "nickname": "Beezy",
+      "hometown": "Nashville",
+      "age": "43",
+      "height_ft": 6,
+      "height_in": 5,
+      "photoURL": "https://media.licdn.com/dms/image/C5603AQGPEAmnWv-Y5Q/profile-displayphoto-shrink_200_200/0?e=1549497600&v=beta&t=08xuCkMojUACN8jSTBKMk5RUx6MmJiLXnkuNMaoaYx4"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Jordan",
+      "email": "mike@mike.com",
+      "nickname": "Air",
+      "hometown": "Brooklyn",
+      "age": "55",
+      "height_ft": "6",
+      "height_in": "6",
+      "photoURL": "/images/profile_default.png",
+      "password": "mike",
+      "id": 2
+    },
+    {
+      "firstName": "Mike",
+      "lastName": "J",
+      "email": "mike@jordan.com",
+      "nickname": "Air",
+      "hometown": "111",
+      "age": "55",
+      "height_ft": "6",
+      "height_in": "6",
+      "photoURL": "https://sineilleifer.files.wordpress.com/2013/01/1066.jpg?w=960",
+      "password": "mike",
+      "id": 3
     }
   ],
-  "workouts":[
+  "workouts": [
     {
       "id": 1,
       "userId": 1,

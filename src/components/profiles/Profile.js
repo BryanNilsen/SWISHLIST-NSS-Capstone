@@ -23,9 +23,12 @@ export default class Profile extends Component {
           <section id="user_card">
         {
           this.state.users.map(user =>
-            <div className="quote_card" key={user.id}>
+            <div className="user_card" key={user.id}>
                 <h2 className="oblique">{user.firstName} {user.lastName}</h2>
-                <p>{user.age}</p>
+                <img src={user.photoURL} className="user_image" alt={user.title} width="100px"></img>
+                <p>Age: {user.age}</p>
+                <p>Hometown: {user.hometown}</p>
+                <p>Height: {user.height_ft}'{user.height_in}"</p>
 
             </div>
           )
