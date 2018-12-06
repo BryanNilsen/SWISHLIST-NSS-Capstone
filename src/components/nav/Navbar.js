@@ -4,6 +4,11 @@ import "./Navbar.css"
 
 export default class Navbar extends Component {
 
+  logoutUser = () => {
+    localStorage.removeItem('userId')
+    sessionStorage.removeItem('userId')
+  }
+
 
   render() {
     return (
@@ -11,7 +16,7 @@ export default class Navbar extends Component {
         <nav className="nav">
           <h1 className="logo"><span className="text_orange">swish</span><span className="text_white">list</span></h1>
           <p>
-            <Link className="nav_item" to="/">logout</Link>
+            <Link className="nav_item" to="/" onClick={() => this.logoutUser()}>logout</Link>
             <Link className="nav_item" to="/motivation">motivation</Link></p>
 
           <ul className="nav_ul">
