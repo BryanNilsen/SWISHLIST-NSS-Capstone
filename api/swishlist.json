@@ -47,6 +47,20 @@
       "date": "10/27/18",
       "gym": "Franklin YMCA",
       "notes": "Lifted weights before shooting. Felt good today"
+    },
+    {
+      "date": "2018-12-06",
+      "gym": "YMCA",
+      "notes": "grgrrgr",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "date": "2018-12-07",
+      "gym": "Franklin Rec",
+      "notes": "nothing new",
+      "userId": 2,
+      "id": 3
     }
   ],
   "swishlists": [

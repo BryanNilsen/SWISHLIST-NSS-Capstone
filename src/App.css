@@ -12,16 +12,29 @@ body {
 }
 
 .logo_small {
-  font-size: 2.5em;
+  font-size: 3.5em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: oblique;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .logo_tagline_large {
-  font-size: .7em;
-  margin-top: 0px;
+  font-size: .65em;
+  margin-top: -10px;
   padding-top: 0px;
   font-weight: bold;
+  color: lightgray;
+}
+
+.logo_tagline_small {
+  font-size: 8px;
+  margin-top: -10px;
+  padding-top: 0px;
+  font-weight: bold;
+  font-style: oblique;
+  color: gray;
 }
 
 .center {
@@ -46,4 +59,9 @@ body {
 
 .hide {
   display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }

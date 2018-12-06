@@ -8,25 +8,29 @@ import Profile from './profiles/Profile'
 
 export default class ApplicationViews extends Component {
 
+  getCurrentUser = () => {
+    const currentUser = +sessionStorage.getItem("userId") || +localStorage.getItem("userId")
+    return currentUser
+  }
+
   render() {
     return (
       <React.Fragment>
-        <p>this is the ApplicationViews.js file rendering NewList.js and Motivation.js below</p>
         <Route path="/newlist" render={props => {
           return (
-            <NewList {...props} />)
+            <NewList getCurrentUser={this.getCurrentUser} {...props} />)
         }} />
         <Route path="/viewlists" render={props => {
           return (
-            <ViewList {...props} />)
+            <ViewList getCurrentUser={this.getCurrentUser} {...props} />)
         }} />
         <Route path="/profile" render={props => {
           return (
-            <Profile {...props} />)
+            <Profile getCurrentUser={this.getCurrentUser} {...props} />)
         }} />
         <Route path="/motivation" render={props => {
           return (
-            <Motivation {...props} />)
+            <Motivation getCurrentUser={this.getCurrentUser} {...props} />)
         }} />
       </React.Fragment>
     )

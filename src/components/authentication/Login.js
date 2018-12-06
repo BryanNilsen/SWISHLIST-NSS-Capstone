@@ -6,8 +6,7 @@ export default class Login extends Component {
   state = {
     loginEmail: "",
     loginPassword: "",
-    remember: "",
-    currentUser: ""
+    remember: ""
   }
 
   // Handles input field changes and sets state
@@ -34,7 +33,7 @@ export default class Login extends Component {
             )
             this.setState({
               currentUser: sessionStorage.getItem("userId")
-            }, console.log(this.state.currentUser))
+            }, console.log("current user1:", this.state.currentUser))
             // this.props.history.push("/")
 
           } else {
@@ -43,7 +42,7 @@ export default class Login extends Component {
             )
             this.setState({
               currentUser: localStorage.getItem("userId")
-            }, console.log(this.state.currentUser))
+            }, console.log("current user2:", this.state.currentUser))
             // this.props.history.push("/")
           }
         })

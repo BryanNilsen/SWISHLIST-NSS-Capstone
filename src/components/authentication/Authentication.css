@@ -2,12 +2,13 @@
   margin: auto;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 15px;
-  color: whitesmoke;
+  color: white;
   border: 1px solid orange;
   border-radius: 10px;
   text-align: left;
   width: 330px;
 }
+
 
 .basketball_bkg {
   background-image: url("/images/basketball_bkg.png"); /* The image used */
@@ -15,5 +16,4 @@
   height: 800px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  opacity: 0.6;
 }

@@ -1,11 +1,20 @@
 .nav {
   color: whitesmoke;
-  border: 1px solid orange;
+  border-bottom: 2px solid rgb(255, 123, 0);
+  min-width: 400px;
 }
 
+.logo {
+  margin-left: 5px;
+}
 .nav_ul {
   display: flex;
   list-style-type: none;
+  justify-content: space-evenly;
+  padding-inline-start: 0px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+
 }
 
 .nav_item {
@@ -20,6 +29,11 @@
 .nav_item:hover {
   color: #111;
   background: rgb(255, 123, 0);
+}
+
+.small_nav {
+  font-size: .8em;
+  padding: 2px 5px;
 }
 
 a.visited {

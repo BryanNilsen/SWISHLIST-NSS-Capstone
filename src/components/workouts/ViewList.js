@@ -5,16 +5,17 @@ import "./Workouts.css"
 export default class ViewList extends Component {
 
   state = {
+    currentUserId: this.props.getCurrentUser(),
     workouts: []
   }
 
 
   componentDidMount() {
-    APIManager.getAllEntries("workouts")
-      .then((workouts) => {
-        this.setState({ workouts: workouts })
-      })
-  }
+    APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`)
+        .then((workouts) => {
+            this.setState({ workouts: workouts })
+        })
+}
 
   render() {
     return (

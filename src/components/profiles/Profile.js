@@ -4,14 +4,23 @@ import APIManager from '../../modules/APIManager'
 export default class Profile extends Component {
 
   state = {
-    users: []
+    currentUserId: this.props.getCurrentUser(),
   }
 
 
   componentDidMount() {
-    APIManager.getAllEntries("users")
-      .then((users) => {
-        this.setState({ users: users })
+    APIManager.getEntry("users", this.state.currentUserId)
+      .then((user) => {
+        this.setState({
+          userId : user.id,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          photoURL: user.photoURL,
+          age: user.age,
+          hometown: user.hometown,
+          height_ft: user.height_ft,
+          height_in: user.height_in,
+        })
       })
   }
 
@@ -19,19 +28,15 @@ export default class Profile extends Component {
     return (
       <React.Fragment>
         <div className="">
-          <p>Users Will Go Here</p>
           <section id="user_card">
         {
-          this.state.users.map(user =>
-            <div className="user_card" key={user.id}>
-                <h2 className="oblique">{user.firstName} {user.lastName}</h2>
-                <img src={user.photoURL} className="user_image" alt={user.title} width="100px"></img>
-                <p>Age: {user.age}</p>
-                <p>Hometown: {user.hometown}</p>
-                <p>Height: {user.height_ft}'{user.height_in}"</p>
-
+            <div className="user_card" key={this.state.userId}>
+                <h2 className="oblique">{this.state.firstName} {this.state.lastName}</h2>
+                <img src={this.state.photoURL} className="user_image" alt={this.state.firstName} width="100px"></img>
+                <p>Age: {this.state.age}</p>
+                <p>Hometown: {this.state.hometown}</p>
+                <p>Height: {this.state.height_ft}&#39;{this.state.height_in}"</p>
             </div>
-          )
         }
           </section>
         </div>
