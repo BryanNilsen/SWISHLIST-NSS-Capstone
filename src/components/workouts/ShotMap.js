@@ -3,6 +3,17 @@ import './ShotMap.css';
 
 export default class ShotMap extends Component {
 
+  state = {
+    clickedSpot: null
+  }
+
+  handleClick = (evt) => {
+    console.log("event:", evt.target.id)
+
+  }
+
+
+
   render() {
     return (
       <div className="main_wrapper">
@@ -147,46 +158,49 @@ export default class ShotMap extends Component {
           </div>
           {/* end court text div */}
 
-        {/* begin shot locations divs */}
+
+
+          {/* begin shot locations divs */}
+        <div id="shotspots" onClick={this.handleClick}>
+
           {/* <!-- free throw --> */}
-          <div className="spot frthrw_1"></div>
+            <div id="spot frthrw_1" className="spot frthrw_1"></div>
+            {/* <!-- two pointers --> */}
+            <div id="twpt_1" className="spot twpt_1"></div>
+            <div className="spot twpt_2"></div>
+            <div className="spot twpt_3"></div>
+            <div className="spot twpt_4"></div>
+            <div className="spot twpt_5"></div>
+            <div className="spot twpt_6"></div>
+            <div className="spot twpt_7"></div>
+            <div className="spot twpt_8"></div>
+            <div className="spot twpt_9"></div>
 
-          {/* <!-- two pointers --> */}
-          <div className="spot twpt_1"></div>
-          <div className="spot twpt_2"></div>
-          <div className="spot twpt_3"></div>
-          <div className="spot twpt_4"></div>
-          <div className="spot twpt_5"></div>
-          <div className="spot twpt_6"></div>
-          <div className="spot twpt_7"></div>
-          <div className="spot twpt_8"></div>
-          <div className="spot twpt_9"></div>
+            {/* <!-- three pointers --> */}
+            <div className="spot thrpt_1"></div>
+            <div className="spot thrpt_2"></div>
+            <div className="spot thrpt_3"></div>
+            <div className="spot thrpt_4"></div>
+            <div className="spot thrpt_5"></div>
+            <div className="spot thrpt_6"></div>
+            <div className="spot thrpt_7"></div>
 
-          {/* <!-- three pointers --> */}
-          <div className="spot thrpt_1"></div>
-          <div className="spot thrpt_2"></div>
-          <div className="spot thrpt_3"></div>
-          <div className="spot thrpt_4"></div>
-          <div className="spot thrpt_5"></div>
-          <div className="spot thrpt_6"></div>
-          <div className="spot thrpt_7"></div>
-
-          {/* <!-- nba three pointers --> */}
-          <div className="spot nba_thrpt_1"></div>
-          <div className="spot nba_thrpt_2"></div>
-          <div className="spot nba_thrpt_3"></div>
-          <div className="spot nba_thrpt_4"></div>
-          <div className="spot nba_thrpt_5"></div>
-          <div className="spot nba_thrpt_6"></div>
-          <div className="spot nba_thrpt_7"></div>
-          <div className="spot nba_thrpt_8"></div>
-          <div className="spot nba_thrpt_9"></div>
-          <div className="spot nba_thrpt_10"></div>
-
+            {/* <!-- nba three pointers --> */}
+            <div className="spot nba_thrpt_1"></div>
+            <div className="spot nba_thrpt_2"></div>
+            <div className="spot nba_thrpt_3"></div>
+            <div className="spot nba_thrpt_4"></div>
+            <div className="spot nba_thrpt_5"></div>
+            <div className="spot nba_thrpt_6"></div>
+            <div className="spot nba_thrpt_7"></div>
+            <div className="spot nba_thrpt_8"></div>
+            <div className="spot nba_thrpt_9"></div>
+            <div className="spot nba_thrpt_10"></div>
+          </div>
         </div>
       </div>
-        );
-      }
-    }
+    );
+  }
+}
 
 

@@ -61,6 +61,20 @@
       "notes": "nothing new",
       "userId": 2,
       "id": 3
+    },
+    {
+      "date": "2018-12-04",
+      "gym": "Franklin YMCA",
+      "notes": "Upper body workout before shooting",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "date": "2018-12-07",
+      "gym": "wrewqreqw",
+      "notes": "werqew",
+      "userId": 1,
+      "id": 5
     }
   ],
   "swishlists": [

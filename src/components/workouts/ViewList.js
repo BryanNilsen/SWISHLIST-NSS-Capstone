@@ -12,25 +12,27 @@ export default class ViewList extends Component {
 
   componentDidMount() {
     APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`)
-        .then((workouts) => {
-            this.setState({ workouts: workouts })
-        })
-}
+      .then((workouts) => {
+        this.setState({ workouts: workouts })
+      })
+  }
 
   render() {
     return (
       <React.Fragment>
         <div className="">
-          <p>View swishlists</p>
-          <section id="workouts">
-        {
-          this.state.workouts.map(workout =>
-            <div className="workout_card" key={workout.id}>
-                <h3>{workout.date}: {workout.gym}</h3>
-                <p>{workout.notes}</p>
-            </div>
-          )
-        }
+          <section id="workouts" className="">
+            <p>View swishlists</p>
+            {
+              this.state.workouts.map(workout =>
+                <div className="card_container">
+                  <div className="workout_card" key={workout.id}>
+                    <h3>{workout.date}: {workout.gym}</h3>
+                    <p>{workout.notes}</p>
+                  </div>
+                </div>
+              )
+            }
           </section>
         </div>
       </React.Fragment>

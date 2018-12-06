@@ -24,6 +24,7 @@
   font-style: oblique;
   padding: 5px 10px;
   text-decoration: none;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .nav_item:hover {
