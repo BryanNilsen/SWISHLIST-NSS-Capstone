@@ -4,12 +4,13 @@ import './ShotMap.css';
 export default class ShotMap extends Component {
 
   state = {
-    clickedSpot: null
+    clickedSpot: null,
   }
 
   handleClick = (evt) => {
+    const spotId = evt.target.id
+    this.setState(spotId)
     console.log("event:", evt.target.id)
-
   }
 
 
@@ -164,7 +165,7 @@ export default class ShotMap extends Component {
         <div id="shotspots" onClick={this.handleClick}>
 
           {/* <!-- free throw --> */}
-            <div id="spot frthrw_1" className="spot frthrw_1"></div>
+            <div id="frthrw_1" className="spot frthrw_1"></div>
             {/* <!-- two pointers --> */}
             <div id="twpt_1" className="spot twpt_1"></div>
             <div className="spot twpt_2"></div>

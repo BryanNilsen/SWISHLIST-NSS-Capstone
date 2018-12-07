@@ -17,6 +17,10 @@ export default class ViewList extends Component {
       })
   }
 
+  deleteWorkout = (id) => APIManager.deleteEntry("workouts", id)
+  .then(() => APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`))
+  .then(workouts => this.setState({ workouts: workouts }))
+
   render() {
     return (
       <React.Fragment>
@@ -25,10 +29,13 @@ export default class ViewList extends Component {
             <p>View swishlists</p>
             {
               this.state.workouts.map(workout =>
-                <div className="card_container">
-                  <div className="workout_card" key={workout.id}>
+                <div className="card_container" key={workout.id}>
+                  <div className="workout_card">
                     <h3>{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
+                    <div id="workoutEditDelete">
+                      <button onClick={() => this.deleteWorkout(workout.id)}>Delete</button>
+                    </div>
                   </div>
                 </div>
               )

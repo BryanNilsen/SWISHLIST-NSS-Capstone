@@ -75,6 +75,13 @@
       "notes": "werqew",
       "userId": 1,
       "id": 5
+    },
+    {
+      "date": "2018-12-07",
+      "gym": "123",
+      "notes": "456",
+      "userId": 1,
+      "id": 6
     }
   ],
   "swishlists": [
@@ -217,6 +224,197 @@
       "id": 25,
       "quote": "If every basketball player worked as hard as I did, I’d be out of a job.",
       "author": "Steve Nash"
+    }
+  ],
+  "shotSpots": [
+    {
+      "id": 1,
+      "name": "frthrw_1",
+      "top": "57%",
+      "left": "50%",
+      "shotValue": 1
+    },
+    {
+      "id": 2,
+      "name": "twpt_1",
+      "top": "72%",
+      "left": "50%",
+      "shotValue": 2
+    },
+    {
+      "id": 3,
+      "name": "twpt_2",
+      "top": "59%",
+      "left": "38%",
+      "shotValue": 2
+    },
+    {
+      "id": 4,
+      "name": "twpt_3",
+      "top": "59%",
+      "left": "62%",
+      "shotValue": 2
+    },
+    {
+      "id": 5,
+      "name": "twpt_4",
+      "top": "72%",
+      "left": "28%",
+      "shotValue": 2
+    },
+    {
+      "id": 6,
+      "name": "twpt_5",
+      "top": "72%",
+      "left": "72%",
+      "shotValue": 2
+    },
+    {
+      "id": 7,
+      "name": "twpt_6",
+      "top": "92%",
+      "left": "25%",
+      "shotValue": 2
+    },
+    {
+      "id": 8,
+      "name": "twpt_7",
+      "top": "80%",
+      "left": "64%",
+      "shotValue": 2
+    },
+    {
+      "id": 9,
+      "name": "twpt_8",
+      "top": "80%",
+      "left": "36%",
+      "shotValue": 2
+    },
+    {
+      "id": 10,
+      "name": "twpt_9",
+      "top": "92%",
+      "left": "75%",
+      "shotValue": 2
+    },
+    {
+      "id": 11,
+      "name": "thrpt_1",
+      "top": "44%",
+      "left": "50%",
+      "shotValue": 3
+    },
+    {
+      "id": 12,
+      "name": "thrpt_2",
+      "top": "52%",
+      "left": "74%",
+      "shotValue": 3
+    },
+    {
+      "id": 13,
+      "name": "thrpt_3",
+      "top": "52%",
+      "left": "26%",
+      "shotValue": 3
+    },
+    {
+      "id": 14,
+      "name": "thrpt_4",
+      "top": "72%",
+      "left": "89%",
+      "shotValue": 3
+    },
+    {
+      "id": 15,
+      "name": "thrpt_5",
+      "top": "72%",
+      "left": "11%",
+      "shotValue": 3
+    },
+    {
+      "id": 16,
+      "name": "thrpt_6",
+      "top": "92%",
+      "left": "92%",
+      "shotValue": 3
+    },
+    {
+      "id": 17,
+      "name": "thrpt_7",
+      "top": "92%",
+      "left": "8%",
+      "shotValue": 3
+    },
+    {
+      "id": 18,
+      "name": "nba_thrpt_1",
+      "top": "39%",
+      "left": "50%",
+      "shotValue": 3
+    },
+    {
+      "id": 19,
+      "name": "nba_thrpt_2",
+      "top": "49%",
+      "left": "80%",
+      "shotValue": 3
+    },
+    {
+      "id": 20,
+      "name": "nba_thrpt_3",
+      "top": "49%",
+      "left": "20%",
+      "shotValue": 3
+    },
+    {
+      "id": 21,
+      "name": "nba_thrpt_4",
+      "top": "68%",
+      "left": "97%",
+      "shotValue": 3
+    },
+    {
+      "id": 22,
+      "name": "nba_thrpt_5",
+      "top": "68%",
+      "left": "3%",
+      "shotValue": 3
+    },
+    {
+      "id": 23,
+      "name": "nba_thrpt_6",
+      "top": "92%",
+      "left": "97%",
+      "shotValue": 3
+    },
+    {
+      "id": 24,
+      "name": "nba_thrpt_7",
+      "top": "92%",
+      "left": "3%",
+      "shotValue": 3
+    },
+    {
+      "id": 25,
+      "name": "nba_thrpt_8",
+      "top": "46%",
+      "left": "92%",
+      "shotValue": 3
+    },
+    {
+      "id": 26,
+      "name": "nba_thrpt_9",
+      "top": "46%",
+      "left": "8%",
+      "shotValue": 3
+    },
+    {
+      "id": 27,
+      "name": "nba_thrpt_10",
+      "top": "34%",
+      "left": "50%",
+      "shotValue": 3
     }
   ]
 }

@@ -31,17 +31,23 @@ export default class NewList extends Component {
         }
   }
 
+  setWorkoutId = () => {
+    const newWorkoutId = new Date()
+    this.setState(newWorkoutId)
+    return newWorkoutId
+  }
+
   //Handles construction of new user object, then executes registerNewUser to add new user to database
   constructNewWorkout = () => {
     const newWorkout = {
       date: this.state.newDate,
       gym: this.state.newGym,
       notes: this.state.newNotes,
-      userId: this.state.currentUserId
+      userId: this.state.currentUserId,
+      workoutId: this.setWorkoutId()
     }
     this.createNewWorkout(newWorkout)
       .then(() => console.log(newWorkout))
-
   }
 
     //Handles registration of new user object
@@ -75,8 +81,6 @@ export default class NewList extends Component {
             </div>
             <button type="submit" onClick={() => {this.handleNewWorkout()} }>Start Workout</button>
           </div>
-          <p>this is the New.js file rendering ShotMap.js below</p>
-
           {/* end contents */}
         </div>
 
