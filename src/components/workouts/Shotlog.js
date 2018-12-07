@@ -25,28 +25,30 @@ export default class Shotlog extends Component {
       <div className="shotlog_container">
         <div className="shotlog_card">
           <table className="shotlog_table">
-            <tr>
-              <td>Shot Location</td>
-              <td>Shots Attempted</td>
-              <td>Shots Made</td>
-              <td>Percentage</td>
-            </tr>
-            {
-              this.state.shotlogs.map((shotlog) => {
-                const shotsMade = Number(shotlog.shotsMade)
-                const shotAttempts = Number(shotlog.shotAttempts)
-                const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(2))
+            <tbody>
+              <tr>
+                <td>Shot Location</td>
+                <td>Shots Attempted</td>
+                <td>Shots Made</td>
+                <td>Percentage</td>
+              </tr>
+              {
+                this.state.shotlogs.map((shotlog) => {
+                  const shotsMade = Number(shotlog.shotsMade)
+                  const shotAttempts = Number(shotlog.shotAttempts)
+                  const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(2))
 
-                return (
-                  <tr key={shotlog.id} className="">
-                    <td>{shotlog.shotLocation}</td>
-                    <td>{shotlog.shotAttempts}</td>
-                    <td>{shotlog.shotsMade}</td>
-                    <td>{shootingPercentage}</td>
-                  </tr>
-                )
-              })
-            }
+                  return (
+                    <tr key={shotlog.id} className="">
+                      <td>{shotlog.shotLocation}</td>
+                      <td>{shotlog.shotAttempts}</td>
+                      <td>{shotlog.shotsMade}</td>
+                      <td>{shootingPercentage}</td>
+                    </tr>
+                  )
+                })
+              }
+            </tbody>
           </table>
         </div>
       </div>
