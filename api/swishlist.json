@@ -42,57 +42,42 @@
   ],
   "workouts": [
     {
-      "id": 1,
-      "userId": 1,
-      "date": "10/27/18",
-      "gym": "Franklin YMCA",
-      "notes": "Lifted weights before shooting. Felt good today"
-    },
-    {
       "date": "2018-12-07",
-      "gym": "Franklin Rec",
-      "notes": "nothing new",
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "date": "2018-12-04",
-      "gym": "Franklin YMCA",
-      "notes": "Upper body workout before shooting",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "date": "2018-12-07",
-      "gym": "wrewqreqw",
-      "notes": "werqew",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "date": "2018-12-07",
-      "gym": "123",
-      "notes": "456",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "date": "2018-12-08",
-      "gym": "Academy Park",
-      "notes": "Mike's record",
-      "userId": 2,
-      "workoutId": "2018-12-07T04:33:29.418Z",
-      "id": 7
+      "gym": "111",
+      "notes": "111",
+      "user_id": 1,
+      "workout_id": "1_2018-12-07T18:28:13.410Z",
+      "id": 1
     }
   ],
   "swishlists": [
     {
-      "id": 1,
-      "workoutId": 1,
-      "shotLocation": "",
-      "shotValue": 1,
-      "shotAttempts": 10,
-      "shotsMade": 9
+      "workout_id": null,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": "5",
+      "shotsMade": "0",
+      "id": 1
+    },
+    {
+      "workout_id": null,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": "5",
+      "shotsMade": "0",
+      "id": 2
+    },
+    {
+      "workout_id": "1_2018-12-07T18:28:27.079Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": "10",
+      "shotsMade": "3",
+      "id": 3
+    },
+    {
+      "workout_id": "1_2018-12-07T18:28:27.079Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": "20",
+      "shotsMade": "7",
+      "id": 4
     }
   ],
   "quotes": [

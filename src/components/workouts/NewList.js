@@ -9,7 +9,8 @@ export default class NewList extends Component {
     newDate: "",
     newGym: "",
     newNotes: "",
-    currentUserId: this.props.getCurrentUser()
+    currentUserId: this.props.getCurrentUser(),
+    workoutId: this.getWorkoutId
   }
 
   // Handles input field changes and sets state
@@ -31,26 +32,36 @@ export default class NewList extends Component {
         }
   }
 
+  getWorkoutId = () => {
+    const currentWorkoutId = sessionStorage.getItem("workoutId")
+    return currentWorkoutId
+  }
+
   setWorkoutId = () => {
-    const newWorkoutId = new Date()
-    this.setState(newWorkoutId)
+    const newWorkoutDate = new Date()
+    const userId = sessionStorage.getItem("userId")
+    const newWorkoutId = `${userId}_${newWorkoutDate.toJSON()}`
+    console.log(newWorkoutId)
+    sessionStorage.setItem(
+      "workoutId", newWorkoutId
+    )
     return newWorkoutId
   }
 
-  //Handles construction of new user object, then executes registerNewUser to add new user to database
+  //Handles construction of new workout object, then executes createNewWorkout to add new workout to database
   constructNewWorkout = () => {
     const newWorkout = {
       date: this.state.newDate,
       gym: this.state.newGym,
       notes: this.state.newNotes,
-      userId: this.state.currentUserId,
-      workoutId: this.setWorkoutId()
+      user_id: this.state.currentUserId,
+      workout_id: this.setWorkoutId()
     }
     this.createNewWorkout(newWorkout)
       .then(() => console.log(newWorkout))
   }
 
-    //Handles registration of new user object
+    //Handles creation of new workout object
     createNewWorkout = newWorkout => {
       return APIManager.addEntry("workouts", newWorkout)
     }
@@ -84,7 +95,8 @@ export default class NewList extends Component {
           {/* end contents */}
         </div>
 
-        <ShotMap />
+        <ShotMap workoutId={this.state.workoutId}/>
+
       </React.Fragment>
     )
   }

@@ -7,6 +7,7 @@ export default class Navbar extends Component {
   logoutUser = () => {
     localStorage.removeItem('userId')
     sessionStorage.removeItem('userId')
+    sessionStorage.removeItem('workoutId')
   }
 
 

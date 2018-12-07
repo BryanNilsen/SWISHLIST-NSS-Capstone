@@ -22,7 +22,7 @@ export default class ApplicationViews extends Component {
         }} />
         <Route path="/viewlists" render={props => {
           return (
-            <ViewList getCurrentUser={this.getCurrentUser} {...props} />)
+            <ViewList getCurrentUser={this.getCurrentUser} />)
         }} />
         <Route path="/profile" render={props => {
           return (
