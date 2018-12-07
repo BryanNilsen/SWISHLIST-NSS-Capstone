@@ -1,0 +1,13 @@
+.workout_card {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0px 10px;
+  color: whitesmoke;
+  margin: auto;
+  min-width: 370px;
+  max-width: 700px;
+}
+
+
+.card_container {
+  padding: 0px 10px;
+}

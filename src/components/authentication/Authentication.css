@@ -1,0 +1,94 @@
+.login_form {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 25px;
+	color: rgb(255, 123, 0);
+  border: 1px solid rgb(255, 123, 0, .5);
+  border-radius: 10px;
+  text-align: left;
+  width: 330px;
+  margin-bottom: 40px;
+  transition: all .2s ease-in-out;
+}
+
+.login_form:hover{
+  background-color: rgba(0, 0, 0, 1);
+  border: 1px solid rgb(255, 123, 0, 1);
+}
+
+.login_form_title {
+  color: whitesmoke;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.form_input {
+  border: 1px solid rgb(255, 123, 0, .5);
+  background: rgb(3, 3, 3);
+  border-radius: 10px;
+  font-size: .8em;
+  padding: 4px;
+  font-weight: bold;
+  width: 90%;
+  margin-bottom: 25px;
+  transition: all 0.2s ease-out;
+}
+
+
+.form_input:focus {
+  background: whitesmoke;
+}
+
+.form_select {
+  border: 1px solid rgb(255, 123, 0, .5);
+  background: rgb(184, 184, 184);
+  border-radius: 10px;
+  font-size: .8em;
+  padding: 4px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  transition: all 0.2s ease-out;
+}
+
+.form_label{
+	display: block;
+	float: left;
+	margin-top: -19px;
+	height: 14px;
+	padding: 2px 5px 2px 5px;
+	color: rgb(255, 123, 0);
+	font-size: 14px;
+	overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.btn_submit {
+  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 3px 6px;
+  background: rgb(255, 123, 0, .8);
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all 0.2s ease-out;
+}
+
+.btn_submit:hover {
+  background: rgb(255, 123, 0, 1);
+  transform: scale(1.2);
+}
+
+.basketball_bkg {
+  background-image: url("/images/basketball_bkg.png"); /* The image used */
+  background-color: black; /* Used if the image is unavailable */
+  height: 800px; /* You must set a specified height */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}

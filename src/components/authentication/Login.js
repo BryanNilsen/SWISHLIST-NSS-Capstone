@@ -3,33 +3,83 @@ import APIManager from '../../modules/APIManager'
 
 export default class Login extends Component {
 
+  state = {
+    loginEmail: "",
+    loginPassword: "",
+    remember: ""
+  }
+
+  // Handles input field changes and sets state
+  handleFieldChange = (evt) => {
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+  }
+
+  handleLogin = (e) => {
+    if (this.state.loginEmail === "" || this.state.loginPassword === "") {
+      alert("No fields should be left blank")
+    }
+    else {
+      APIManager.getAllEntries("users", `/?email=${this.state.loginEmail}&password=${this.state.loginPassword
+        }`)
+        .then(returns => {
+
+          if (returns.length < 1) {
+            alert("That email doesn't exist or your password doesn't match. Please try again")
+          } else if (this.state.remember === "") {
+            sessionStorage.setItem(
+              "userId", returns[0].id
+            )
+            this.setState({
+              currentUser: sessionStorage.getItem("userId")
+            }, console.log("current user1:", this.state.currentUser))
+            // this.props.history.push("/")
+
+          } else {
+            localStorage.setItem(
+              "userId", returns[0].id
+            )
+            this.setState({
+              currentUser: localStorage.getItem("userId")
+            }, console.log("current user2:", this.state.currentUser))
+            // this.props.history.push("/")
+          }
+        })
+    }
+  }
+
+
 
 
   render() {
     return (
       <React.Fragment>
-        <p>this will be the login form</p>
+        <div className={this.props.hideLoginForm ? "hide" : "center basketball_bkg"}>
+          <div className="login_form">
+            <h2 className="login_form_title">SIGN IN</h2>
 
-        <div className="">
-          <h2>SIGN IN</h2>
+            <label className="form_label" htmlFor="loginEmail">Email</label>
+            <input className="form_input" onChange={this.handleFieldChange} type="email" id="loginEmail" placeholder="Email address" required="" autoFocus="" />
+            <br />
+            <label className="form_label" htmlFor="loginPassword">Password</label>
+            <input className="form_input" onChange={this.handleFieldChange} type="password" id="loginPassword" placeholder="Password" required="" />
+            <br />
 
-          <label className="" htmlFor="inputEmail">Email</label>
-          <input className="" onChange="" type="email" id="loginEmail" placeholder="Email address" required="" autoFocus="" />
-          <br />
-          <label className="" htmlFor="inputPassword">Password</label>
-          <input className="" onChange="" type="password" id="loginPassword" placeholder="Password" required="" />
-          <br />
-
-          <p className="">
-            Remember me
-            <input className="" onChange="" type="checkbox" id="remember" />
-          </p>
-
-          <button className="" type="submit" onClick="">Sign in</button>
-        </div>
-        <div className="">
-        <p>First Time Here?</p>
-          <button>REGISTER</button>
+            <p className="">
+              Remember me
+              <input className="" onChange={this.handleFieldChange} type="checkbox" id="remember" />
+            </p>
+            <div className="center">
+              <button className="btn_submit" type="submit" onClick={() => { this.handleLogin() }}>SIGN IN</button>
+            </div>
+          </div>
+          <div className="login_form">
+            <div className="center">
+              <p>First Time Here?</p>
+              <button className="btn_submit" onClick={() => this.props.handleChangeForm()}>REGISTER</button>
+            </div>
+          </div>
         </div>
       </React.Fragment>
     )
