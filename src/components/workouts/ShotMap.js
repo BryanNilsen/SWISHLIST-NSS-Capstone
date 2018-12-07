@@ -48,8 +48,8 @@ export default class ShotMap extends Component {
       workout_id: this.getWorkoutId(),
       shotLocation: this.state.newShotLocation,
       // shotValue: this.state.newShotValue,
-      shotAttempts: this.state.newShotAttempts,
-      shotsMade: this.state.newShotsMade,
+      shotAttempts: Number(this.state.newShotAttempts),
+      shotsMade: Number(this.state.newShotsMade),
     }
 
     // state not being fully set here!!!!!

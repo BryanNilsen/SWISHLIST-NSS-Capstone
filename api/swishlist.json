@@ -42,12 +42,28 @@
   ],
   "workouts": [
     {
-      "date": "2018-12-07",
-      "gym": "111",
-      "notes": "111",
+      "date": "2018-12-19",
+      "gym": "franklinYMCA",
+      "notes": "aaaa",
       "user_id": 1,
-      "workout_id": "1_2018-12-07T18:28:13.410Z",
-      "id": 1
+      "workout_id": "1_2018-12-07T19:58:49.107Z",
+      "id": 3
+    },
+    {
+      "date": "2018-12-19",
+      "gym": "wwww",
+      "notes": "edede",
+      "user_id": 1,
+      "workout_id": "1_2018-12-07T20:50:46.353Z",
+      "id": 4
+    },
+    {
+      "date": "2018-12-05",
+      "gym": "YMCA",
+      "notes": "on fire today",
+      "user_id": 1,
+      "workout_id": "1_2018-12-07T21:00:37.262Z",
+      "id": 6
     }
   ],
   "swishlists": [
@@ -78,6 +94,90 @@
       "shotAttempts": "20",
       "shotsMade": "7",
       "id": 4
+    },
+    {
+      "workout_id": "1_2018-12-07T19:58:01.141Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 5
+    },
+    {
+      "workout_id": "1_2018-12-07T19:58:01.141Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 20,
+      "shotsMade": 12,
+      "id": 6
+    },
+    {
+      "workout_id": "1_2018-12-07T19:58:49.107Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 7
+    },
+    {
+      "workout_id": "1_2018-12-07T19:58:49.107Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 40,
+      "shotsMade": 14,
+      "id": 8
+    },
+    {
+      "workout_id": "1_2018-12-07T19:58:49.107Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 50,
+      "shotsMade": 20,
+      "id": 9
+    },
+    {
+      "workout_id": "1_2018-12-07T20:50:46.353Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 10
+    },
+    {
+      "workout_id": "1_2018-12-07T20:50:46.353Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 95,
+      "shotsMade": 14,
+      "id": 11
+    },
+    {
+      "workout_id": "1_2018-12-07T20:54:22.531Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 12
+    },
+    {
+      "workout_id": "1_2018-12-07T20:54:22.531Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 13
+    },
+    {
+      "workout_id": "1_2018-12-07T21:00:37.262Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 5,
+      "shotsMade": 12,
+      "id": 14
+    },
+    {
+      "workout_id": "1_2018-12-07T21:00:37.262Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 80,
+      "shotsMade": 11,
+      "id": 15
+    },
+    {
+      "workout_id": "1_2018-12-07T21:00:37.262Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 85,
+      "shotsMade": 16,
+      "id": 16
     }
   ],
   "quotes": [
