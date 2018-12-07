@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import APIManager from '../../modules/APIManager'
+import Shotlog from './Shotlog'
 import "./Workouts.css"
 
 export default class ViewList extends Component {
@@ -18,8 +19,8 @@ export default class ViewList extends Component {
   }
 
   deleteWorkout = (id) => APIManager.deleteEntry("workouts", id)
-  .then(() => APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`))
-  .then(workouts => this.setState({ workouts: workouts }))
+    .then(() => APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`))
+    .then(workouts => this.setState({ workouts: workouts }))
 
   render() {
     return (
@@ -28,17 +29,23 @@ export default class ViewList extends Component {
           <section id="workouts" className="">
             <p>View swishlists</p>
             {
-              this.state.workouts.map(workout =>
+              this.state.workouts.map((workout) => {
+                return (
                 <div className="card_container" key={workout.id}>
                   <div className="workout_card">
                     <h3>{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
+                    <p>collapse / expand swishlist container links</p>
+                    {/* begin swishlists */}
+
+                    <Shotlog workoutId={workout.workout_id} />
+
                     <div id="workoutEditDelete">
                       <button onClick={() => this.deleteWorkout(workout.id)}>Delete</button>
                     </div>
                   </div>
                 </div>
-              )
+              )})
             }
           </section>
         </div>

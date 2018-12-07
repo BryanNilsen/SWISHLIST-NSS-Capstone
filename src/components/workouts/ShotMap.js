@@ -1,17 +1,67 @@
 import React, { Component } from 'react';
 import './ShotMap.css';
+import APIManager from '../../modules/APIManager'
 
 export default class ShotMap extends Component {
 
   state = {
     clickedSpot: null,
+    // newShotValue: "",
+    newShotAttempts: "",
+    newShotsMade: "",
   }
 
-  handleClick = (evt) => {
+  handleCourtMapClick = (evt) => {
+    const shotLocationId = evt.target.id
     console.log("event:", evt.target.id)
+    this.setState({ newShotLocation: shotLocationId })
+
   }
 
+  getWorkoutId = () => {
+    const currentWorkoutId = sessionStorage.getItem("workoutId")
+    return currentWorkoutId
+  }
 
+  handleFieldChange = (evt) => {
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+  }
+
+  // Handles validation for new swishlist (throws an alert on empty fields or unselected shot location)
+  // Then executes constructSwishlist to create new workout in database
+  handleNewSwishlist = (e) => {
+    if (this.state.newShotAttempts === "" || this.state.newShotsMade === "") {
+      alert("No fields should be left blank")
+    } else if (this.state.newShotLocation === "") {
+      alert("Please select a shot location on the map")
+    } else {
+      this.constructNewSwishlist()
+      alert("Shot recorded. Enter more or end workout to finish.")
+    }
+  }
+
+  //Handles construction of new swishlist object, then executes createNewSwishlist to add new swishlist to database
+  constructNewSwishlist = () => {
+    const newSwishlist = {
+      workout_id: this.getWorkoutId(),
+      shotLocation: this.state.newShotLocation,
+      // shotValue: this.state.newShotValue,
+      shotAttempts: Number(this.state.newShotAttempts),
+      shotsMade: Number(this.state.newShotsMade),
+    }
+
+    // state not being fully set here!!!!!
+
+    this.createNewSwishlist(newSwishlist)
+      .then(() => console.log(newSwishlist))
+  }
+
+  //Handles creation of new swishlist object
+  createNewSwishlist = newSwishlist => {
+    return APIManager.addEntry("swishlists", newSwishlist)
+  }
 
   render() {
     return (
@@ -25,7 +75,7 @@ export default class ShotMap extends Component {
           <div className="court_text">
             <p className="underline clear_padding">select shot location</p>
             <p className="clear_padding">shots attempted -
-              <select>
+              <select id="newShotAttempts" onClick={this.handleFieldChange}>
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -49,7 +99,7 @@ export default class ShotMap extends Component {
               </select>
             </p>
             <p className="clear_padding">shots made -
-              <select>
+              <select id="newShotsMade" onClick={this.handleFieldChange}>
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -154,8 +204,9 @@ export default class ShotMap extends Component {
               </select>
             </p>
             <p className="clear_padding">
-              <button type="submit">Add Shots</button>
+              <button type="submit" onClick={this.handleNewSwishlist}>Add Shots</button>
               <button type="submit">Finish Workout</button>
+              {/* need to remove workout Id from session storage when finished with workout */}
             </p>
           </div>
           {/* end court text div */}
@@ -163,7 +214,7 @@ export default class ShotMap extends Component {
 
 
           {/* begin shot locations divs */}
-        <div id="shotspots" onClick={this.handleClick}>
+        <div id="shotspots" onClick={this.handleCourtMapClick}>
 
           {/* <!-- free throw --> */}
             <div id="frthrw_1" className="spot frthrw_1"></div>
