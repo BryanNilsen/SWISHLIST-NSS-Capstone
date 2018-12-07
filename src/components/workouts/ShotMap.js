@@ -155,7 +155,10 @@ export default class ShotMap extends Component {
                 <option value="100">100</option>
               </select>
             </p>
-            <p className="clear_padding"><button type="submit">submit</button></p>
+            <p className="clear_padding">
+              <button type="submit">Add Shots</button>
+              <button type="submit">Finish Workout</button>
+            </p>
           </div>
           {/* end court text div */}
 

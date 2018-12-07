@@ -56,27 +56,29 @@ export default class Login extends Component {
     return (
       <React.Fragment>
         <div className={this.props.hideLoginForm ? "hide" : "center basketball_bkg"}>
-        <p>spacer text</p>
           <div className="login_form">
-            <h2>SIGN IN</h2>
+            <h2 className="login_form_title">SIGN IN</h2>
 
-            <label className="" htmlFor="loginEmail">Email</label>
-            <input className="" onChange={this.handleFieldChange} type="email" id="loginEmail" placeholder="Email address" required="" autoFocus="" />
+            <label className="form_label" htmlFor="loginEmail">Email</label>
+            <input className="form_input" onChange={this.handleFieldChange} type="email" id="loginEmail" placeholder="Email address" required="" autoFocus="" />
             <br />
-            <label className="" htmlFor="loginPassword">Password</label>
-            <input className="" onChange={this.handleFieldChange} type="password" id="loginPassword" placeholder="Password" required="" />
+            <label className="form_label" htmlFor="loginPassword">Password</label>
+            <input className="form_input" onChange={this.handleFieldChange} type="password" id="loginPassword" placeholder="Password" required="" />
             <br />
 
             <p className="">
               Remember me
               <input className="" onChange={this.handleFieldChange} type="checkbox" id="remember" />
             </p>
-
-            <button className="" type="submit" onClick={() => {this.handleLogin()}}>Sign in</button>
+            <div className="center">
+              <button className="btn_submit" type="submit" onClick={() => { this.handleLogin() }}>SIGN IN</button>
+            </div>
           </div>
-          <div className="">
-            <p>First Time Here?</p>
-            <button onClick={() => this.props.handleChangeForm()}>REGISTER</button>
+          <div className="login_form">
+            <div className="center">
+              <p>First Time Here?</p>
+              <button className="btn_submit" onClick={() => this.props.handleChangeForm()}>REGISTER</button>
+            </div>
           </div>
         </div>
       </React.Fragment>
