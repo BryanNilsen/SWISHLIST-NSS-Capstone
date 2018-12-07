@@ -29,12 +29,28 @@
 
 .form_input {
   border: 1px solid rgb(255, 123, 0, .5);
-  background: whitesmoke;
+  background: rgb(3, 3, 3);
   border-radius: 10px;
   font-size: .8em;
   padding: 4px;
   font-weight: bold;
   width: 90%;
+  margin-bottom: 25px;
+  transition: all 0.2s ease-out;
+}
+
+
+.form_input:focus {
+  background: whitesmoke;
+}
+
+.form_select {
+  border: 1px solid rgb(255, 123, 0, .5);
+  background: rgb(184, 184, 184);
+  border-radius: 10px;
+  font-size: .8em;
+  padding: 4px;
+  font-weight: bold;
   margin-bottom: 25px;
   transition: all 0.2s ease-out;
 }
