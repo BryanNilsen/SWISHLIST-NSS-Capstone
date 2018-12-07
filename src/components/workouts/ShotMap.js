@@ -8,8 +8,6 @@ export default class ShotMap extends Component {
   }
 
   handleClick = (evt) => {
-    const spotId = evt.target.id
-    this.setState(spotId)
     console.log("event:", evt.target.id)
   }
 
