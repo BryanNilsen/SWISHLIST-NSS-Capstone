@@ -12,24 +12,29 @@ export default class ViewList extends Component {
 
 
   componentDidMount() {
-    APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`)
+    APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`)
       .then((workouts) => {
         this.setState({ workouts: workouts })
       })
   }
 
   deleteWorkout = (id) => APIManager.deleteEntry("workouts", id)
-    .then(() => APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`))
+    .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`))
     .then(workouts => this.setState({ workouts: workouts }))
+
+  editWorkout = (id) => {
+    console.log("you clicked edit for id: ", id)
+    alert(`you clicked edit for ${id}`)
+  }
 
   render() {
     return (
       <React.Fragment>
         <div id="viewlist_container" className="page_container">
-        <h2>View swishlists</h2>
-            {
-              this.state.workouts.map((workout) => {
-                return (
+          <h2>View swishlists</h2>
+          {
+            this.state.workouts.map((workout) => {
+              return (
                 <div className="card_container" key={workout.id}>
                   <div className="workout_card">
                     <h3>{workout.date}: {workout.gym}</h3>
@@ -41,12 +46,14 @@ export default class ViewList extends Component {
                     <Shotlog workoutId={workout.id} />
 
                     <div id="workoutEditDelete">
+                      <button onClick={() => this.editWorkout(workout.id)}>Edit</button>
                       <button onClick={() => this.deleteWorkout(workout.id)}>Delete</button>
                     </div>
                   </div>
                 </div>
-              )})
-            }
+              )
+            })
+          }
         </div>
       </React.Fragment>
     )
