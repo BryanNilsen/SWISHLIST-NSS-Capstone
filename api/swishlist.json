@@ -42,36 +42,380 @@
   ],
   "workouts": [
     {
-      "date": "2018-12-06",
-      "gym": "sebastian may still rule",
-      "notes": "qqqqqq",
+      "date": "2018-12-04",
+      "gym": "111",
+      "notes": "1111",
+      "user_d": 2,
+      "workout_id": "2_2018-12-09T04:35:17.030Z",
+      "id": 30
+    },
+    {
+      "date": "2018-12-04",
+      "gym": "Franklin YMCA",
+      "notes": "lifted: bench, pullups, squats",
       "user_d": 1,
-      "workout_id": "1_2018-12-07T22:29:38.068Z",
-      "id": 10
+      "workout_id": "1_2018-12-09T04:44:45.615Z",
+      "id": 31
+    },
+    {
+      "date": "2018-12-19",
+      "gym": "Franklin Rec",
+      "notes": "treadmill 30 min before workout",
+      "user_d": 1,
+      "workout_id": "1_2018-12-09T04:53:38.809Z",
+      "id": 32
     },
     {
       "date": "2018-12-12",
-      "gym": "Dillon's Gym",
-      "notes": "ate falafel and feel awful",
-      "user_d": 1,
-      "workout_id": "1_2018-12-07T22:35:30.237Z",
-      "id": 12
+      "gym": "Nashville YMCA",
+      "notes": "nothing",
+      "user_id": 1,
+      "workout_id": "1_2018-12-09T05:13:41.477Z",
+      "id": 33
+    },
+    {
+      "date": "2018-12-28",
+      "gym": "Franklin Rec Center",
+      "notes": "pullups, bench, squats",
+      "user_id": 1,
+      "id": 34
     },
     {
       "date": "2018-12-08",
-      "gym": "mt. juliet rec center",
-      "notes": "shot with nancy",
-      "user_d": 1,
-      "workout_id": "1_2018-12-08T23:54:21.786Z",
-      "id": 13
+      "gym": "Brentwood YMCA",
+      "notes": "none",
+      "user_id": 1,
+      "id": 35
     },
     {
-      "date": "2018-12-08",
-      "gym": "111",
-      "notes": "111",
-      "user_d": 1,
-      "workout_id": "1_2018-12-09T01:32:11.584Z",
-      "id": 14
+      "date": "2018-12-05",
+      "gym": "qqq",
+      "notes": "qqq",
+      "user_id": 1,
+      "id": 37
+    }
+  ],
+  "quotes": [
+    {
+      "id": 0,
+      "quote": "Don't give up. Don't ever give up.",
+      "author": "Jim Valvano"
+    },
+    {
+      "id": 1,
+      "quote": "Shooting percentage is just as much about decision making as it is about technique.",
+      "author": "Jeff Van Gundy"
+    },
+    {
+      "id": 2,
+      "quote": "All the successful teams I’ve ever seen have three characteristics: They play unselfish, they play together, and they play hard.",
+      "author": "Larry Bird"
+    },
+    {
+      "id": 3,
+      "quote": "Everyone is born with a certain potential. You may never achieve your full potential, but how close you come depends on how much you want to pay the price.",
+      "author": "Red Auerbach"
+    },
+    {
+      "id": 4,
+      "quote": "If you are afraid of failure you don’t deserve to be successful!",
+      "author": "Charles Barkley"
+    },
+    {
+      "id": 5,
+      "quote": "I’ve got a theory that if you give 100 percent all of the time, somehow things will work out in the end.",
+      "author": "Larry Bird"
+    },
+    {
+      "id": 6,
+      "quote": "Ask not what your teammates can do for you. Ask what you can do for your teammates.",
+      "author": "Magic Johnson"
+    },
+    {
+      "id": 7,
+      "quote": "Obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 8,
+      "quote": "Some people want it to happen, some wish it would happen, others make it happen.",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 9,
+      "quote": "You can't get much done in life if you only work on the days when you feel good.",
+      "author": "Jerry West"
+    },
+    {
+      "id": 10,
+      "quote": "I've missed more than 9000 shots in my career. I've lost almost 300 games. Twenty six times, I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 11,
+      "quote": "I can accept failure, everyone fails at something. But I can’t accept not trying.",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 12,
+      "quote": "Nothing is given. Everything is earned.",
+      "author": "LeBron James"
+    },
+    {
+      "id": 13,
+      "quote": "What do you do with a mistake: recognize it, admit it, learn from it, forget it.",
+      "author": "Dean Smith"
+    },
+    {
+      "id": 14,
+      "quote": "Concentration and mental toughness are the margins of victory.",
+      "author": "Bill Russell"
+    },
+    {
+      "id": 15,
+      "quote": "Basketball is a beautiful game when the five players on the court play with one heartbeat.",
+      "author": "Dean Smith"
+    },
+    {
+      "id": 16,
+      "quote": "How good can we expect to be if our best player is not our best teammate.",
+      "author": "Brad Stevens"
+    },
+    {
+      "id": 17,
+      "quote": "Leadership is diving for a loose ball. It’s about being able to take it as well as dish it out. That’s the only way you're going to get respect from other players.",
+      "author": "Larry Bird"
+    },
+    {
+      "id": 18,
+      "quote": "You must expect great things of yourself before you can do them.",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 19,
+      "quote": "Good players want to be coached. Great players want to be told the truth.",
+      "author": "Doc Rivers"
+    },
+    {
+      "id": 20,
+      "quote": "Good, better, best. Never let it rest. Until your good is better and your better is best.",
+      "author": "Tim Duncan"
+    },
+    {
+      "id": 21,
+      "quote": "If you quit ONCE, it becomes a habit. Never quit!",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 22,
+      "quote": "There’s only one thing we can control, and that is how hard we play.",
+      "author": "Don Meyer"
+    },
+    {
+      "id": 23,
+      "quote": "When you think you have done enough, do a little more, because someone out there is working harder than you.",
+      "author": "Larry Bird"
+    },
+    {
+      "id": 24,
+      "quote": "I'm chasing perfection.",
+      "author": "Kobe Bryant"
+    },
+    {
+      "id": 25,
+      "quote": "If every basketball player worked as hard as I did, I’d be out of a job.",
+      "author": "Steve Nash"
+    }
+  ],
+  "shotSpots": [
+    {
+      "id": 1,
+      "name": "FT",
+      "top": "57%",
+      "left": "50%",
+      "shotValue": 1
+    },
+    {
+      "id": 2,
+      "name": "twpt_1",
+      "top": "72%",
+      "left": "50%",
+      "shotValue": 2
+    },
+    {
+      "id": 3,
+      "name": "twpt_2",
+      "top": "59%",
+      "left": "38%",
+      "shotValue": 2
+    },
+    {
+      "id": 4,
+      "name": "twpt_3",
+      "top": "59%",
+      "left": "62%",
+      "shotValue": 2
+    },
+    {
+      "id": 5,
+      "name": "twpt_4",
+      "top": "72%",
+      "left": "28%",
+      "shotValue": 2
+    },
+    {
+      "id": 6,
+      "name": "twpt_5",
+      "top": "72%",
+      "left": "72%",
+      "shotValue": 2
+    },
+    {
+      "id": 7,
+      "name": "twpt_6",
+      "top": "92%",
+      "left": "25%",
+      "shotValue": 2
+    },
+    {
+      "id": 8,
+      "name": "twpt_7",
+      "top": "80%",
+      "left": "64%",
+      "shotValue": 2
+    },
+    {
+      "id": 9,
+      "name": "twpt_8",
+      "top": "80%",
+      "left": "36%",
+      "shotValue": 2
+    },
+    {
+      "id": 10,
+      "name": "twpt_9",
+      "top": "92%",
+      "left": "75%",
+      "shotValue": 2
+    },
+    {
+      "id": 11,
+      "name": "thrpt_1",
+      "top": "44%",
+      "left": "50%",
+      "shotValue": 3
+    },
+    {
+      "id": 12,
+      "name": "thrpt_2",
+      "top": "52%",
+      "left": "74%",
+      "shotValue": 3
+    },
+    {
+      "id": 13,
+      "name": "thrpt_3",
+      "top": "52%",
+      "left": "26%",
+      "shotValue": 3
+    },
+    {
+      "id": 14,
+      "name": "thrpt_4",
+      "top": "72%",
+      "left": "89%",
+      "shotValue": 3
+    },
+    {
+      "id": 15,
+      "name": "thrpt_5",
+      "top": "72%",
+      "left": "11%",
+      "shotValue": 3
+    },
+    {
+      "id": 16,
+      "name": "thrpt_6",
+      "top": "92%",
+      "left": "92%",
+      "shotValue": 3
+    },
+    {
+      "id": 17,
+      "name": "thrpt_7",
+      "top": "92%",
+      "left": "8%",
+      "shotValue": 3
+    },
+    {
+      "id": 18,
+      "name": "nba_thrpt_1",
+      "top": "39%",
+      "left": "50%",
+      "shotValue": 3
+    },
+    {
+      "id": 19,
+      "name": "nba_thrpt_2",
+      "top": "49%",
+      "left": "80%",
+      "shotValue": 3
+    },
+    {
+      "id": 20,
+      "name": "nba_thrpt_3",
+      "top": "49%",
+      "left": "20%",
+      "shotValue": 3
+    },
+    {
+      "id": 21,
+      "name": "nba_thrpt_4",
+      "top": "68%",
+      "left": "97%",
+      "shotValue": 3
+    },
+    {
+      "id": 22,
+      "name": "nba_thrpt_5",
+      "top": "68%",
+      "left": "3%",
+      "shotValue": 3
+    },
+    {
+      "id": 23,
+      "name": "nba_thrpt_6",
+      "top": "92%",
+      "left": "97%",
+      "shotValue": 3
+    },
+    {
+      "id": 24,
+      "name": "nba_thrpt_7",
+      "top": "92%",
+      "left": "3%",
+      "shotValue": 3
+    },
+    {
+      "id": 25,
+      "name": "nba_thrpt_8",
+      "top": "46%",
+      "left": "92%",
+      "shotValue": 3
+    },
+    {
+      "id": 26,
+      "name": "nba_thrpt_9",
+      "top": "46%",
+      "left": "8%",
+      "shotValue": 3
+    },
+    {
+      "id": 27,
+      "name": "nba_thrpt_10",
+      "top": "34%",
+      "left": "50%",
+      "shotValue": 3
     }
   ],
   "swishlists": [
@@ -336,329 +680,97 @@
       "shotAttempts": 50,
       "shotsMade": 17,
       "id": 38
-    }
-  ],
-  "quotes": [
-    {
-      "id": 0,
-      "quote": "Don't give up. Don't ever give up.",
-      "author": "Jim Valvano"
     },
     {
-      "id": 1,
-      "quote": "Shooting percentage is just as much about decision making as it is about technique.",
-      "author": "Jeff Van Gundy"
+      "workout_id": 30,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 20,
+      "shotsMade": 5,
+      "id": 39
     },
     {
-      "id": 2,
-      "quote": "All the successful teams I’ve ever seen have three characteristics: They play unselfish, they play together, and they play hard.",
-      "author": "Larry Bird"
+      "workout_id": 31,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 15,
+      "shotsMade": 6,
+      "id": 40
     },
     {
-      "id": 3,
-      "quote": "Everyone is born with a certain potential. You may never achieve your full potential, but how close you come depends on how much you want to pay the price.",
-      "author": "Red Auerbach"
+      "workout_id": 32,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 41
     },
     {
-      "id": 4,
-      "quote": "If you are afraid of failure you don’t deserve to be successful!",
-      "author": "Charles Barkley"
+      "workout_id": 33,
+      "shotLocation": "thrpt_3",
+      "shotAttempts": 20,
+      "shotsMade": 14,
+      "id": 42
     },
     {
-      "id": 5,
-      "quote": "I’ve got a theory that if you give 100 percent all of the time, somehow things will work out in the end.",
-      "author": "Larry Bird"
+      "workout_id": 34,
+      "shotLocation": "thrpt_5",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 43
     },
     {
-      "id": 6,
-      "quote": "Ask not what your teammates can do for you. Ask what you can do for your teammates.",
-      "author": "Magic Johnson"
+      "workout_id": 34,
+      "shotLocation": "thrpt_1",
+      "shotAttempts": 15,
+      "shotsMade": 7,
+      "id": 44
     },
     {
-      "id": 7,
-      "quote": "Obstacles don't have to stop you. If you run into a wall, don't turn around and give up. Figure out how to climb it, go through it, or work around it.",
-      "author": "Michael Jordan"
+      "workout_id": 34,
+      "shotLocation": "thrpt_2",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 45
     },
     {
-      "id": 8,
-      "quote": "Some people want it to happen, some wish it would happen, others make it happen.",
-      "author": "Michael Jordan"
+      "workout_id": 35,
+      "shotLocation": "FT",
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 46
     },
     {
-      "id": 9,
-      "quote": "You can't get much done in life if you only work on the days when you feel good.",
-      "author": "Jerry West"
+      "workout_id": "",
+      "shotLocation": "thrpt_1",
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 47
     },
     {
-      "id": 10,
-      "quote": "I've missed more than 9000 shots in my career. I've lost almost 300 games. Twenty six times, I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.",
-      "author": "Michael Jordan"
+      "workout_id": 36,
+      "shotLocation": "FT",
+      "shotAttempts": 10,
+      "shotsMade": 1,
+      "id": 48
     },
     {
-      "id": 11,
-      "quote": "I can accept failure, everyone fails at something. But I can’t accept not trying.",
-      "author": "Michael Jordan"
+      "workout_id": 37,
+      "shotLocation": "nba_thrpt_8",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 49
     },
     {
-      "id": 12,
-      "quote": "Nothing is given. Everything is earned.",
-      "author": "LeBron James"
+      "workout_id": 37,
+      "shotLocation": "FT",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 50
     },
     {
-      "id": 13,
-      "quote": "What do you do with a mistake: recognize it, admit it, learn from it, forget it.",
-      "author": "Dean Smith"
-    },
-    {
-      "id": 14,
-      "quote": "Concentration and mental toughness are the margins of victory.",
-      "author": "Bill Russell"
-    },
-    {
-      "id": 15,
-      "quote": "Basketball is a beautiful game when the five players on the court play with one heartbeat.",
-      "author": "Dean Smith"
-    },
-    {
-      "id": 16,
-      "quote": "How good can we expect to be if our best player is not our best teammate.",
-      "author": "Brad Stevens"
-    },
-    {
-      "id": 17,
-      "quote": "Leadership is diving for a loose ball. It’s about being able to take it as well as dish it out. That’s the only way you're going to get respect from other players.",
-      "author": "Larry Bird"
-    },
-    {
-      "id": 18,
-      "quote": "You must expect great things of yourself before you can do them.",
-      "author": "Michael Jordan"
-    },
-    {
-      "id": 19,
-      "quote": "Good players want to be coached. Great players want to be told the truth.",
-      "author": "Doc Rivers"
-    },
-    {
-      "id": 20,
-      "quote": "Good, better, best. Never let it rest. Until your good is better and your better is best.",
-      "author": "Tim Duncan"
-    },
-    {
-      "id": 21,
-      "quote": "If you quit ONCE, it becomes a habit. Never quit!",
-      "author": "Michael Jordan"
-    },
-    {
-      "id": 22,
-      "quote": "There’s only one thing we can control, and that is how hard we play.",
-      "author": "Don Meyer"
-    },
-    {
-      "id": 23,
-      "quote": "When you think you have done enough, do a little more, because someone out there is working harder than you.",
-      "author": "Larry Bird"
-    },
-    {
-      "id": 24,
-      "quote": "I'm chasing perfection.",
-      "author": "Kobe Bryant"
-    },
-    {
-      "id": 25,
-      "quote": "If every basketball player worked as hard as I did, I’d be out of a job.",
-      "author": "Steve Nash"
-    }
-  ],
-  "shotSpots": [
-    {
-      "id": 1,
-      "name": "frthrw_1",
-      "top": "57%",
-      "left": "50%",
-      "shotValue": 1
-    },
-    {
-      "id": 2,
-      "name": "twpt_1",
-      "top": "72%",
-      "left": "50%",
-      "shotValue": 2
-    },
-    {
-      "id": 3,
-      "name": "twpt_2",
-      "top": "59%",
-      "left": "38%",
-      "shotValue": 2
-    },
-    {
-      "id": 4,
-      "name": "twpt_3",
-      "top": "59%",
-      "left": "62%",
-      "shotValue": 2
-    },
-    {
-      "id": 5,
-      "name": "twpt_4",
-      "top": "72%",
-      "left": "28%",
-      "shotValue": 2
-    },
-    {
-      "id": 6,
-      "name": "twpt_5",
-      "top": "72%",
-      "left": "72%",
-      "shotValue": 2
-    },
-    {
-      "id": 7,
-      "name": "twpt_6",
-      "top": "92%",
-      "left": "25%",
-      "shotValue": 2
-    },
-    {
-      "id": 8,
-      "name": "twpt_7",
-      "top": "80%",
-      "left": "64%",
-      "shotValue": 2
-    },
-    {
-      "id": 9,
-      "name": "twpt_8",
-      "top": "80%",
-      "left": "36%",
-      "shotValue": 2
-    },
-    {
-      "id": 10,
-      "name": "twpt_9",
-      "top": "92%",
-      "left": "75%",
-      "shotValue": 2
-    },
-    {
-      "id": 11,
-      "name": "thrpt_1",
-      "top": "44%",
-      "left": "50%",
-      "shotValue": 3
-    },
-    {
-      "id": 12,
-      "name": "thrpt_2",
-      "top": "52%",
-      "left": "74%",
-      "shotValue": 3
-    },
-    {
-      "id": 13,
-      "name": "thrpt_3",
-      "top": "52%",
-      "left": "26%",
-      "shotValue": 3
-    },
-    {
-      "id": 14,
-      "name": "thrpt_4",
-      "top": "72%",
-      "left": "89%",
-      "shotValue": 3
-    },
-    {
-      "id": 15,
-      "name": "thrpt_5",
-      "top": "72%",
-      "left": "11%",
-      "shotValue": 3
-    },
-    {
-      "id": 16,
-      "name": "thrpt_6",
-      "top": "92%",
-      "left": "92%",
-      "shotValue": 3
-    },
-    {
-      "id": 17,
-      "name": "thrpt_7",
-      "top": "92%",
-      "left": "8%",
-      "shotValue": 3
-    },
-    {
-      "id": 18,
-      "name": "nba_thrpt_1",
-      "top": "39%",
-      "left": "50%",
-      "shotValue": 3
-    },
-    {
-      "id": 19,
-      "name": "nba_thrpt_2",
-      "top": "49%",
-      "left": "80%",
-      "shotValue": 3
-    },
-    {
-      "id": 20,
-      "name": "nba_thrpt_3",
-      "top": "49%",
-      "left": "20%",
-      "shotValue": 3
-    },
-    {
-      "id": 21,
-      "name": "nba_thrpt_4",
-      "top": "68%",
-      "left": "97%",
-      "shotValue": 3
-    },
-    {
-      "id": 22,
-      "name": "nba_thrpt_5",
-      "top": "68%",
-      "left": "3%",
-      "shotValue": 3
-    },
-    {
-      "id": 23,
-      "name": "nba_thrpt_6",
-      "top": "92%",
-      "left": "97%",
-      "shotValue": 3
-    },
-    {
-      "id": 24,
-      "name": "nba_thrpt_7",
-      "top": "92%",
-      "left": "3%",
-      "shotValue": 3
-    },
-    {
-      "id": 25,
-      "name": "nba_thrpt_8",
-      "top": "46%",
-      "left": "92%",
-      "shotValue": 3
-    },
-    {
-      "id": 26,
-      "name": "nba_thrpt_9",
-      "top": "46%",
-      "left": "8%",
-      "shotValue": 3
-    },
-    {
-      "id": 27,
-      "name": "nba_thrpt_10",
-      "top": "34%",
-      "left": "50%",
-      "shotValue": 3
+      "workout_id": 37,
+      "shotLocation": "thrpt_3",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 51
     }
   ]
 }

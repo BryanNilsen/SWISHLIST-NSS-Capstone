@@ -6,8 +6,24 @@ export default class ShotMap extends Component {
 
   state = {
     clickedSpot: null,
-    // newShotValue: "",
+    newShotAttempts: "",
+    newShotsMade: "",
+    newShotLocation: "",
+    shotSpots: []
   }
+
+
+  componentDidMount() {
+    APIManager.getAllEntries("shotSpots")
+      .then((shotSpots) => {
+        this.setState({ shotSpots: shotSpots })
+      })
+  }
+
+  buildShotSpots = () => {
+
+  }
+
 
   handleCourtMapClick = (evt) => {
     const shotLocationId = evt.target.id
@@ -16,15 +32,12 @@ export default class ShotMap extends Component {
 
   }
 
-  // getWorkoutId = () => {
-  //   const currentWorkoutId = sessionStorage.getItem("workoutId")
-  //   return currentWorkoutId
-  // }
 
   handleFieldChange = (evt) => {
     const stateToChange = {}
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
+    console.log("clicked:", evt.target.value)
   }
 
   // Handles validation for new swishlist (throws an alert on empty fields or unselected shot location)
@@ -37,24 +50,22 @@ export default class ShotMap extends Component {
     } else {
       this.constructNewSwishlist()
       alert("Shot recorded. Enter more or end workout to finish.")
+      // clear state for new shots
+      this.setState({newShotLocation: ""})
     }
   }
 
   //Handles construction of new swishlist object, then executes createNewSwishlist to add new swishlist to database
   constructNewSwishlist = () => {
     const newSwishlist = {
-      // workout_id: this.getWorkoutId(),
       workout_id: this.props.workoutId,
       shotLocation: this.state.newShotLocation,
       // shotValue: this.state.newShotValue,
       shotAttempts: Number(this.state.newShotAttempts),
       shotsMade: Number(this.state.newShotsMade),
     }
-console.log("New Swishlist:", newSwishlist)
-    // state not being fully set here!!!!!
-
+    console.log("New Swishlist:", newSwishlist)
     this.createNewSwishlist(newSwishlist)
-    //   .then(() => console.log(newSwishlist))
   }
 
   //Handles creation of new swishlist object
@@ -65,6 +76,7 @@ console.log("New Swishlist:", newSwishlist)
   finishWorkout = () => {
     sessionStorage.removeItem('workoutId')
   }
+
 
   render() {
     return (
@@ -79,6 +91,7 @@ console.log("New Swishlist:", newSwishlist)
             <p className="underline clear_padding">select shot location</p>
             <p className="clear_padding">shots attempted -
               <select id="newShotAttempts" onChange={this.handleFieldChange}>
+                <option defaultValue="selected">Select</option>
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -214,44 +227,22 @@ console.log("New Swishlist:", newSwishlist)
           </div>
           {/* end court text div */}
 
+          {/* begin shot locations divs generated from database */}
+          <div id="shotspots" onClick={this.handleCourtMapClick}>
 
+            {
+              this.state.shotSpots.map((shotspot) => {
+                const spotStyle = {
+                  top: shotspot.top,
+                  left: shotspot.left,
+                }
 
-          {/* begin shot locations divs */}
-        <div id="shotspots" onClick={this.handleCourtMapClick}>
+                return (
+                  <div id={shotspot.name} className="spot" style={spotStyle} key={shotspot.id}></div>
+                )
+              })
+            }
 
-          {/* <!-- free throw --> */}
-            <div id="frthrw_1" className="spot frthrw_1"></div>
-            {/* <!-- two pointers --> */}
-            <div id="twpt_1" className="spot twpt_1"></div>
-            <div className="spot twpt_2"></div>
-            <div className="spot twpt_3"></div>
-            <div className="spot twpt_4"></div>
-            <div className="spot twpt_5"></div>
-            <div className="spot twpt_6"></div>
-            <div className="spot twpt_7"></div>
-            <div className="spot twpt_8"></div>
-            <div className="spot twpt_9"></div>
-
-            {/* <!-- three pointers --> */}
-            <div className="spot thrpt_1"></div>
-            <div className="spot thrpt_2"></div>
-            <div className="spot thrpt_3"></div>
-            <div className="spot thrpt_4"></div>
-            <div className="spot thrpt_5"></div>
-            <div className="spot thrpt_6"></div>
-            <div className="spot thrpt_7"></div>
-
-            {/* <!-- nba three pointers --> */}
-            <div className="spot nba_thrpt_1"></div>
-            <div className="spot nba_thrpt_2"></div>
-            <div className="spot nba_thrpt_3"></div>
-            <div className="spot nba_thrpt_4"></div>
-            <div className="spot nba_thrpt_5"></div>
-            <div className="spot nba_thrpt_6"></div>
-            <div className="spot nba_thrpt_7"></div>
-            <div className="spot nba_thrpt_8"></div>
-            <div className="spot nba_thrpt_9"></div>
-            <div className="spot nba_thrpt_10"></div>
           </div>
         </div>
       </div>

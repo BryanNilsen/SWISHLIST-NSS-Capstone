@@ -74,3 +74,7 @@ body {
 .noTopMargin {
   margin-top: 0px;
 }
+
+.pageViewContainer {
+  padding: 10px;
+}

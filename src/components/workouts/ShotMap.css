@@ -58,14 +58,14 @@
 
 /* free throw */
 
-.frthrw_1 {
+/* .frthrw_1 {
   z-index: 10;
   top: 57%;
   left: 50%;
-}
+} */
 
 /* two pointers */
-.twpt_1 {
+/* .twpt_1 {
   z-index: 10;
   top: 72%;
   left: 50%;
@@ -109,10 +109,10 @@
   z-index: 10;
   top: 92%;
   left: 75%;
-}
+} */
 
 /* three pointers */
-.thrpt_1 {
+/* .thrpt_1 {
   z-index: 10;
   top: 44%;
   left: 50%;
@@ -146,10 +146,10 @@
   z-index: 10;
   top: 92%;
   left: 8%;
-}
+} */
 
 /* NBA three pointers */
-.nba_thrpt_1 {
+/* .nba_thrpt_1 {
   z-index: 10;
   top: 39%;
   left: 50%;
@@ -198,4 +198,4 @@
   z-index: 10;
   top: 34%;
   left: 50%;
-}
+} */

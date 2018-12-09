@@ -1,6 +1,7 @@
-import React, { Component } from "react"
-import "./ShotMap.css"
+import React, { Component } from 'react'
+import './ShotMap.css'
 import ShotMap from './ShotMap';
+import './Workouts.css';
 import APIManager from '../../modules/APIManager'
 
 export default class NewList extends Component {
@@ -11,7 +12,6 @@ export default class NewList extends Component {
     newNotes: "",
     currentUserId: this.props.getCurrentUser(),
     workoutId: ""
-    // workoutId: this.getWorkoutId
   }
 
   // Handles input field changes and sets state
@@ -33,21 +33,6 @@ export default class NewList extends Component {
         }
   }
 
-  // getWorkoutId = () => {
-  //   const currentWorkoutId = sessionStorage.getItem("workoutId")
-  //   return currentWorkoutId
-  // }
-
-  setWorkoutId = () => {
-    const newWorkoutDate = new Date()
-    const userId = sessionStorage.getItem("userId")
-    const newWorkoutId = `${userId}_${newWorkoutDate.toJSON()}`
-    console.log(newWorkoutId)
-    sessionStorage.setItem(
-      "workoutId", newWorkoutId
-    )
-    return newWorkoutId
-  }
 
   //Handles construction of new workout object, then executes createNewWorkout to add new workout to database
   constructNewWorkout = () => {
@@ -55,8 +40,7 @@ export default class NewList extends Component {
       date: this.state.newDate,
       gym: this.state.newGym,
       notes: this.state.newNotes,
-      user_d: this.state.currentUserId,
-      workout_id: this.setWorkoutId()
+      user_id: this.state.currentUserId
     }
     this.createNewWorkout(newWorkout)
       .then(() => console.log(newWorkout))
@@ -74,7 +58,7 @@ export default class NewList extends Component {
   render() {
     return (
       <React.Fragment>
-        <div id="newlist_container">
+        <div id="newlist_container" className="page_container">
         {/* begin contents */}
           <h2>New Swishlist 'info icon'</h2>
           <p>Select date, gym, and enter any notes relevant to your workout</p>

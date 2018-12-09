@@ -25,9 +25,8 @@ export default class ViewList extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="">
-          <section id="workouts" className="">
-            <p>View swishlists</p>
+        <div id="viewlist_container" className="page_container">
+        <h2>View swishlists</h2>
             {
               this.state.workouts.map((workout) => {
                 return (
@@ -48,7 +47,6 @@ export default class ViewList extends Component {
                 </div>
               )})
             }
-          </section>
         </div>
       </React.Fragment>
     )
