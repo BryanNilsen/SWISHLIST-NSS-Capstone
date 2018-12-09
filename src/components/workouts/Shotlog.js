@@ -37,9 +37,11 @@ export default class Shotlog extends Component {
                   const shotsMade = Number(shotlog.shotsMade)
                   const shotAttempts = Number(shotlog.shotAttempts)
                   const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(2))
+                  const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
+
 
                   return (
-                    <tr key={shotlog.id} className="shotlog_cel">
+                    <tr key={shotlog.id} className={tableRowColor}>
                       <td>{shotlog.shotLocation}</td>
                       <td>{shotlog.shotAttempts}</td>
                       <td>{shotlog.shotsMade}</td>

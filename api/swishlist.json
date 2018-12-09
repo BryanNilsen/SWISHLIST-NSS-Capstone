@@ -61,6 +61,20 @@
       "notes": "wanna be like mike",
       "user_id": 3,
       "id": 41
+    },
+    {
+      "date": "2018-12-11",
+      "gym": "Franklin Rec Center",
+      "notes": "no notes",
+      "user_id": 2,
+      "id": 42
+    },
+    {
+      "date": "2018-12-13",
+      "gym": "WFHS",
+      "notes": "jumped rope 1/2 hr",
+      "user_id": 1,
+      "id": 43
     }
   ],
   "quotes": [
@@ -435,6 +449,41 @@
       "shotAttempts": 20,
       "shotsMade": 13,
       "id": 60
+    },
+    {
+      "workout_id": 42,
+      "shotLocation": "FT",
+      "shotAttempts": 100,
+      "shotsMade": 21,
+      "id": 61
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "FT",
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 62
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "thrpt_1",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 63
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "nba_thrpt_10",
+      "shotAttempts": 10,
+      "shotsMade": 2,
+      "id": 64
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "nba_thrpt_9",
+      "shotAttempts": 10,
+      "shotsMade": 0,
+      "id": 65
     }
   ]
 }

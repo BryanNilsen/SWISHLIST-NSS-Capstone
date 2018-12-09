@@ -11,3 +11,91 @@
 .shotlog_cel:hover {
   background: rgb(187, 0, 0, .8);
 }
+
+.trc_0 {
+  background: rgba(92, 0, 167, 0.5);
+  margin: 1px;
+}
+.trc_0:hover {
+  background: rgba(92, 0, 167, 0.9);
+}
+
+.trc_1 {
+  background: rgba(11, 0, 167, 0.5);
+  margin: 1px;
+}
+.trc_1:hover {
+  background: rgba(11, 0, 167, 0.9);
+}
+
+.trc_2 {
+  background: rgba(0, 86, 167, 0.5);
+  margin: 1px;
+}
+.trc_2:hover {
+  background: rgba(0, 86, 167, 0.9);
+}
+
+.trc_3 {
+  background: rgba(0, 161, 167, 0.5);
+  margin: 1px;
+}
+.trc_3:hover {
+  background: rgba(0, 161, 167, 0.9);
+}
+
+.trc_4 {
+  background: rgba(0, 167, 70, 0.5);
+  margin: 1px;
+}
+.trc_4:hover {
+  background: rgba(0, 167, 70, 0.9);
+}
+
+.trc_5 {
+  background: rgba(67, 167, 0, 0.5);
+  margin: 1px;
+}
+.trc_5:hover {
+  background: rgba(67, 167, 0, 0.9);
+}
+
+.trc_6 {
+  background: rgba(150, 167, 0, 0.5);
+  margin: 1px;
+}
+.trc_6:hover {
+  background: rgba(150, 167, 0, 0.9);
+}
+
+.trc_7 {
+  background: rgba(167, 128, 0, 0.5);
+  margin: 1px;
+}
+.trc_7:hover {
+  background: rgba(167, 128, 0, 0.9);
+}
+
+.trc_8 {
+  background: rgba(167, 81, 0, 0.5);
+  margin: 1px;
+}
+.trc_8:hover {
+  background: rgba(167, 81, 0, 0.9);
+}
+
+.trc_9 {
+  background: rgba(167, 25, 0, 0.5);
+  margin: 1px;
+}
+.trc_9:hover {
+  background: rgba(167, 25, 0, 0.9);
+}
+
+.trc_10 {
+  background: rgba(167, 0, 0, 0.5);
+  border: 1px solid white;
+}
+.trc_10:hover {
+  background: rgba(167, 0, 0, 0.9);
+}
