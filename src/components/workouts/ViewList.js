@@ -37,17 +37,16 @@ export default class ViewList extends Component {
               return (
                 <div className="card_container" key={workout.id}>
                   <div className="workout_card">
-                    <h3>{workout.date}: {workout.gym}</h3>
+                    <h3 className="card_header">{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
-                    <p>collapse / expand swishlist container links</p>
 
                     {/* begin swishlists */}
 
                     <Shotlog workoutId={workout.id} />
 
                     <div id="workoutEditDelete">
-                      <button onClick={() => this.editWorkout(workout.id)}>Edit</button>
-                      <button onClick={() => this.deleteWorkout(workout.id)}>Delete</button>
+                      <button onClick={() => this.editWorkout(workout.id)}>Edit Workout </button>
+                      <button onClick={() => this.deleteWorkout(workout.id)}>Delete Workout</button>
                     </div>
                   </div>
                 </div>

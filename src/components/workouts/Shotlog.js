@@ -26,11 +26,11 @@ export default class Shotlog extends Component {
         <div className="shotlog_card">
           <table className="shotlog_table">
             <tbody>
-              <tr>
-                <td>Shot Location</td>
-                <td>Shots Attempted</td>
-                <td>Shots Made</td>
-                <td>Percentage</td>
+              <tr className="shotlog_rowHeader">
+                <td width="40%">Shot Location</td>
+                <td width="20%">Attempts</td>
+                <td width="20%">Made</td>
+                <td width="20%">%</td>
               </tr>
               {
                 this.state.shotlogs.map((shotlog) => {
@@ -42,7 +42,7 @@ export default class Shotlog extends Component {
 
                   return (
                     <tr key={shotlog.id} className={tableRowColor}>
-                      <td>{shotlog.shotLocation}</td>
+                      <td style={{textAlign: "left", padding: "0px 5px"}}>{shotlog.shotLocation}</td>
                       <td>{shotlog.shotAttempts}</td>
                       <td>{shotlog.shotsMade}</td>
                       <td>{shootingPercentage}</td>
