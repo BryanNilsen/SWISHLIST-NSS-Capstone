@@ -16,7 +16,10 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route path="/" render={props => {
+        <Route exact path="/" render={() => (
+          <Redirect to="/newList" />
+        )} />
+        <Route path="/newList" render={props => {
           return (
             <NewList getCurrentUser={this.getCurrentUser} {...props} />)
         }} />

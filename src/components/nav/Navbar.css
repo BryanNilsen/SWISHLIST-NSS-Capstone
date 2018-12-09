@@ -14,7 +14,6 @@
   padding-inline-start: 0px;
   margin-bottom: 5px;
   margin-top: 10px;
-
 }
 
 .nav_item {
@@ -35,6 +34,8 @@
 .small_nav {
   font-size: .8em;
   padding: 2px 5px;
+  border-radius: 0px 0px 5px 5px;
+  margin-top: 0px;
 }
 
 a.visited {
