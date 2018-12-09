@@ -1,4 +1,13 @@
 .shotlog_table {
   width: 100%;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
+}
+
+.shotlog_cel {
+  background: rgb(187, 0, 0, .5);
+  margin: 1px;
+}
+
+.shotlog_cel:hover {
+  background: rgb(187, 0, 0, .8);
 }

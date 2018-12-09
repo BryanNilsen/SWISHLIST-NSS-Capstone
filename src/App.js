@@ -23,6 +23,13 @@ export default class App extends Component {
     return currentUser
   }
 
+  setCurrentUserState = (user) => {
+    this.setState({
+      currentUser: user
+    })
+
+  }
+
 
   isAuthenticated = () => {
     if(this.isLoggedIn()) {
@@ -31,7 +38,7 @@ export default class App extends Component {
       )
     } else {
       return (
-        <Welcome handleFieldChange={this.handleFieldChange}/>
+        <Welcome handleFieldChange={this.handleFieldChange} setCurrentUserState={this.setCurrentUserState}/>
       )
     }
   }

@@ -42,28 +42,36 @@
   ],
   "workouts": [
     {
-      "date": "2018-12-19",
-      "gym": "franklinYMCA",
-      "notes": "aaaa",
-      "user_id": 1,
-      "workout_id": "1_2018-12-07T19:58:49.107Z",
-      "id": 3
+      "date": "2018-12-06",
+      "gym": "sebastian may still rule",
+      "notes": "qqqqqq",
+      "user_d": 1,
+      "workout_id": "1_2018-12-07T22:29:38.068Z",
+      "id": 10
     },
     {
-      "date": "2018-12-19",
-      "gym": "wwww",
-      "notes": "edede",
-      "user_id": 1,
-      "workout_id": "1_2018-12-07T20:50:46.353Z",
-      "id": 4
+      "date": "2018-12-12",
+      "gym": "Dillon's Gym",
+      "notes": "ate falafel and feel awful",
+      "user_d": 1,
+      "workout_id": "1_2018-12-07T22:35:30.237Z",
+      "id": 12
     },
     {
-      "date": "2018-12-05",
-      "gym": "YMCA",
-      "notes": "on fire today",
-      "user_id": 1,
-      "workout_id": "1_2018-12-07T21:00:37.262Z",
-      "id": 6
+      "date": "2018-12-08",
+      "gym": "mt. juliet rec center",
+      "notes": "shot with nancy",
+      "user_d": 1,
+      "workout_id": "1_2018-12-08T23:54:21.786Z",
+      "id": 13
+    },
+    {
+      "date": "2018-12-08",
+      "gym": "111",
+      "notes": "111",
+      "user_d": 1,
+      "workout_id": "1_2018-12-09T01:32:11.584Z",
+      "id": 14
     }
   ],
   "swishlists": [
@@ -178,6 +186,156 @@
       "shotAttempts": 85,
       "shotsMade": 16,
       "id": 16
+    },
+    {
+      "workout_id": "1_2018-12-07T21:38:56.955Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 17
+    },
+    {
+      "workout_id": "1_2018-12-07T21:38:56.955Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 18
+    },
+    {
+      "workout_id": "1_2018-12-07T21:38:56.955Z",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 5,
+      "shotsMade": 0,
+      "id": 19
+    },
+    {
+      "workout_id": "1_2018-12-07T21:38:56.955Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 50,
+      "shotsMade": 15,
+      "id": 20
+    },
+    {
+      "workout_id": "1_2018-12-07T21:38:56.955Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 65,
+      "shotsMade": 19,
+      "id": 21
+    },
+    {
+      "workout_id": null,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 30,
+      "shotsMade": 21,
+      "id": 22
+    },
+    {
+      "workout_id": null,
+      "shotLocation": "twpt_1",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 23
+    },
+    {
+      "workout_id": "2_2018-12-07T22:16:20.513Z",
+      "shotAttempts": 20,
+      "shotsMade": 10,
+      "id": 24
+    },
+    {
+      "workout_id": "2_2018-12-07T22:16:20.513Z",
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 60,
+      "shotsMade": 18,
+      "id": 25
+    },
+    {
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 40,
+      "shotsMade": 38,
+      "id": 26
+    },
+    {
+      "workout_id": 10,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 30,
+      "shotsMade": 26,
+      "id": 27
+    },
+    {
+      "workout_id": 11,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 45,
+      "shotsMade": 40,
+      "id": 28
+    },
+    {
+      "workout_id": 12,
+      "shotLocation": "twpt_1",
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 29
+    },
+    {
+      "workout_id": 12,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 35,
+      "shotsMade": 26,
+      "id": 30
+    },
+    {
+      "workout_id": 13,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 31
+    },
+    {
+      "workout_id": 14,
+      "shotLocation": "twpt_1",
+      "shotAttempts": 20,
+      "shotsMade": 16,
+      "id": 32
+    },
+    {
+      "workout_id": 14,
+      "shotLocation": "twpt_1",
+      "shotAttempts": 30,
+      "shotsMade": 27,
+      "id": 33
+    },
+    {
+      "workout_id": 13,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 30,
+      "shotsMade": 23,
+      "id": 34
+    },
+    {
+      "workout_id": 13,
+      "shotLocation": "twpt_1",
+      "shotAttempts": 30,
+      "shotsMade": 27,
+      "id": 35
+    },
+    {
+      "workout_id": "",
+      "shotAttempts": 65,
+      "shotsMade": 54,
+      "id": 36
+    },
+    {
+      "workout_id": 14,
+      "shotLocation": "frthrw_1",
+      "shotAttempts": 20,
+      "shotsMade": 2,
+      "id": 37
+    },
+    {
+      "workout_id": "",
+      "shotLocation": "twpt_1",
+      "shotAttempts": 50,
+      "shotsMade": 17,
+      "id": 38
     }
   ],
   "quotes": [

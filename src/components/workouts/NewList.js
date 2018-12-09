@@ -10,7 +10,8 @@ export default class NewList extends Component {
     newGym: "",
     newNotes: "",
     currentUserId: this.props.getCurrentUser(),
-    workoutId: this.getWorkoutId
+    workoutId: ""
+    // workoutId: this.getWorkoutId
   }
 
   // Handles input field changes and sets state
@@ -32,10 +33,10 @@ export default class NewList extends Component {
         }
   }
 
-  getWorkoutId = () => {
-    const currentWorkoutId = sessionStorage.getItem("workoutId")
-    return currentWorkoutId
-  }
+  // getWorkoutId = () => {
+  //   const currentWorkoutId = sessionStorage.getItem("workoutId")
+  //   return currentWorkoutId
+  // }
 
   setWorkoutId = () => {
     const newWorkoutDate = new Date()
@@ -54,7 +55,7 @@ export default class NewList extends Component {
       date: this.state.newDate,
       gym: this.state.newGym,
       notes: this.state.newNotes,
-      user_id: this.state.currentUserId,
+      user_d: this.state.currentUserId,
       workout_id: this.setWorkoutId()
     }
     this.createNewWorkout(newWorkout)
@@ -64,6 +65,7 @@ export default class NewList extends Component {
     //Handles creation of new workout object
     createNewWorkout = newWorkout => {
       return APIManager.addEntry("workouts", newWorkout)
+      .then((response) => this.setState({ workoutId : response.id}))
     }
 
 

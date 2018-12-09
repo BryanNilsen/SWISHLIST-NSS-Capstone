@@ -1,10 +1,12 @@
 .workout_card {
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 0px 10px;
+  padding: 5px 10px;
   color: whitesmoke;
   margin: auto;
   min-width: 370px;
   max-width: 700px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 

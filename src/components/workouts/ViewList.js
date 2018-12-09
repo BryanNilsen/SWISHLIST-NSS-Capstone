@@ -36,9 +36,10 @@ export default class ViewList extends Component {
                     <h3>{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
                     <p>collapse / expand swishlist container links</p>
+
                     {/* begin swishlists */}
 
-                    <Shotlog workoutId={workout.workout_id} />
+                    <Shotlog workoutId={workout.id} />
 
                     <div id="workoutEditDelete">
                       <button onClick={() => this.deleteWorkout(workout.id)}>Delete</button>

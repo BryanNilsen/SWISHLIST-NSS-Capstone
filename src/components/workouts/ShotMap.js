@@ -7,8 +7,6 @@ export default class ShotMap extends Component {
   state = {
     clickedSpot: null,
     // newShotValue: "",
-    newShotAttempts: "",
-    newShotsMade: "",
   }
 
   handleCourtMapClick = (evt) => {
@@ -18,10 +16,10 @@ export default class ShotMap extends Component {
 
   }
 
-  getWorkoutId = () => {
-    const currentWorkoutId = sessionStorage.getItem("workoutId")
-    return currentWorkoutId
-  }
+  // getWorkoutId = () => {
+  //   const currentWorkoutId = sessionStorage.getItem("workoutId")
+  //   return currentWorkoutId
+  // }
 
   handleFieldChange = (evt) => {
     const stateToChange = {}
@@ -45,22 +43,27 @@ export default class ShotMap extends Component {
   //Handles construction of new swishlist object, then executes createNewSwishlist to add new swishlist to database
   constructNewSwishlist = () => {
     const newSwishlist = {
-      workout_id: this.getWorkoutId(),
+      // workout_id: this.getWorkoutId(),
+      workout_id: this.props.workoutId,
       shotLocation: this.state.newShotLocation,
       // shotValue: this.state.newShotValue,
       shotAttempts: Number(this.state.newShotAttempts),
       shotsMade: Number(this.state.newShotsMade),
     }
-
+console.log("New Swishlist:", newSwishlist)
     // state not being fully set here!!!!!
 
     this.createNewSwishlist(newSwishlist)
-      .then(() => console.log(newSwishlist))
+    //   .then(() => console.log(newSwishlist))
   }
 
   //Handles creation of new swishlist object
   createNewSwishlist = newSwishlist => {
     return APIManager.addEntry("swishlists", newSwishlist)
+  }
+
+  finishWorkout = () => {
+    sessionStorage.removeItem('workoutId')
   }
 
   render() {
@@ -75,7 +78,7 @@ export default class ShotMap extends Component {
           <div className="court_text">
             <p className="underline clear_padding">select shot location</p>
             <p className="clear_padding">shots attempted -
-              <select id="newShotAttempts" onClick={this.handleFieldChange}>
+              <select id="newShotAttempts" onChange={this.handleFieldChange}>
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -99,7 +102,7 @@ export default class ShotMap extends Component {
               </select>
             </p>
             <p className="clear_padding">shots made -
-              <select id="newShotsMade" onClick={this.handleFieldChange}>
+              <select id="newShotsMade" onChange={this.handleFieldChange}>
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -205,7 +208,7 @@ export default class ShotMap extends Component {
             </p>
             <p className="clear_padding">
               <button type="submit" onClick={this.handleNewSwishlist}>Add Shots</button>
-              <button type="submit">Finish Workout</button>
+              <button type="submit" onClick={this.finishWorkout}>Finish Workout</button>
               {/* need to remove workout Id from session storage when finished with workout */}
             </p>
           </div>

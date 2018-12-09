@@ -39,7 +39,7 @@ export default class Shotlog extends Component {
                   const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(2))
 
                   return (
-                    <tr key={shotlog.id} className="">
+                    <tr key={shotlog.id} className="shotlog_cel">
                       <td>{shotlog.shotLocation}</td>
                       <td>{shotlog.shotAttempts}</td>
                       <td>{shotlog.shotsMade}</td>
