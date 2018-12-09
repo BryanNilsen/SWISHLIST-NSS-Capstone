@@ -43,14 +43,6 @@
   "workouts": [
     {
       "date": "2018-12-04",
-      "gym": "111",
-      "notes": "1111",
-      "user_d": 2,
-      "workout_id": "2_2018-12-09T04:35:17.030Z",
-      "id": 30
-    },
-    {
-      "date": "2018-12-04",
       "gym": "Franklin YMCA",
       "notes": "lifted: bench, pullups, squats",
       "user_d": 1,
@@ -93,6 +85,20 @@
       "notes": "qqq",
       "user_id": 1,
       "id": 37
+    },
+    {
+      "date": "2018-12-11",
+      "gym": "qqqqq",
+      "notes": "qqqqq",
+      "user_id": 1,
+      "id": 38
+    },
+    {
+      "date": "2018-12-12",
+      "gym": "Franklin Rec Center",
+      "notes": "went to the gym",
+      "user_id": 1,
+      "id": 39
     }
   ],
   "quotes": [
@@ -771,6 +777,41 @@
       "shotAttempts": 10,
       "shotsMade": 6,
       "id": 51
+    },
+    {
+      "workout_id": 38,
+      "shotLocation": "FT",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 52
+    },
+    {
+      "workout_id": 38,
+      "shotLocation": "thrpt_3",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 53
+    },
+    {
+      "workout_id": 39,
+      "shotLocation": "FT",
+      "shotAttempts": 20,
+      "shotsMade": 10,
+      "id": 54
+    },
+    {
+      "workout_id": 39,
+      "shotLocation": "nba_thrpt_3",
+      "shotAttempts": 25,
+      "shotsMade": 14,
+      "id": 55
+    },
+    {
+      "workout_id": 39,
+      "shotLocation": "thrpt_5",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 56
     }
   ]
 }
