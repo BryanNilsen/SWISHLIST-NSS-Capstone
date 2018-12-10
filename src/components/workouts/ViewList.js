@@ -53,30 +53,6 @@ export default class ViewList extends Component {
 
   render() {
 
-    // let editForm = ""
-    // if(this.state.isEditable){
-    //   editForm = (
-    //     <div id={workout.id} className="edit_form">
-    //     <label htmlFor="newWorkoutDate">Date</label>
-    //     <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} className="edit_form_input"/>
-    //     <br/>
-    //     <label htmlFor="newWorkoutGym">Gym</label>
-    //     <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} className="edit_form_input" />
-    //     <br />
-    //     <textarea id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes} className="edit_form_input" style={{width: "90%"}}></textarea>
-    //     <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Save Edits</button>
-
-    //   </div>
-    //   )
-
-    // }
-
-
-
-
-
-
-
     return (
         <div id="viewlist_container" className="page_container">
           <h2>View swishlists</h2>

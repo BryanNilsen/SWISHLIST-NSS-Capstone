@@ -17,6 +17,7 @@ export default class NewList extends Component {
     hideAddForm: false,
   }
 
+
   toggleAddForm = () => {
     const currentState = this.state.hideAddForm;
     this.setState({
@@ -93,12 +94,10 @@ export default class NewList extends Component {
               <button type="submit" className="btn_edit" onClick={() => { this.handleNewWorkout() }}>Start Workout</button>
             </div>
             {/* end contents */}
-          <div id="shotmap_div" className={this.state.hideAddForm ? null : 'hide'}>
-          <hr></hr>
-            <ShotMap workoutId={this.state.workoutId} />
-          </div>
-{ console.log("workoutId from ", this.state.workoutId)}
-          <Shotlog workoutId={this.state.workoutId}/>
+            <div id="shotmap_div" className={this.state.hideAddForm ? null : 'hide'}>
+              <hr></hr>
+              <ShotMap workoutId={this.state.workoutId} />
+            </div>
           </div>
         </div>
       </React.Fragment>

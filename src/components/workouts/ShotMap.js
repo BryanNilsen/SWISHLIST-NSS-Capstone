@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ShotMap.css';
 import APIManager from '../../modules/APIManager'
+import ShotsAdded from './ShotsAdded'
 
 export default class ShotMap extends Component {
 
@@ -9,14 +10,23 @@ export default class ShotMap extends Component {
     newShotAttempts: "",
     newShotsMade: "",
     newShotLocation: "",
-    shotSpots: []
+    shotSpots: [],
+    swishlists: [],
+    swishlistArray: [],
   }
+
+
 
 
   componentDidMount() {
     APIManager.getAllEntries("shotSpots")
       .then((shotSpots) => {
         this.setState({ shotSpots: shotSpots })
+      })
+
+      APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
+      .then((swishlists) => {
+        this.setState({ swishlists: swishlists })
       })
   }
 
@@ -85,8 +95,14 @@ export default class ShotMap extends Component {
 
   //Handles creation of new swishlist object
   createNewSwishlist = newSwishlist => {
+    let swishlistArray = this.state.swishlistArray
     return APIManager.addEntry("swishlists", newSwishlist)
-  }
+    .then(APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`))
+    .then((swishlists) => {
+      swishlistArray.push(swishlists)
+      this.setState({ swishlists: swishlistArray })
+  })
+}
 
   finishWorkout = () => {
     sessionStorage.removeItem('workoutId')
@@ -141,6 +157,7 @@ export default class ShotMap extends Component {
             }
           </div>
         </div>
+        <ShotsAdded workoutId={this.props.workoutId} swishlists={this.state.swishlists}/>
       </div>
     );
   }
