@@ -54,12 +54,18 @@ export default class ViewList extends Component {
               return (
                 <div className="card_container" key={workout.id}>
                   <div className="workout_card">
+
+                    {/* begin page content */}
                     <h3 className="card_header">{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
 
-                    <div id={workout.id}>
+                    {/* edit form hidden to start */}
+                    <div id={workout.id} className="edit_modal">
+                      <label htmlFor="newWorkoutDate">Date</label>
                       <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} />
+                      <label htmlFor="newWorkoutGym">Gym</label>
                       <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} />
+                      <br />
                       <textarea id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes}></textarea>
                       <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Edit</button>
                     </div>
