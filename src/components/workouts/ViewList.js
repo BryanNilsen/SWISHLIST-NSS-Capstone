@@ -8,6 +8,7 @@ export default class ViewList extends Component {
   state = {
     currentUserId: this.props.getCurrentUser(),
     workouts: [],
+    isEditable: false
   }
 
   // This updates state whenever an input field is edited
@@ -15,6 +16,12 @@ export default class ViewList extends Component {
     const stateToChange = {}
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
+  }
+
+  toggleEditable = (evt) => {
+    const isEditable = this.state.isEditable
+    this.setState({ isEditable: !isEditable })
+    console.log(this.state.isEditable)
   }
 
   componentDidMount() {
@@ -45,8 +52,32 @@ export default class ViewList extends Component {
   }
 
   render() {
+
+    // let editForm = ""
+    // if(this.state.isEditable){
+    //   editForm = (
+    //     <div id={workout.id} className="edit_form">
+    //     <label htmlFor="newWorkoutDate">Date</label>
+    //     <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} className="edit_form_input"/>
+    //     <br/>
+    //     <label htmlFor="newWorkoutGym">Gym</label>
+    //     <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} className="edit_form_input" />
+    //     <br />
+    //     <textarea id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes} className="edit_form_input" style={{width: "90%"}}></textarea>
+    //     <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Save Edits</button>
+
+    //   </div>
+    //   )
+
+    // }
+
+
+
+
+
+
+
     return (
-      <React.Fragment>
         <div id="viewlist_container" className="page_container">
           <h2>View swishlists</h2>
           {
@@ -54,20 +85,22 @@ export default class ViewList extends Component {
               return (
                 <div className="card_container" key={workout.id}>
                   <div className="workout_card">
-
                     {/* begin page content */}
                     <h3 className="card_header">{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
+                    <button className="btn_edit" onClick={() => this.toggleEditable()}>toggle</button>
 
                     {/* edit form hidden to start */}
-                    <div id={workout.id} className="edit_modal">
+                    <div id={workout.id} className="edit_form">
                       <label htmlFor="newWorkoutDate">Date</label>
-                      <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} />
+                      <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} className="edit_form_input"/>
+                      <br/>
                       <label htmlFor="newWorkoutGym">Gym</label>
-                      <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} />
+                      <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} className="edit_form_input" />
                       <br />
-                      <textarea id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes}></textarea>
-                      <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Edit</button>
+                      <textarea id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes} className="edit_form_input" style={{width: "90%"}}></textarea>
+                      <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Save Edits</button>
+
                     </div>
 
                     {/* begin swishlists */}
@@ -84,7 +117,6 @@ export default class ViewList extends Component {
             })
           }
         </div>
-      </React.Fragment>
     )
   }
 }

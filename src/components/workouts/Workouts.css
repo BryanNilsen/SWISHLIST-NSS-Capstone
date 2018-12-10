@@ -46,3 +46,21 @@
 .btn_delete:hover {
   background: rgb(168, 0, 0);
 }
+
+.edit_form_input {
+  border: 1px solid rgb(255, 123, 0, .5);
+  background: rgb(77, 77, 77);
+  color: whitesmoke;
+  border-radius: 5px;
+  font-size: .8em;
+  padding: 4px;
+  font-weight: bold;
+  /* margin-bottom: 25px; */
+  transition: all 0.2s ease-out;
+}
+
+.edit_form {
+  padding: 10px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}

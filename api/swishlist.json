@@ -79,7 +79,7 @@
     {
       "date": "2018-12-11",
       "gym": "WFHS",
-      "notes": "didn't lift today",
+      "notes": "did lift today",
       "user_id": 1,
       "id": 44
     },
@@ -101,13 +101,6 @@
       "date": "2018-12-10",
       "gym": "Franklin Rec Center",
       "notes": "111",
-      "user_id": 2,
-      "id": 48
-    },
-    {
-      "date": "2018-12-10",
-      "gym": "Franklin Rec Center",
-      "notes": "111",
       "user_id": 1,
       "id": 49
     },
@@ -117,6 +110,27 @@
       "notes": "45 min cardio",
       "user_id": 1,
       "id": 50
+    },
+    {
+      "date": "2018-12-10",
+      "gym": "User 3's Gym",
+      "notes": "hhhh",
+      "user_id": 1,
+      "id": 51
+    },
+    {
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "qqqq",
+      "user_id": 1,
+      "id": 52
+    },
+    {
+      "date": "2018-12-11",
+      "gym": "Franklin Rec Center",
+      "notes": "none",
+      "user_id": 1,
+      "id": 56
     }
   ],
   "quotes": [
@@ -680,6 +694,90 @@
       "shotAttempts": 20,
       "shotsMade": 17,
       "id": 87
+    },
+    {
+      "workout_id": 51,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 88
+    },
+    {
+      "workout_id": 51,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 89
+    },
+    {
+      "workout_id": 52,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 20,
+      "shotsMade": 3,
+      "id": 90
+    },
+    {
+      "workout_id": 52,
+      "shotLocation": "3PT(NBA)-9",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 91
+    },
+    {
+      "workout_id": 52,
+      "shotLocation": "2PT-7",
+      "shotAttempts": 30,
+      "shotsMade": 29,
+      "id": 92
+    },
+    {
+      "workout_id": 53,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 93
+    },
+    {
+      "workout_id": 54,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 94
+    },
+    {
+      "workout_id": 55,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 95
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 96
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "1FT",
+      "shotAttempts": 20,
+      "shotsMade": 9,
+      "id": 97
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 98
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "2PT-5",
+      "shotAttempts": 20,
+      "shotsMade": 13,
+      "id": 99
     }
   ]
 }

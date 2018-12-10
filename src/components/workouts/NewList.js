@@ -3,6 +3,7 @@ import './ShotMap.css'
 import ShotMap from './ShotMap';
 import './Workouts.css';
 import APIManager from '../../modules/APIManager'
+import Shotlog from './Shotlog';
 
 export default class NewList extends Component {
 
@@ -96,6 +97,8 @@ export default class NewList extends Component {
           <hr></hr>
             <ShotMap workoutId={this.state.workoutId} />
           </div>
+{ console.log("workoutId from ", this.state.workoutId)}
+          <Shotlog workoutId={this.state.workoutId}/>
           </div>
         </div>
       </React.Fragment>

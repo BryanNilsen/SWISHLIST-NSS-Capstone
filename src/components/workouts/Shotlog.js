@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import APIManager from '../../modules/APIManager'
 import "./Shotlog.css"
-
+import TotalGenerator from './TotalGenerator'
 export default class Shotlog extends Component {
 
   state = {
@@ -37,7 +37,7 @@ export default class Shotlog extends Component {
                 this.state.shotlogs.map((shotlog) => {
                   const shotsMade = Number(shotlog.shotsMade)
                   const shotAttempts = Number(shotlog.shotAttempts)
-                  const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(2))
+                  const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
                   const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
 
                   return (
@@ -50,13 +50,7 @@ export default class Shotlog extends Component {
                   )
                 })
               }
-              <tr className="shotlog_totals">
-                <td width="40%">TOTALS</td>
-                <td width="20%">{this.state.totalShots}</td>
-                <td width="20%">Made</td>
-                <td width="20%">%</td>
-              </tr>
-
+              <TotalGenerator workoutId={this.props.workoutId}/>
             </tbody>
           </table>
         </div>
