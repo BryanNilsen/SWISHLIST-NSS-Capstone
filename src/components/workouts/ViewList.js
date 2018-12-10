@@ -7,9 +7,15 @@ export default class ViewList extends Component {
 
   state = {
     currentUserId: this.props.getCurrentUser(),
-    workouts: []
+    workouts: [],
   }
 
+  // This updates state whenever an input field is edited
+  handleFieldChange = (evt) => {
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+  }
 
   componentDidMount() {
     APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`)
@@ -22,9 +28,20 @@ export default class ViewList extends Component {
     .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`))
     .then(workouts => this.setState({ workouts: workouts }))
 
-  editWorkout = (id) => {
-    console.log("you clicked edit for id: ", id)
-    alert(`you clicked edit for ${id}`)
+  editWorkout = (id, editedWorkout) => APIManager.editEntry("workouts", id, editedWorkout)
+    .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`))
+    .then(workouts => this.setState({ workouts: workouts }))
+
+
+
+  constructEditedWorkout = (id) => {
+    const editedWorkout = {
+      date: this.state.newWorkoutDate,
+      gym: this.state.newWorkoutGym,
+      notes: this.state.newWorkoutNotes,
+    }
+    console.log("edited workout: ", editedWorkout)
+    this.editWorkout(id, editedWorkout)
   }
 
   render() {
@@ -40,12 +57,19 @@ export default class ViewList extends Component {
                     <h3 className="card_header">{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
 
+                    <div id={workout.id}>
+                      <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} />
+                      <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} />
+                      <textarea id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes}></textarea>
+                      <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Edit</button>
+                    </div>
+
                     {/* begin swishlists */}
 
                     <Shotlog workoutId={workout.id} />
 
                     <div id="workoutEditDelete" className="align_right">
-                      <button className="btn_edit" onClick={() => this.editWorkout(workout.id)}>Edit Workout </button>
+                      <button className="btn_edit">Edit Workout </button>
                       <button className="btn_delete" onClick={() => this.deleteWorkout(workout.id)}>Delete Workout</button>
                     </div>
                   </div>

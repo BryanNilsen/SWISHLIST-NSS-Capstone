@@ -42,9 +42,9 @@
   ],
   "workouts": [
     {
-      "date": "2018-12-12",
+      "date": "2018-12-13",
       "gym": "Franklin Rec Center",
-      "notes": "went to the gym",
+      "notes": "went to the gyms",
       "user_id": 1,
       "id": 39
     },
@@ -72,7 +72,7 @@
     {
       "date": "2018-12-13",
       "gym": "WFHS",
-      "notes": "jumped rope 1/2 hr",
+      "notes": "jumped rope for 1/2 hr",
       "user_id": 1,
       "id": 43
     },
@@ -110,6 +110,13 @@
       "notes": "111",
       "user_id": 1,
       "id": 49
+    },
+    {
+      "date": "2018-12-18",
+      "gym": "Franklin Rec Center",
+      "notes": "45 min cardio",
+      "user_id": 1,
+      "id": 50
     }
   ],
   "quotes": [
@@ -631,6 +638,48 @@
       "shotAttempts": 20,
       "shotsMade": 16,
       "id": 81
+    },
+    {
+      "workout_id": 49,
+      "shotLocation": "1FT",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 82
+    },
+    {
+      "workout_id": 49,
+      "shotLocation": "3PT-2",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 83
+    },
+    {
+      "workout_id": 49,
+      "shotLocation": "3PT-3",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 84
+    },
+    {
+      "workout_id": 50,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 85
+    },
+    {
+      "workout_id": 50,
+      "shotLocation": "2PT-8",
+      "shotAttempts": 20,
+      "shotsMade": 19,
+      "id": 86
+    },
+    {
+      "workout_id": 50,
+      "shotLocation": "2PT-7",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 87
     }
   ]
 }

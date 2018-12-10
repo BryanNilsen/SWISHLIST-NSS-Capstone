@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './ShotMap.css';
 import APIManager from '../../modules/APIManager'
-import Shotlog from './Shotlog';
 
 export default class ShotMap extends Component {
 
