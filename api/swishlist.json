@@ -82,6 +82,34 @@
       "notes": "didn't lift today",
       "user_id": 1,
       "id": 44
+    },
+    {
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "lifted weights",
+      "user_id": 1,
+      "id": 45
+    },
+    {
+      "date": "2018-12-09",
+      "gym": "Franklin Rec Center",
+      "notes": "lifted weights before workout",
+      "user_id": 1,
+      "id": 47
+    },
+    {
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "111",
+      "user_id": 2,
+      "id": 48
+    },
+    {
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "111",
+      "user_id": 1,
+      "id": 49
     }
   ],
   "quotes": [
@@ -554,6 +582,55 @@
       "shotAttempts": 10,
       "shotsMade": 4,
       "id": 74
+    },
+    {
+      "workout_id": 45,
+      "shotLocation": "1FT",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 75
+    },
+    {
+      "workout_id": 45,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 76
+    },
+    {
+      "workout_id": 47,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 77
+    },
+    {
+      "workout_id": 47,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 20,
+      "shotsMade": 2,
+      "id": 78
+    },
+    {
+      "workout_id": 47,
+      "shotLocation": "3PT-4",
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 79
+    },
+    {
+      "workout_id": 48,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 80
+    },
+    {
+      "workout_id": 48,
+      "shotLocation": "2PT-2",
+      "shotAttempts": 20,
+      "shotsMade": 16,
+      "id": 81
     }
   ]
 }

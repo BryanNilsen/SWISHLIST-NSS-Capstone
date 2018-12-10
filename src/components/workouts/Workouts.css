@@ -21,3 +21,28 @@
   padding: 0px 10px;
   margin: 0px
 }
+
+.btn_edit {
+  border-radius: 5px;
+  border: 1px solid black;
+  background: rgb(184, 89, 0);
+  color: white;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.btn_edit:hover {
+  background: rgb(6, 168, 0);
+}
+
+.btn_delete {
+  border-radius: 5px;
+  border: 1px solid black;
+  background: rgb(27, 27, 27);
+  color: white;
+  font-weight: bold;
+}
+
+.btn_delete:hover {
+  background: rgb(168, 0, 0);
+}

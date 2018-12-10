@@ -44,9 +44,9 @@ export default class ViewList extends Component {
 
                     <Shotlog workoutId={workout.id} />
 
-                    <div id="workoutEditDelete">
-                      <button onClick={() => this.editWorkout(workout.id)}>Edit Workout </button>
-                      <button onClick={() => this.deleteWorkout(workout.id)}>Delete Workout</button>
+                    <div id="workoutEditDelete" className="align_right">
+                      <button className="btn_edit" onClick={() => this.editWorkout(workout.id)}>Edit Workout </button>
+                      <button className="btn_delete" onClick={() => this.deleteWorkout(workout.id)}>Delete Workout</button>
                     </div>
                   </div>
                 </div>

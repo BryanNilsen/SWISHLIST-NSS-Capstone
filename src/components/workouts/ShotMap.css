@@ -6,15 +6,13 @@
 .main_wrapper {
   width: 100%;
   margin: auto;
-  /* border: 1px solid red; */
-  background: black;
+  /* background: black; */
 }
 
 .court_wrapper {
   margin: auto;
   width: 380px;
   position: relative;
-  /* border: 1px solid blue; */
 }
 
 .court_text {

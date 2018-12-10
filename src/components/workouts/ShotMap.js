@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ShotMap.css';
 import APIManager from '../../modules/APIManager'
+import Shotlog from './Shotlog';
 
 export default class ShotMap extends Component {
 
@@ -37,7 +38,7 @@ export default class ShotMap extends Component {
   }
 
 
-  buildShotAttempsSelect = () => {
+  buildShotAttemptsSelect = () => {
     let shotAttemptsSelect = []
     for (let i = 0; i <= 100; i+=5) {
         shotAttemptsSelect.push(<option key={i} value={i}>{i}</option>);
@@ -108,7 +109,7 @@ export default class ShotMap extends Component {
             <p className="clear_padding">shots attempted -
               <select id="newShotAttempts" onChange={this.handleFieldChange}>
                 <option defaultValue="selected">Select</option>
-                { this.buildShotAttempsSelect() }
+                { this.buildShotAttemptsSelect() }
               </select>
             </p>
             <p className="clear_padding">shots made -
@@ -140,7 +141,6 @@ export default class ShotMap extends Component {
                 )
               })
             }
-
           </div>
         </div>
       </div>
