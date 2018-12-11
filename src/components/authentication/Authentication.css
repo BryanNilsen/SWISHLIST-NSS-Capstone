@@ -39,18 +39,6 @@
   transition: all 0.2s ease-out;
 }
 
-.edit_form_input {
-  border: 1px solid rgb(255, 123, 0, .5);
-  background: rgb(77, 77, 77);
-  color: whitesmoke;
-  border-radius: 5px;
-  font-size: .8em;
-  padding: 4px;
-  font-weight: bold;
-  margin-bottom: 25px;
-  transition: all 0.2s ease-out;
-}
-
 
 .form_input:focus {
   background: whitesmoke;

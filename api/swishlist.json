@@ -180,6 +180,13 @@
       "notes": "11111",
       "user_id": 2,
       "id": 75
+    },
+    {
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "Austin rules!",
+      "user_id": 1,
+      "id": 76
     }
   ],
   "quotes": [
@@ -1037,6 +1044,27 @@
       "shotAttempts": 10,
       "shotsMade": 7,
       "id": 129
+    },
+    {
+      "workout_id": 76,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 130
+    },
+    {
+      "workout_id": 76,
+      "shotLocation": "2PT-2",
+      "shotAttempts": 30,
+      "shotsMade": 27,
+      "id": 131
+    },
+    {
+      "workout_id": 76,
+      "shotLocation": "3PT-3",
+      "shotAttempts": 30,
+      "shotsMade": 3,
+      "id": 132
     }
   ]
 }
