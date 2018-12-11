@@ -2,26 +2,13 @@ import React, { Component } from "react"
 import APIManager from '../../modules/APIManager'
 import "./Shotlog.css"
 import TotalGenerator from './TotalGenerator'
-export default class Shotlog extends Component {
 
-  state = {
-    shotlogs: [],
-    totalShots: []
-  }
+export default class ShotsAdded extends Component {
 
-
-  componentDidMount() {
-    APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
-      .then((shotlogs) => {
-        this.setState({ shotlogs: shotlogs })
-      })
-  }
-
-  // deleteWorkout = (id) => APIManager.deleteEntry("workouts", id)
-  //   .then(() => APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`))
-  //   .then(workouts => this.setState({ workouts: workouts }))
 
   render() {
+    console.log("swishlists from ShotsAdded:", this.props.swishlists)
+
     return (
       <div className="shotlog_container">
         <div className="shotlog_card">
@@ -34,7 +21,7 @@ export default class Shotlog extends Component {
                 <td width="20%" style={{ textAlign: "center" }} >%</td>
               </tr>
               {
-                this.state.shotlogs.map((shotlog) => {
+                this.props.swishlists.map((shotlog) => {
                   const shotsMade = Number(shotlog.shotsMade)
                   const shotAttempts = Number(shotlog.shotAttempts)
                   const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
@@ -50,7 +37,6 @@ export default class Shotlog extends Component {
                   )
                 })
               }
-              <TotalGenerator workoutId={this.props.workoutId}/>
             </tbody>
           </table>
         </div>

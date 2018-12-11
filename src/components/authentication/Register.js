@@ -76,6 +76,7 @@ export default class Register extends Component {
     return (
       <React.Fragment>
         <div className={this.props.hideLoginForm ? "center basketball_bkg" : "hide"}>
+        <br/><br/>
           <div className="login_form">
             <h2 className="login_form_title">REGISTER</h2>
 

@@ -20,7 +20,7 @@ export default class Navbar extends Component {
               <h1 className="logo_small"><span className="text_orange">swish</span><span className="text_white">list</span></h1>
               <p className="logo_tagline_small">YOU MISS 100% OF THE SHOTS YOU DON'T TAKE</p>
             </div>
-            <p>
+            <p className="noTopMargin">
               <Link className="nav_item small_nav" to="/" onClick={() => this.logoutUser()}>logout</Link>
               <Link className="nav_item small_nav" to="/motivation">motivation</Link></p>
           </div>

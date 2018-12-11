@@ -9,7 +9,7 @@ export default class Swishlist extends Component {
     return (
       <React.Fragment>
         <Navbar />
-        <ApplicationViews />
+        <ApplicationViews handleFieldChange={this.props.handleFieldChange}/>
       </React.Fragment>
     )
   }

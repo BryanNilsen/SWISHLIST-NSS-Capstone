@@ -42,142 +42,151 @@
   ],
   "workouts": [
     {
-      "date": "2018-12-19",
-      "gym": "franklinYMCA",
-      "notes": "aaaa",
+      "date": "2018-12-12",
+      "gym": "Franklin Rec Center",
+      "notes": "went to the gym",
       "user_id": 1,
-      "workout_id": "1_2018-12-07T19:58:49.107Z",
-      "id": 3
-    },
-    {
-      "date": "2018-12-19",
-      "gym": "wwww",
-      "notes": "edede",
-      "user_id": 1,
-      "workout_id": "1_2018-12-07T20:50:46.353Z",
-      "id": 4
+      "id": 39
     },
     {
       "date": "2018-12-05",
-      "gym": "YMCA",
-      "notes": "on fire today",
+      "gym": "WFHS",
+      "notes": "high school gym",
+      "user_id": 2,
+      "id": 40
+    },
+    {
+      "date": "2018-12-01",
+      "gym": "User 3's Gym",
+      "notes": "wanna be like mike",
+      "user_id": 3,
+      "id": 41
+    },
+    {
+      "date": "2018-12-11",
+      "gym": "Franklin Rec Center",
+      "notes": "no notes",
+      "user_id": 2,
+      "id": 42
+    },
+    {
+      "date": "2018-12-13",
+      "gym": "WFHS",
+      "notes": "jumped rope for 1/2 hr",
       "user_id": 1,
-      "workout_id": "1_2018-12-07T21:00:37.262Z",
-      "id": 6
-    }
-  ],
-  "swishlists": [
-    {
-      "workout_id": null,
-      "shotLocation": "frthrw_1",
-      "shotAttempts": "5",
-      "shotsMade": "0",
-      "id": 1
+      "id": 43
     },
     {
-      "workout_id": null,
-      "shotLocation": "frthrw_1",
-      "shotAttempts": "5",
-      "shotsMade": "0",
-      "id": 2
+      "date": "2018-12-11",
+      "gym": "WFHS",
+      "notes": "did lift today",
+      "user_id": 1,
+      "id": 44
     },
     {
-      "workout_id": "1_2018-12-07T18:28:27.079Z",
-      "shotLocation": "frthrw_1",
-      "shotAttempts": "10",
-      "shotsMade": "3",
-      "id": 3
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "lifted weights",
+      "user_id": 1,
+      "id": 45
     },
     {
-      "workout_id": "1_2018-12-07T18:28:27.079Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": "20",
-      "shotsMade": "7",
-      "id": 4
+      "date": "2018-12-09",
+      "gym": "Franklin Rec Center",
+      "notes": "lifted weights before workout",
+      "user_id": 1,
+      "id": 47
     },
     {
-      "workout_id": "1_2018-12-07T19:58:01.141Z",
-      "shotLocation": "frthrw_1",
-      "shotAttempts": 5,
-      "shotsMade": 0,
-      "id": 5
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "111",
+      "user_id": 1,
+      "id": 49
     },
     {
-      "workout_id": "1_2018-12-07T19:58:01.141Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 20,
-      "shotsMade": 12,
-      "id": 6
+      "date": "2018-12-18",
+      "gym": "Franklin Rec Center",
+      "notes": "45 min cardio",
+      "user_id": 1,
+      "id": 50
     },
     {
-      "workout_id": "1_2018-12-07T19:58:49.107Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 5,
-      "shotsMade": 0,
-      "id": 7
+      "date": "2018-12-10",
+      "gym": "User 3's Gym",
+      "notes": "hhhh",
+      "user_id": 1,
+      "id": 51
     },
     {
-      "workout_id": "1_2018-12-07T19:58:49.107Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 40,
-      "shotsMade": 14,
-      "id": 8
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "qqqq",
+      "user_id": 1,
+      "id": 52
     },
     {
-      "workout_id": "1_2018-12-07T19:58:49.107Z",
-      "shotLocation": "frthrw_1",
-      "shotAttempts": 50,
-      "shotsMade": 20,
-      "id": 9
+      "date": "2018-12-11",
+      "gym": "Franklin Rec Center",
+      "notes": "none so far",
+      "user_id": 1,
+      "id": 56
     },
     {
-      "workout_id": "1_2018-12-07T20:50:46.353Z",
-      "shotLocation": "frthrw_1",
-      "shotAttempts": 5,
-      "shotsMade": 0,
-      "id": 10
+      "date": "2018-12-12",
+      "gym": "Franklin Rec Center",
+      "notes": "40 minutes of cardio before workout",
+      "user_id": 2,
+      "id": 57
     },
     {
-      "workout_id": "1_2018-12-07T20:50:46.353Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 95,
-      "shotsMade": 14,
-      "id": 11
+      "date": "2018-12-19",
+      "gym": "Franklin Rec Center",
+      "notes": "here we go again",
+      "user_id": 2,
+      "id": 63
     },
     {
-      "workout_id": "1_2018-12-07T20:54:22.531Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 5,
-      "shotsMade": 0,
-      "id": 12
+      "date": "2018-12-11",
+      "gym": "Franklin Rec Center",
+      "notes": "1111",
+      "user_id": 2,
+      "id": 71
     },
     {
-      "workout_id": "1_2018-12-07T20:54:22.531Z",
-      "shotLocation": "frthrw_1",
-      "shotAttempts": 5,
-      "shotsMade": 0,
-      "id": 13
+      "date": "2018-12-12",
+      "gym": "Franklin Rec Center",
+      "notes": "11111",
+      "user_id": 2,
+      "id": 72
     },
     {
-      "workout_id": "1_2018-12-07T21:00:37.262Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 5,
-      "shotsMade": 12,
-      "id": 14
+      "date": "2018-12-11",
+      "gym": "Franklin Rec Center",
+      "notes": "1111",
+      "user_id": 2,
+      "id": 73
     },
     {
-      "workout_id": "1_2018-12-07T21:00:37.262Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 80,
-      "shotsMade": 11,
-      "id": 15
+      "date": "2018-12-11",
+      "gym": "Franklin Rec Center",
+      "notes": "1111",
+      "user_id": 2,
+      "id": 74
     },
     {
-      "workout_id": "1_2018-12-07T21:00:37.262Z",
-      "shotLocation": "twpt_1",
-      "shotAttempts": 85,
-      "shotsMade": 16,
-      "id": 16
+      "date": "2018-12-04",
+      "gym": "Franklin Rec Center",
+      "notes": "11111",
+      "user_id": 2,
+      "id": 75
+    },
+    {
+      "date": "2018-12-10",
+      "gym": "Franklin Rec Center",
+      "notes": "Austin rules!",
+      "user_id": 1,
+      "id": 76
     }
   ],
   "quotes": [
@@ -315,192 +324,747 @@
   "shotSpots": [
     {
       "id": 1,
-      "name": "frthrw_1",
+      "name": "1FT",
       "top": "57%",
       "left": "50%",
       "shotValue": 1
     },
     {
       "id": 2,
-      "name": "twpt_1",
+      "name": "2PT-1",
       "top": "72%",
       "left": "50%",
       "shotValue": 2
     },
     {
       "id": 3,
-      "name": "twpt_2",
+      "name": "2PT-2",
       "top": "59%",
       "left": "38%",
       "shotValue": 2
     },
     {
       "id": 4,
-      "name": "twpt_3",
+      "name": "2PT-3",
       "top": "59%",
       "left": "62%",
       "shotValue": 2
     },
     {
       "id": 5,
-      "name": "twpt_4",
+      "name": "2PT-4",
       "top": "72%",
       "left": "28%",
       "shotValue": 2
     },
     {
       "id": 6,
-      "name": "twpt_5",
+      "name": "2PT-5",
       "top": "72%",
       "left": "72%",
       "shotValue": 2
     },
     {
       "id": 7,
-      "name": "twpt_6",
+      "name": "2PT-6",
       "top": "92%",
       "left": "25%",
       "shotValue": 2
     },
     {
       "id": 8,
-      "name": "twpt_7",
+      "name": "2PT-7",
       "top": "80%",
       "left": "64%",
       "shotValue": 2
     },
     {
       "id": 9,
-      "name": "twpt_8",
+      "name": "2PT-8",
       "top": "80%",
       "left": "36%",
       "shotValue": 2
     },
     {
       "id": 10,
-      "name": "twpt_9",
+      "name": "2PT-9",
       "top": "92%",
       "left": "75%",
       "shotValue": 2
     },
     {
       "id": 11,
-      "name": "thrpt_1",
+      "name": "3PT-1",
       "top": "44%",
       "left": "50%",
       "shotValue": 3
     },
     {
       "id": 12,
-      "name": "thrpt_2",
+      "name": "3PT-2",
       "top": "52%",
       "left": "74%",
       "shotValue": 3
     },
     {
       "id": 13,
-      "name": "thrpt_3",
+      "name": "3PT-3",
       "top": "52%",
       "left": "26%",
       "shotValue": 3
     },
     {
       "id": 14,
-      "name": "thrpt_4",
+      "name": "3PT-4",
       "top": "72%",
       "left": "89%",
       "shotValue": 3
     },
     {
       "id": 15,
-      "name": "thrpt_5",
+      "name": "3PT-5",
       "top": "72%",
       "left": "11%",
       "shotValue": 3
     },
     {
       "id": 16,
-      "name": "thrpt_6",
+      "name": "3PT-6",
       "top": "92%",
       "left": "92%",
       "shotValue": 3
     },
     {
       "id": 17,
-      "name": "thrpt_7",
+      "name": "3PT-7",
       "top": "92%",
       "left": "8%",
       "shotValue": 3
     },
     {
       "id": 18,
-      "name": "nba_thrpt_1",
+      "name": "3PT(NBA)-1",
       "top": "39%",
       "left": "50%",
       "shotValue": 3
     },
     {
       "id": 19,
-      "name": "nba_thrpt_2",
+      "name": "3PT(NBA)-2",
       "top": "49%",
       "left": "80%",
       "shotValue": 3
     },
     {
       "id": 20,
-      "name": "nba_thrpt_3",
+      "name": "3PT(NBA)-3",
       "top": "49%",
       "left": "20%",
       "shotValue": 3
     },
     {
       "id": 21,
-      "name": "nba_thrpt_4",
+      "name": "3PT(NBA)-4",
       "top": "68%",
       "left": "97%",
       "shotValue": 3
     },
     {
       "id": 22,
-      "name": "nba_thrpt_5",
+      "name": "3PT(NBA)-5",
       "top": "68%",
       "left": "3%",
       "shotValue": 3
     },
     {
       "id": 23,
-      "name": "nba_thrpt_6",
+      "name": "3PT(NBA)-6",
       "top": "92%",
       "left": "97%",
       "shotValue": 3
     },
     {
       "id": 24,
-      "name": "nba_thrpt_7",
+      "name": "3PT(NBA)-7",
       "top": "92%",
       "left": "3%",
       "shotValue": 3
     },
     {
       "id": 25,
-      "name": "nba_thrpt_8",
+      "name": "3PT(NBA)-8",
       "top": "46%",
       "left": "92%",
       "shotValue": 3
     },
     {
       "id": 26,
-      "name": "nba_thrpt_9",
+      "name": "3PT(NBA)-9",
       "top": "46%",
       "left": "8%",
       "shotValue": 3
     },
     {
       "id": 27,
-      "name": "nba_thrpt_10",
+      "name": "3PT(NBA)-10",
       "top": "34%",
       "left": "50%",
       "shotValue": 3
+    }
+  ],
+  "swishlists": [
+    {
+      "workout_id": 39,
+      "shotLocation": "FT",
+      "shotAttempts": 20,
+      "shotsMade": 10,
+      "id": 54
+    },
+    {
+      "workout_id": 39,
+      "shotLocation": "nba_thrpt_3",
+      "shotAttempts": 25,
+      "shotsMade": 14,
+      "id": 55
+    },
+    {
+      "workout_id": 39,
+      "shotLocation": "thrpt_5",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 56
+    },
+    {
+      "workout_id": 40,
+      "shotLocation": "thrpt_1",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 57
+    },
+    {
+      "workout_id": 41,
+      "shotLocation": "nba_thrpt_3",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 58
+    },
+    {
+      "workout_id": 41,
+      "shotLocation": "nba_thrpt_1",
+      "shotAttempts": 20,
+      "shotsMade": 12,
+      "id": 59
+    },
+    {
+      "workout_id": 41,
+      "shotLocation": "nba_thrpt_2",
+      "shotAttempts": 20,
+      "shotsMade": 13,
+      "id": 60
+    },
+    {
+      "workout_id": 42,
+      "shotLocation": "FT",
+      "shotAttempts": 100,
+      "shotsMade": 21,
+      "id": 61
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "FT",
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 62
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "thrpt_1",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 63
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "nba_thrpt_10",
+      "shotAttempts": 10,
+      "shotsMade": 2,
+      "id": 64
+    },
+    {
+      "workout_id": 43,
+      "shotLocation": "nba_thrpt_9",
+      "shotAttempts": 10,
+      "shotsMade": 0,
+      "id": 65
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "2PT-2",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 66
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "2PT-3",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 67
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "3PT-7",
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 68
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "3PT-5",
+      "shotAttempts": 10,
+      "shotsMade": 3,
+      "id": 69
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "3PT-3",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 70
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 71
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "3PT-2",
+      "shotAttempts": 10,
+      "shotsMade": 2,
+      "id": 72
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "3PT-4",
+      "shotAttempts": 10,
+      "shotsMade": 3,
+      "id": 73
+    },
+    {
+      "workout_id": 44,
+      "shotLocation": "3PT-6",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 74
+    },
+    {
+      "workout_id": 45,
+      "shotLocation": "1FT",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 75
+    },
+    {
+      "workout_id": 45,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 76
+    },
+    {
+      "workout_id": 47,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 77
+    },
+    {
+      "workout_id": 47,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 20,
+      "shotsMade": 2,
+      "id": 78
+    },
+    {
+      "workout_id": 47,
+      "shotLocation": "3PT-4",
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 79
+    },
+    {
+      "workout_id": 48,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 80
+    },
+    {
+      "workout_id": 48,
+      "shotLocation": "2PT-2",
+      "shotAttempts": 20,
+      "shotsMade": 16,
+      "id": 81
+    },
+    {
+      "workout_id": 49,
+      "shotLocation": "1FT",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 82
+    },
+    {
+      "workout_id": 49,
+      "shotLocation": "3PT-2",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 83
+    },
+    {
+      "workout_id": 49,
+      "shotLocation": "3PT-3",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 84
+    },
+    {
+      "workout_id": 50,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 85
+    },
+    {
+      "workout_id": 50,
+      "shotLocation": "2PT-8",
+      "shotAttempts": 20,
+      "shotsMade": 19,
+      "id": 86
+    },
+    {
+      "workout_id": 50,
+      "shotLocation": "2PT-7",
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 87
+    },
+    {
+      "workout_id": 51,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 88
+    },
+    {
+      "workout_id": 51,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 89
+    },
+    {
+      "workout_id": 52,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 20,
+      "shotsMade": 3,
+      "id": 90
+    },
+    {
+      "workout_id": 52,
+      "shotLocation": "3PT(NBA)-9",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 91
+    },
+    {
+      "workout_id": 52,
+      "shotLocation": "2PT-7",
+      "shotAttempts": 30,
+      "shotsMade": 29,
+      "id": 92
+    },
+    {
+      "workout_id": 53,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 93
+    },
+    {
+      "workout_id": 54,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 94
+    },
+    {
+      "workout_id": 55,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 95
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 96
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "1FT",
+      "shotAttempts": 20,
+      "shotsMade": 9,
+      "id": 97
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 98
+    },
+    {
+      "workout_id": 56,
+      "shotLocation": "2PT-5",
+      "shotAttempts": 20,
+      "shotsMade": 13,
+      "id": 99
+    },
+    {
+      "workout_id": 57,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 100
+    },
+    {
+      "workout_id": 61,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 2,
+      "id": 101
+    },
+    {
+      "workout_id": 62,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 102
+    },
+    {
+      "workout_id": 63,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 20,
+      "shotsMade": 16,
+      "id": 103
+    },
+    {
+      "workout_id": 63,
+      "shotLocation": "3PT(NBA)-3",
+      "shotAttempts": 30,
+      "shotsMade": 28,
+      "id": 104
+    },
+    {
+      "workout_id": 63,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 105
+    },
+    {
+      "workout_id": 64,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 106
+    },
+    {
+      "workout_id": 65,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 107
+    },
+    {
+      "workout_id": 66,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 5,
+      "shotsMade": 2,
+      "id": 108
+    },
+    {
+      "workout_id": 67,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 109
+    },
+    {
+      "workout_id": 68,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 110
+    },
+    {
+      "workout_id": 69,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 111
+    },
+    {
+      "workout_id": 70,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 15,
+      "shotsMade": 11,
+      "id": 112
+    },
+    {
+      "workout_id": 71,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 113
+    },
+    {
+      "workout_id": 71,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 114
+    },
+    {
+      "workout_id": 71,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 115
+    },
+    {
+      "workout_id": 72,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 116
+    },
+    {
+      "workout_id": 72,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 20,
+      "shotsMade": 12,
+      "id": 117
+    },
+    {
+      "workout_id": 73,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 15,
+      "shotsMade": 4,
+      "id": 118
+    },
+    {
+      "workout_id": 73,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 20,
+      "shotsMade": 8,
+      "id": 119
+    },
+    {
+      "workout_id": 74,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 120
+    },
+    {
+      "workout_id": 75,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 121
+    },
+    {
+      "workout_id": 75,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 20,
+      "shotsMade": 11,
+      "id": 122
+    },
+    {
+      "workout_id": 76,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 123
+    },
+    {
+      "workout_id": 77,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 5,
+      "shotsMade": 4,
+      "id": 124
+    },
+    {
+      "workout_id": 77,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 15,
+      "shotsMade": 12,
+      "id": 125
+    },
+    {
+      "workout_id": 73,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 126
+    },
+    {
+      "workout_id": 73,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 127
+    },
+    {
+      "workout_id": 74,
+      "shotLocation": "3PT(NBA)-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 128
+    },
+    {
+      "workout_id": 75,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 129
+    },
+    {
+      "workout_id": 76,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 130
+    },
+    {
+      "workout_id": 76,
+      "shotLocation": "2PT-2",
+      "shotAttempts": 30,
+      "shotsMade": 27,
+      "id": 131
+    },
+    {
+      "workout_id": 76,
+      "shotLocation": "3PT-3",
+      "shotAttempts": 30,
+      "shotsMade": 3,
+      "id": 132
     }
   ]
 }

@@ -8,6 +8,7 @@ body {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: oblique;
   margin-bottom: 0px;
+  margin-top: 10px;
   padding-bottom: 0px;
 }
 
@@ -70,3 +71,20 @@ body {
   text-align: center;
   margin: auto;
 }
+
+.noTopMargin {
+  margin-top: 0px;
+}
+
+.pageViewContainer {
+  padding: 10px;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.margin_bottom {
+  margin-bottom: 10px;
+}
+

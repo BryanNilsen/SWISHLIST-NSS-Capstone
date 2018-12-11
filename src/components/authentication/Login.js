@@ -21,29 +21,22 @@ export default class Login extends Component {
       alert("No fields should be left blank")
     }
     else {
-      APIManager.getAllEntries("users", `/?email=${this.state.loginEmail}&password=${this.state.loginPassword
-        }`)
+      APIManager.getAllEntries("users", `/?email=${this.state.loginEmail}&password=${this.state.loginPassword}`)
         .then(returns => {
-
+          // if theres no user/password match, throw an alert message
           if (returns.length < 1) {
             alert("That email doesn't exist or your password doesn't match. Please try again")
-          } else if (this.state.remember === "") {
-            sessionStorage.setItem(
-              "userId", returns[0].id
-            )
-            this.setState({
-              currentUser: sessionStorage.getItem("userId")
-            }, console.log("current user1:", this.state.currentUser))
-            // this.props.history.push("/")
 
+            // if the "remember" checkbox is not selected, log in user to session storage only
+          } else if (this.state.remember === "") {
+            sessionStorage.setItem( "userId", returns[0].id )
+            this.props.setCurrentUserState(returns[0].id)
+
+            // if the "remember" checkbox is selected, log in user to both session and local storage
           } else {
-            localStorage.setItem(
-              "userId", returns[0].id
-            )
-            this.setState({
-              currentUser: localStorage.getItem("userId")
-            }, console.log("current user2:", this.state.currentUser))
-            // this.props.history.push("/")
+            localStorage.setItem( "userId", returns[0].id )
+            sessionStorage.setItem( "userId", returns[0].id )
+            this.props.setCurrentUserState( returns[0].id )
           }
         })
     }
@@ -56,6 +49,7 @@ export default class Login extends Component {
     return (
       <React.Fragment>
         <div className={this.props.hideLoginForm ? "hide" : "center basketball_bkg"}>
+        <br/><br/>
           <div className="login_form">
             <h2 className="login_form_title">SIGN IN</h2>
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom'
 import './App.css';
 import Swishlist from './components/Swishlist'
 import Welcome from './components/authentication/Welcome'
@@ -23,6 +22,13 @@ export default class App extends Component {
     return currentUser
   }
 
+  setCurrentUserState = (user) => {
+    this.setState({
+      currentUser: user
+    })
+
+  }
+
 
   isAuthenticated = () => {
     if(this.isLoggedIn()) {
@@ -31,7 +37,7 @@ export default class App extends Component {
       )
     } else {
       return (
-        <Welcome handleFieldChange={this.handleFieldChange}/>
+        <Welcome handleFieldChange={this.handleFieldChange} setCurrentUserState={this.setCurrentUserState}/>
       )
     }
   }

@@ -1,4 +1,67 @@
 .shotlog_table {
   width: 100%;
-  border: 1px solid gray;
+  font-size: .8em;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.shotlog_rowHeader {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.shotlog_hover {
+  opacity: .7;
+}
+
+.shotlog_hover:hover {
+  opacity: 1;
+}
+
+.trc_0 {
+  background: rgb(52, 0, 95);
+}
+
+.trc_1 {
+  background: rgba(11, 0, 167);
+}
+
+.trc_2 {
+  background: rgba(0, 86, 167);
+}
+
+.trc_3 {
+  background: rgba(0, 161, 167);
+}
+
+.trc_4 {
+  background: rgba(0, 167, 70);
+}
+
+.trc_5 {
+  background: rgba(67, 167, 0);
+}
+
+.trc_6 {
+  background: rgba(150, 167, 0);
+}
+
+.trc_7 {
+  background: rgba(167, 128, 0);
+}
+
+.trc_8 {
+  background: rgba(167, 81, 0);
+}
+
+.trc_9 {
+  background: rgba(167, 25, 0);
+}
+
+.trc_10 {
+  background: rgba(167, 0, 0);
 }
