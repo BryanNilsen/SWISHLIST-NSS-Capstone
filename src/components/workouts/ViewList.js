@@ -39,6 +39,7 @@ export default class ViewList extends Component {
   }
 
   deleteWorkout = (id) => APIManager.deleteEntry("workouts", id)
+    .then(this.deleteWorkoutSwishlists(id))
     .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`))
     .then(workouts => this.setState({ workouts: workouts }))
 
@@ -48,13 +49,21 @@ export default class ViewList extends Component {
 
 
 
+  deleteWorkoutSwishlists = (workoutId) => {
+    APIManager.getAllEntries("swishlists", `?workout_id=${workoutId}`)
+      .then((results) =>
+      results.forEach((result) => APIManager.deleteEntry("swishlists", result.id))
+        )
+  }
+
+
+
   constructEditedWorkout = (id) => {
     const editedWorkout = {
       date: this.state.newWorkoutDate,
       gym: this.state.newWorkoutGym,
       notes: this.state.newWorkoutNotes,
     }
-    console.log("edited workout: ", editedWorkout)
     this.editWorkout(id, editedWorkout)
     this.toggleEditForm()
   }
@@ -76,7 +85,7 @@ export default class ViewList extends Component {
                   </div>
                   {/* edit form hidden to start */}
                   <div id={workout.id} className={`${this.state.shownForm === workout.id ? "edit_form" : 'hide'}`}>
-                    <table style={{width: "100%"}}>
+                    <table style={{ width: "100%" }}>
                       <tbody>
                         <tr>
                           <td>

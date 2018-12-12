@@ -48,7 +48,6 @@ export default class ShotMap extends Component {
 
   handleCourtMapClick = (evt) => {
     const shotLocationId = evt.target.id
-    console.log("event:", evt.target.id)
     this.setState({ newShotLocation: shotLocationId })
   }
 
@@ -57,7 +56,6 @@ export default class ShotMap extends Component {
     const stateToChange = {}
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
-    console.log("clicked:", evt.target.value)
   }
 
 
@@ -103,7 +101,6 @@ export default class ShotMap extends Component {
       shotAttempts: Number(this.state.newShotAttempts),
       shotsMade: Number(this.state.newShotsMade),
     }
-    console.log("New Swishlist:", newSwishlist)
     this.createNewSwishlist(newSwishlist)
   }
 

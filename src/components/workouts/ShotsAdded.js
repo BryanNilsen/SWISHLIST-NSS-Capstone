@@ -23,10 +23,6 @@ export default class ShotsAdded extends Component {
               </tr>
               {
                 this.props.swishlists.map((shotlog) => {
-                  {/* const shotsMade = Number(shotlog.shotsMade)
-                  const shotAttempts = Number(shotlog.shotAttempts)
-                  const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
-                  const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}` */}
 
                   return (
 
