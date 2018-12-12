@@ -38,11 +38,15 @@ export default class Profile extends Component {
   loggedWorkoutLevel = (loggedWorkouts) => {
     console.log(loggedWorkouts)
     if(loggedWorkouts < 10) {
-      this.setState({workoutLevel: "rookie"})
+      this.setState({workoutLevel: "ROOKIE"})
     } else if (loggedWorkouts < 20){
-      this.setState({workoutLevel: "sophomore"})
+      this.setState({workoutLevel: "SOPHOMORE"})
+    } else if (loggedWorkouts < 50){
+      this.setState({workoutLevel: "PRO"})
+    } else if (loggedWorkouts < 100){
+      this.setState({workoutLevel: "VETERAN"})
     } else {
-      this.setState({workoutLevel: "pro"})
+      this.setState({workoutLevel: "ALL-STAR"})
     }
   }
 
@@ -55,19 +59,19 @@ export default class Profile extends Component {
           <h2>Player Profile</h2>
           {
             <div className="user_card" key={this.state.userId}>
-              <div className="flex test_border">
+              <div className="flex">
                 <div className="user_image_wrapper">
                   <img src={this.state.photoURL} alt={this.state.firstName} className="user_image"></img>
                 </div>
-                <div className="user_details test_border">
-                  <h2>{this.state.firstName} {this.state.lastName}</h2>
-                  <h2 className="oblique">"{this.state.nickname}"</h2>
+                <div className="user_details">
+                  <h1 className="profile_name_header">{this.state.firstName} {this.state.lastName}</h1>
+                  <p className="oblique">aka: "{this.state.nickname}"</p>
                   <p>Age: {this.state.age}</p>
                   <p>Hometown: {this.state.hometown}</p>
                   <p>Height: {this.state.height_ft}&#39;{this.state.height_in}"</p>
                 </div>
               </div>
-              <p>Total Workouts Logged: {this.state.numberOfWorkouts} - Level: {this.state.workoutLevel}</p>
+              <p>Total Workouts Logged: {this.state.numberOfWorkouts} - Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
             </div>
           }
 

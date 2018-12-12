@@ -110,6 +110,13 @@
       "notes": "testing 10 logs",
       "user_id": 1,
       "id": 31
+    },
+    {
+      "date": "2018-12-13",
+      "gym": "Brentwood YMCA",
+      "notes": "played pickup for a half hour before shooting",
+      "user_id": 1,
+      "id": 32
     }
   ],
   "quotes": [
@@ -687,6 +694,27 @@
       "shotAttempts": 20,
       "shotsMade": 19,
       "id": 66
+    },
+    {
+      "workout_id": 32,
+      "shotLocation": "3PT-3",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 68
+    },
+    {
+      "workout_id": 32,
+      "shotLocation": "3PT(NBA)-2",
+      "shotAttempts": 30,
+      "shotsMade": 19,
+      "id": 69
+    },
+    {
+      "workout_id": 32,
+      "shotLocation": "3PT-5",
+      "shotAttempts": 50,
+      "shotsMade": 49,
+      "id": 70
     }
   ]
 }
