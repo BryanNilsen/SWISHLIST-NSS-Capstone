@@ -24,18 +24,32 @@ export default class ShotMap extends Component {
         this.setState({ shotSpots: shotSpots })
       })
 
-      APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
+    APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
       .then((swishlists) => {
         this.setState({ swishlists: swishlists })
       })
   }
 
 
+  deleteSwishlist = (id) => {
+    this.setState({ swishlistArray: [] })
+    APIManager.deleteEntry("swishlists", id)
+      .then(() => APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`))
+      .then(swishlists => this.setState({ swishlists: swishlists }))
+  }
+
+
+  editSwishlist = (id, editedThing) => {
+    this.setState({ swishlistArray: [] })
+    APIManager.editEntry("swishlists", id, editedThing)
+      .then(() => APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`))
+      .then(swishlists => this.setState({ swishlists: swishlists }))
+  }
+
   handleCourtMapClick = (evt) => {
     const shotLocationId = evt.target.id
     console.log("event:", evt.target.id)
     this.setState({ newShotLocation: shotLocationId })
-
   }
 
 
@@ -49,18 +63,18 @@ export default class ShotMap extends Component {
 
   buildShotAttemptsSelect = () => {
     let shotAttemptsSelect = []
-    for (let i = 0; i <= 100; i+=5) {
-        shotAttemptsSelect.push(<option key={i} value={i}>{i}</option>);
+    for (let i = 0; i <= 100; i += 5) {
+      shotAttemptsSelect.push(<option key={i} value={i}>{i}</option>);
     }
     return shotAttemptsSelect;
   }
 
 
-  buildShotsMadeSelect = () =>{
+  buildShotsMadeSelect = () => {
     const shotsAttempted = this.state.newShotAttempts
     let shotsMadeSelect = []
     for (var i = 0; i <= shotsAttempted; i++) {
-        shotsMadeSelect.push(<option key={i} value={i}>{i}</option>);
+      shotsMadeSelect.push(<option key={i} value={i}>{i}</option>);
     }
     return shotsMadeSelect;
   }
@@ -77,7 +91,7 @@ export default class ShotMap extends Component {
       this.constructNewSwishlist()
       alert("Shot recorded. Enter more or end workout to finish.")
       // clear state for new shots
-      this.setState({newShotLocation: ""})
+      this.setState({ newShotLocation: "" })
     }
   }
 
@@ -97,17 +111,21 @@ export default class ShotMap extends Component {
   createNewSwishlist = newSwishlist => {
     let swishlistArray = this.state.swishlistArray
     return APIManager.addEntry("swishlists", newSwishlist)
-    .then(APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`))
-    .then((swishlists) => {
-      swishlistArray.push(swishlists)
-      this.setState({ swishlists: swishlistArray })
-  })
-}
-
-  finishWorkout = () => {
-    sessionStorage.removeItem('workoutId')
+      .then(APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`))
+      .then((swishlists) => {
+        swishlistArray.push(swishlists)
+        this.setState({
+          swishlists: swishlistArray,
+          newShotAttempts: "",
+          newShotsMade: ""
+         })
+      })
   }
 
+  finishWorkout = () => {
+    this.props.clearWorkoutId();
+    this.props.toggleAddForm()
+  }
 
   render() {
     return (
@@ -119,23 +137,24 @@ export default class ShotMap extends Component {
 
           {/* <!-- begin court text overlay div --> */}
           <div className="court_text">
-            <p className="underline clear_padding">select shot location</p>
+            <p className="underline clear_padding">select shotspot: {this.state.newShotLocation}</p>
+
+
             <p className="clear_padding">shots attempted -
               <select id="newShotAttempts" onChange={this.handleFieldChange}>
                 <option defaultValue="selected">Select</option>
-                { this.buildShotAttemptsSelect() }
+                {this.buildShotAttemptsSelect()}
               </select>
             </p>
             <p className="clear_padding">shots made -
               <select id="newShotsMade" onChange={this.handleFieldChange}>
                 <option defaultValue="selected">Select</option>
-                { this.buildShotsMadeSelect() }
+                {this.buildShotsMadeSelect()}
               </select>
             </p>
             <p className="clear_padding">
               <button type="submit" onClick={this.handleNewSwishlist}>Add Shots</button>
               <button type="submit" onClick={this.finishWorkout}>Finish Workout</button>
-              {/* need to remove workout Id from session storage when finished with workout */}
             </p>
           </div>
           {/* end court text div */}
@@ -157,7 +176,7 @@ export default class ShotMap extends Component {
             }
           </div>
         </div>
-        <ShotsAdded workoutId={this.props.workoutId} swishlists={this.state.swishlists}/>
+        <ShotsAdded workoutId={this.props.workoutId} swishlists={this.state.swishlists} deleteSwishlist={this.deleteSwishlist} editSwishlist={this.editSwishlist}/>
       </div>
     );
   }

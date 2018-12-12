@@ -8,7 +8,7 @@ export default class ViewList extends Component {
   state = {
     currentUserId: this.props.getCurrentUser(),
     workouts: [],
-    isEditable: false
+    shownForm: null,
   }
 
   // This updates state whenever an input field is edited
@@ -18,11 +18,18 @@ export default class ViewList extends Component {
     this.setState(stateToChange)
   }
 
-  toggleEditable = (evt) => {
-    const isEditable = this.state.isEditable
-    this.setState({ isEditable: !isEditable })
-    console.log(this.state.isEditable)
+  toggleEditForm = (id) => {
+    if (this.state.shownForm === null) {
+      this.setState({
+        shownForm: id,
+      });
+    } else {
+      this.setState({
+        shownForm: null,
+      });
+    }
   }
+
 
   componentDidMount() {
     APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`)
@@ -49,50 +56,68 @@ export default class ViewList extends Component {
     }
     console.log("edited workout: ", editedWorkout)
     this.editWorkout(id, editedWorkout)
+    this.toggleEditForm()
   }
 
   render() {
 
     return (
-        <div id="viewlist_container" className="page_container">
-          <h2>View swishlists</h2>
-          {
-            this.state.workouts.map((workout) => {
-              return (
-                <div className="card_container" key={workout.id}>
-                  <div className="workout_card">
-                    {/* begin page content */}
+      <div id="viewlist_container" className="page_container">
+        <h2>View swishlists</h2>
+        {
+          this.state.workouts.map((workout) => {
+            return (
+              <div className="card_container" key={workout.id}>
+                <div className="workout_card">
+                  {/* begin page content */}
+                  <div id={workout.id} className={`${this.state.shownForm === workout.id ? 'hide' : "workout_card"}`}>
                     <h3 className="card_header">{workout.date}: {workout.gym}</h3>
                     <p>{workout.notes}</p>
-                    <button className="btn_edit" onClick={() => this.toggleEditable()}>toggle</button>
+                  </div>
+                  {/* edit form hidden to start */}
+                  <div id={workout.id} className={`${this.state.shownForm === workout.id ? "edit_form" : 'hide'}`}>
+                    <table style={{width: "100%"}}>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <label htmlFor="newWorkoutDate">Date: </label></td>
+                          <td>
+                            <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} className="edit_form_input" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label htmlFor="newWorkoutGym">Gym: </label></td>
+                          <td>
+                            <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} className="edit_form_input" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label htmlFor="newWorkoutNotes">Notes:</label></td>
+                          <td>
+                            <input type="text" id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes} className="edit_form_input" style={{ width: "100%" }} />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Save Edits</button>
+                  </div>
 
-                    {/* edit form hidden to start */}
-                    <div id={workout.id} className="edit_form">
-                      <label htmlFor="newWorkoutDate">Date</label>
-                      <input id="newWorkoutDate" onChange={this.handleFieldChange} type="date" defaultValue={workout.date} className="edit_form_input"/>
-                      <br/>
-                      <label htmlFor="newWorkoutGym">Gym</label>
-                      <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} className="edit_form_input" />
-                      <br />
-                      <textarea id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes} className="edit_form_input" style={{width: "90%"}}></textarea>
-                      <button className="btn_edit" onClick={() => this.constructEditedWorkout(workout.id)}>Save Edits</button>
+                  {/* begin swishlists */}
 
-                    </div>
+                  <Shotlog workoutId={workout.id} />
 
-                    {/* begin swishlists */}
-
-                    <Shotlog workoutId={workout.id} />
-
-                    <div id="workoutEditDelete" className="align_right">
-                      <button className="btn_edit">Edit Workout </button>
-                      <button className="btn_delete" onClick={() => this.deleteWorkout(workout.id)}>Delete Workout</button>
-                    </div>
+                  <div id="workoutEditDelete" className="align_right">
+                    <button className="btn_edit" onClick={() => this.toggleEditForm(workout.id)}>Edit Workout </button>
+                    <button className="btn_delete" onClick={() => this.deleteWorkout(workout.id)}>Delete Workout</button>
                   </div>
                 </div>
-              )
-            })
-          }
-        </div>
+              </div>
+            )
+          })
+        }
+      </div>
     )
   }
 }

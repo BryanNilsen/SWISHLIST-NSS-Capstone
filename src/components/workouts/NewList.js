@@ -3,7 +3,6 @@ import './ShotMap.css'
 import ShotMap from './ShotMap';
 import './Workouts.css';
 import APIManager from '../../modules/APIManager'
-import Shotlog from './Shotlog';
 
 export default class NewList extends Component {
 
@@ -50,6 +49,7 @@ export default class NewList extends Component {
 
   //Handles construction of new workout object, then executes createNewWorkout to add new workout to database
   constructNewWorkout = () => {
+    this.clearWorkoutId()
     const newWorkout = {
       date: this.state.newDate,
       gym: this.state.newGym,
@@ -63,11 +63,15 @@ export default class NewList extends Component {
   //Handles creation of new workout object
   createNewWorkout = newWorkout => {
     return APIManager.addEntry("workouts", newWorkout)
-      .then((response) => this.setState({ workoutId: response.id }))
+      .then((response) => {
+        this.setState({ workoutId: response.id })
+        sessionStorage.setItem( "workoutId", response.id)
+      })
   }
 
-
-
+  clearWorkoutId = () => {
+    sessionStorage.removeItem('workoutId')
+  }
 
   render() {
     return (
@@ -91,12 +95,12 @@ export default class NewList extends Component {
                 Notes
               <textarea type="text" onChange={this.handleFieldChange} id="newNotes" />
               </div>
-              <button type="submit" className="btn_edit" onClick={() => { this.handleNewWorkout() }}>Start Workout</button>
+              <button type="submit" className={this.state.hideAddForm ? "hide" : "btn_edit"} onClick={() => { this.handleNewWorkout() }}>Start Workout</button>
             </div>
             {/* end contents */}
             <div id="shotmap_div" className={this.state.hideAddForm ? null : 'hide'}>
               <hr></hr>
-              <ShotMap workoutId={this.state.workoutId} />
+              <ShotMap workoutId={this.state.workoutId} clearWorkoutId={this.clearWorkoutId} toggleAddForm={this.toggleAddForm} />
             </div>
           </div>
         </div>
