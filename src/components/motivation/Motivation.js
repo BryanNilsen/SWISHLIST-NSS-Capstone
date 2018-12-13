@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import APIManager from '../../modules/APIManager'
+import './Motivation.css'
 
 export default class Motivation extends Component {
 
@@ -26,22 +27,19 @@ export default class Motivation extends Component {
   }
 
 
-  // generateRandomNumber = (number) => Math.floor((Math.random() * number) + 1)
-
   render() {
     if (this.state.initialized === true) {
-      console.log("quotes:", this.state.quotes)
       let randomQuote = this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
 
       return (
           <div className="basketball_bkg">
             <div id="motivation_container" className="page_container">
               {/* begin contents */}
-              <h2>Motivation</h2>
+              <h2>&nbsp;</h2>
               <section id="quote_card">
                 <div className="quote_card" key={randomQuote.id}>
-                  <h2 className="oblique">{randomQuote.quote}</h2>
-                  <p>{randomQuote.author}</p>
+                  <h2 className="oblique">"{randomQuote.quote}"</h2>
+                  <p>- {randomQuote.author}</p>
                 </div>
               </section>
             </div>

@@ -19,6 +19,7 @@
 .user_image {
   width: 100%;
   border: 2px solid whitesmoke;
+  border-radius: 10px 0px 0px 0px;
 }
 
 .user_details {

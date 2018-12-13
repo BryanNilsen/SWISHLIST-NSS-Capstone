@@ -1,0 +1,23 @@
+.quote_card {
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 25px;
+    color: rgb(255, 123, 0);
+    border: 1px solid rgb(255, 123, 0, .5);
+    border-radius: 10px;
+    text-align: left;
+    width: 330px;
+    margin-bottom: 40px;
+    transition: all .2s ease-in-out;
+
+
+}
+
+.quote_card:hover{
+  background-color: rgba(0, 0, 0, 1);
+  border: 1px solid rgb(255, 123, 0, 1);
+}

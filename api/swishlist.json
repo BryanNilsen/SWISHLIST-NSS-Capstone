@@ -92,9 +92,23 @@
     {
       "date": "2018-12-14",
       "gym": "WFHS",
-      "notes": "drank beer and ate tacos",
+      "notes": "drank coronas and ate tacos ",
       "user_id": 4,
       "id": 6
+    },
+    {
+      "date": "2018-12-13",
+      "gym": "Franklin Rec Center",
+      "notes": "Austin made oatmeal and I ate too much.",
+      "user_id": 4,
+      "id": 8
+    },
+    {
+      "date": "2018-12-13",
+      "gym": "Brentwood YMCA",
+      "notes": "skipped rope 10 min",
+      "user_id": 4,
+      "id": 9
     }
   ],
   "quotes": [
@@ -548,6 +562,38 @@
       "shotAttempts": 5,
       "shotsMade": 1,
       "id": 16
+    },
+    {
+      "workout_id": 8,
+      "user_id": 4,
+      "shotLocation": "1FT",
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 17
+    },
+    {
+      "workout_id": 8,
+      "user_id": 4,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 18
+    },
+    {
+      "workout_id": 9,
+      "user_id": 4,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 19
+    },
+    {
+      "workout_id": 9,
+      "user_id": 4,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 5,
+      "shotsMade": 3,
+      "id": 20
     }
   ]
 }

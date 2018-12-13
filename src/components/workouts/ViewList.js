@@ -95,7 +95,7 @@ export default class ViewList extends Component {
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <td style={{ width: "50px" }}>
                             <label htmlFor="newWorkoutGym">Gym: </label></td>
                           <td>
                             <input id="newWorkoutGym" onChange={this.handleFieldChange} type="text" defaultValue={workout.gym} className="edit_form_input" />
@@ -105,7 +105,7 @@ export default class ViewList extends Component {
                           <td>
                             <label htmlFor="newWorkoutNotes">Notes:</label></td>
                           <td>
-                            <input type="text" id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes} className="edit_form_input" style={{ width: "100%" }} />
+                            <input type="text" id="newWorkoutNotes" onChange={this.handleFieldChange} defaultValue={workout.notes} className="edit_form_input" style={{ width: "90%" }} />
                           </td>
                         </tr>
                       </tbody>

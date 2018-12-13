@@ -80,21 +80,26 @@ export default class NewList extends Component {
           {/* begin contents */}
           <h2>New Swishlist 'info icon'</h2>
           <div className="workout_card">
+
             <p>Select date, gym, and enter any notes relevant to your workout</p>
             <p>Click "Start swishlist" to begin</p>
             <div id="newlist_form" className="margin_bottom">
-              <div id="new_date">
-                Date
-              <input type="date" onChange={this.handleFieldChange} id="newDate"></input>
-              </div>
-              <div id="new_gym">
-                Gym
-              <input type="text" onChange={this.handleFieldChange} id="newGym"></input>
-              </div>
-              <div id="new_notes">
-                Notes
-              <textarea type="text" onChange={this.handleFieldChange} id="newNotes" />
-              </div>
+            <table style={{ width: "100%" }}>
+              <tbody>
+                <tr>
+                  <td style={{ width: "50px" }}>Date</td>
+                  <td><input type="date" onChange={this.handleFieldChange} id="newDate" className="edit_form_input"></input></td>
+                </tr>
+                <tr>
+                  <td>Gym</td>
+                  <td><input type="text" onChange={this.handleFieldChange} id="newGym" className="edit_form_input"></input></td>
+                </tr>
+                <tr>
+                  <td>Notes</td>
+                  <td><input type="text" onChange={this.handleFieldChange} id="newNotes" className="edit_form_input" style={{ width: "80%" }}/></td>
+                </tr>
+              </tbody>
+            </table>
               <button type="submit" className={this.state.hideAddForm ? "hide" : "btn_edit"} onClick={() => { this.handleNewWorkout() }}>Start Workout</button>
             </div>
             {/* end contents */}
