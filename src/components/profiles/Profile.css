@@ -41,6 +41,13 @@
   font-size: .8em;
 }
 
+.total_card_container {
+  display: flex;
+}
+
+.total_card {
+  border: 1px solid orange;
+}
 
 /* USER LOGS >> LEVEL UPS */
 

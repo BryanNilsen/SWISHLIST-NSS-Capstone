@@ -12,10 +12,11 @@ export default class TotalGenerator extends Component {
     APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
       .then((swishlists) => {
         swishlists.map((shots) => {
-          console.log("shot attempts per swishlist:", shots.shotAttempts)
-          console.log("shots made per swishlist:", shots.shotsMade)
+          // console.log("shot attempts per swishlist:", shots.shotAttempts)
+          // console.log("shots made per swishlist:", shots.shotsMade)
           this.state.shotAttempts.push(shots.shotAttempts)
           this.state.shotsMade.push(shots.shotsMade)
+          return shots
         }
         )
       })

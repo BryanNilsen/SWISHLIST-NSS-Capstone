@@ -97,6 +97,7 @@ export default class ShotMap extends Component {
   constructNewSwishlist = () => {
     const newSwishlist = {
       workout_id: this.props.workoutId,
+      user_id: this.props.userId,
       shotLocation: this.state.newShotLocation,
       shotAttempts: Number(this.state.newShotAttempts),
       shotsMade: Number(this.state.newShotsMade),

@@ -6,83 +6,141 @@ export default class Profile extends Component {
 
   state = {
     currentUserId: this.props.getCurrentUser(),
-    workoutLevel: ""
+    workoutLevel: "",
+    totalShotAttemptsArray: [],
+    totalShotsMadeArray: [],
+    initialized: false,
   }
 
 
   componentDidMount() {
-    APIManager.getEntry("users", this.state.currentUserId)
-      .then((user) => {
-        this.setState({
-          userId: user.id,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          nickname: user.nickname,
-          photoURL: user.photoURL,
-          age: user.age,
-          hometown: user.hometown,
-          height_ft: user.height_ft,
-          height_in: user.height_in,
-        })
-      })
+    let array = [
+      APIManager.getEntry("users", this.state.currentUserId)
+        .then((user) => {
+          this.setState({
+            userId: user.id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            nickname: user.nickname,
+            photoURL: user.photoURL,
+            age: user.age,
+            hometown: user.hometown,
+            height_ft: user.height_ft,
+            height_in: user.height_in,
+          })
+        }),
 
-    APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`)
-      .then((workouts) => {
-        this.setState({
-          allWorkouts: workouts,
-          numberOfWorkouts: Number(workouts.length)
-        });
-        this.loggedWorkoutLevel(Number(workouts.length))
-        workouts.forEach((workout) => console.log("workout id:", workout.id))
-      })
+      APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`)
+        .then((workouts) => {
+          this.setState({
+            allWorkouts: workouts,
+            numberOfWorkouts: Number(workouts.length)
+          });
+          this.loggedWorkoutLevel(Number(workouts.length))
+        }),
+
+      APIManager.getAllEntries("swishlists", `?user_id=${this.state.currentUserId}`)
+        .then((swishlists) => {
+          this.setState({
+            allSwishlists: swishlists,
+            numberOfSwishlists: Number(swishlists.length)
+          })
+          swishlists.map((shots) => {
+            this.state.totalShotAttemptsArray.push(shots.shotAttempts)
+            this.state.totalShotsMadeArray.push(shots.shotsMade)
+            return shots
+          })
+
+        })
+    ]
+
+    return Promise.all(array)
+      .then(() => this.setState({
+        initialized: true,
+      }))
+
+
 
   }
 
+  calculateTotalShotsAttempted = () => {
+    const totalShotsAttempted = this.state.totalShotAttemptsArray.reduce((total, amount) => { return total + amount }, 0)
+    // const totalShotsMade = this.state.totalShotsMadeArray.reduce((total, amount) => { return total + amount}, 0)
+    // const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1))
+
+    this.setState({
+      totalShotsAttempted: totalShotsAttempted,
+      // totalShotsMade: totalShotsMade,
+      // totalPercentage: totalPercentage
+    })
+  }
 
 
   loggedWorkoutLevel = (loggedWorkouts) => {
     console.log(loggedWorkouts)
-    if(loggedWorkouts < 10) {
-      this.setState({workoutLevel: "ROOKIE"})
-    } else if (loggedWorkouts < 20){
-      this.setState({workoutLevel: "SOPHOMORE"})
-    } else if (loggedWorkouts < 50){
-      this.setState({workoutLevel: "PRO"})
-    } else if (loggedWorkouts < 100){
-      this.setState({workoutLevel: "VETERAN"})
+    if (loggedWorkouts < 10) {
+      this.setState({ workoutLevel: "ROOKIE" })
+    } else if (loggedWorkouts < 20) {
+      this.setState({ workoutLevel: "SOPHOMORE" })
+    } else if (loggedWorkouts < 50) {
+      this.setState({ workoutLevel: "PRO" })
+    } else if (loggedWorkouts < 100) {
+      this.setState({ workoutLevel: "VETERAN" })
     } else {
-      this.setState({workoutLevel: "ALL-STAR"})
+      this.setState({ workoutLevel: "ALL-STAR" })
     }
   }
 
 
   render() {
-    console.log("allworkouts: ", this.state.allWorkouts)
-    return (
-      <React.Fragment>
-        <div id="profile_container" className="page_container">
-          {/* begin contents */}
-          <h2>Player Profile</h2>
-          {
-            <div className="user_card" key={this.state.userId}>
-              <div className="flex">
-                <div className="user_image_wrapper">
-                  <img src={this.state.photoURL} alt={this.state.firstName} className="user_image"></img>
+
+    if (this.state.initialized === true) {
+
+      console.log("allworkouts: ", this.state.allWorkouts)
+      console.log("allswishlists: ", this.state.allSwishlists)
+
+      const totalShotsAttempted = this.state.totalShotAttemptsArray.reduce((total, amount) => { return total + amount }, 0)
+      const totalShotsMade = this.state.totalShotsMadeArray.reduce((total, amount) => { return total + amount }, 0)
+      const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1))
+
+      return (
+        <React.Fragment>
+          <div id="profile_container" className="page_container">
+            {/* begin contents */}
+            <h2>Player Profile</h2>
+            {
+              <div className="user_card" key={this.state.userId}>
+                <div className="flex">
+                  <div className="user_image_wrapper">
+                    <img src={this.state.photoURL} alt={this.state.firstName} className="user_image"></img>
+                  </div>
+                  <div className="user_details">
+                    <h1 className="profile_name_header">{this.state.firstName} {this.state.lastName}</h1>
+                    <p className="oblique">aka: "{this.state.nickname}"</p>
+                    <p>Age: {this.state.age}</p>
+                    <p>Hometown: {this.state.hometown}</p>
+                    <p>Height: {this.state.height_ft}&#39;{this.state.height_in}"</p>
+                  </div>
                 </div>
-                <div className="user_details">
-                  <h1 className="profile_name_header">{this.state.firstName} {this.state.lastName}</h1>
-                  <p className="oblique">aka: "{this.state.nickname}"</p>
-                  <p>Age: {this.state.age}</p>
-                  <p>Hometown: {this.state.hometown}</p>
-                  <p>Height: {this.state.height_ft}&#39;{this.state.height_in}"</p>
+
+                  <p>Total Workouts Logged: {this.state.numberOfWorkouts} - Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
+
+                  <div className="total_card_container">
+                  <p>Total Shots Attempted: {totalShotsAttempted}</p>
+                  <p>Total Shots Made: {totalShotsMade}</p>
+                  <p>Total Shot Percentage: {totalPercentage}</p>
                 </div>
               </div>
-              <p>Total Workouts Logged: {this.state.numberOfWorkouts} - Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
-            </div>
-          }
+            }
 
-        </div>
-      </React.Fragment>
-    )
+          </div>
+        </React.Fragment>
+      )
+    } else {
+      return (
+        <div><p>calculating</p></div>
+      )
+    }
   }
+
 }

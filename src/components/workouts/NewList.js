@@ -100,7 +100,7 @@ export default class NewList extends Component {
             {/* end contents */}
             <div id="shotmap_div" className={this.state.hideAddForm ? null : 'hide'}>
               <hr></hr>
-              <ShotMap workoutId={this.state.workoutId} clearWorkoutId={this.clearWorkoutId} toggleAddForm={this.toggleAddForm} />
+              <ShotMap userId={this.state.currentUserId} workoutId={this.state.workoutId} clearWorkoutId={this.clearWorkoutId} toggleAddForm={this.toggleAddForm} />
             </div>
           </div>
         </div>
