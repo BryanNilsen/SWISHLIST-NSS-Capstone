@@ -5,10 +5,12 @@ export default class TotalGenerator extends Component {
 
   state = {
     shotAttempts: [],
-    shotsMade: []
+    shotsMade: [],
+    initialized: false
   }
 
   componentDidMount() {
+    let array = [
     APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
       .then((swishlists) => {
         swishlists.map((shots) => {
@@ -20,6 +22,12 @@ export default class TotalGenerator extends Component {
         }
         )
       })
+    ]
+
+    return Promise.all(array)
+      .then(() => this.setState({
+        initialized: true,
+      }))
 
   }
 
@@ -30,10 +38,11 @@ export default class TotalGenerator extends Component {
 
 
 render() {
+  if (this.state.initialized === true) {
 
   const totalShotsAttempted = this.state.shotAttempts.reduce((total, amount) => { return total + amount}, 0)
   const totalShotsMade = this.state.shotsMade.reduce((total, amount) => { return total + amount}, 0)
-  const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1))
+  const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1)) || 0
 
 
   return (
@@ -45,7 +54,16 @@ render() {
       <td width="20%" style={{ textAlign: "center" }}>{totalPercentage}</td>
     </tr>
   )
-
+  } else {
+    return (
+      <tr className="shotlog_totals" >
+      <td width="40%">Totals</td>
+      <td width="20%" style={{ textAlign: "center" }}>calculating</td>
+      <td width="20%" style={{ textAlign: "center" }}>calculating</td>
+      <td width="20%" style={{ textAlign: "center" }}>calculating</td>
+    </tr>
+    )
+  }
 
 }
 

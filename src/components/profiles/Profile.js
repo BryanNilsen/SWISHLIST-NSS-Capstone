@@ -58,9 +58,6 @@ export default class Profile extends Component {
       .then(() => this.setState({
         initialized: true,
       }))
-
-
-
   }
 
   calculateTotalShotsAttempted = () => {
@@ -101,7 +98,7 @@ export default class Profile extends Component {
 
       const totalShotsAttempted = this.state.totalShotAttemptsArray.reduce((total, amount) => { return total + amount }, 0)
       const totalShotsMade = this.state.totalShotsMadeArray.reduce((total, amount) => { return total + amount }, 0)
-      const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1))
+      const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1)) || 0
 
       return (
         <React.Fragment>
@@ -123,12 +120,21 @@ export default class Profile extends Component {
                   </div>
                 </div>
 
-                  <p>Total Workouts Logged: {this.state.numberOfWorkouts} - Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
-
-                  <div className="total_card_container">
-                  <p>Total Shots Attempted: {totalShotsAttempted}</p>
-                  <p>Total Shots Made: {totalShotsMade}</p>
-                  <p>Total Shot Percentage: {totalPercentage}</p>
+                <p>Total Workouts Logged: {this.state.numberOfWorkouts} - Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
+                <h3>Shooting Totals</h3>
+                <div className="total_card_container">
+                  <div className="total_card">
+                    <h1 className="total_card_digits">{totalShotsAttempted}</h1>
+                    <p className="total_card_text">Shot<br/>Attempts</p>
+                  </div>
+                  <div className="total_card">
+                    <h1 className="total_card_digits">{totalShotsMade}</h1>
+                    <p className="total_card_text">Shots<br/>Made</p>
+                  </div>
+                  <div className="total_card">
+                    <h1 className="total_card_digits">{totalPercentage}%</h1>
+                    <p className="total_card_text">Shooting<br/>Percentage</p>
+                  </div>
                 </div>
               </div>
             }

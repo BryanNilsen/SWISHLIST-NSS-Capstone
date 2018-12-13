@@ -38,6 +38,19 @@
       "photoURL": "https://sineilleifer.files.wordpress.com/2013/01/1066.jpg?w=960",
       "password": "mike",
       "id": 3
+    },
+    {
+      "firstName": "Jackie",
+      "lastName": "Moon",
+      "email": "jackie@jackie.com",
+      "nickname": "Love Me Sexy",
+      "hometown": "Flint, MI",
+      "age": "43",
+      "height_ft": "6",
+      "height_in": "5",
+      "photoURL": "/images/jackie-moon.jpg",
+      "password": "jackie",
+      "id": 4
     }
   ],
   "workouts": [
@@ -75,6 +88,13 @@
       "notes": "aaaa",
       "user_id": 1,
       "id": 5
+    },
+    {
+      "date": "2018-12-14",
+      "gym": "WFHS",
+      "notes": "drank beer and ate tacos",
+      "user_id": 4,
+      "id": 6
     }
   ],
   "quotes": [
@@ -520,6 +540,14 @@
       "shotAttempts": 20,
       "shotsMade": 19,
       "id": 15
+    },
+    {
+      "workout_id": 6,
+      "user_id": 4,
+      "shotLocation": "2PT-1",
+      "shotAttempts": 5,
+      "shotsMade": 1,
+      "id": 16
     }
   ]
 }

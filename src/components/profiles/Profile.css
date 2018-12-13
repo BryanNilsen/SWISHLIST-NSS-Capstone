@@ -43,10 +43,29 @@
 
 .total_card_container {
   display: flex;
+  justify-content: space-between;
 }
 
 .total_card {
-  border: 1px solid orange;
+  padding: 0px 10px;
+  margin: 0px 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  background: rgb(255, 123, 0, 1);
+  color: black;
+  width: 33%
+}
+
+.total_card_digits {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 5px;
+}
+
+.total_card_text {
+  margin: 5px;
+  font-size: .8em
 }
 
 /* USER LOGS >> LEVEL UPS */
