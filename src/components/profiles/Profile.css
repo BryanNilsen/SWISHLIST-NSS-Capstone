@@ -40,10 +40,13 @@
   border-radius: 5px; */
   font-size: .8em;
 }
+
+
+/* USER LOGS >> LEVEL UPS */
+
 .ROOKIE {
   animation: rookieglow .8s infinite alternate;
 }
-
 @keyframes rookieglow {
   to {
       text-shadow: 0 0 10px rgb(0, 238, 255);
@@ -53,23 +56,37 @@
 .SOPHOMORE {
   animation: sophomoreglow .8s infinite alternate;
 }
-
 @keyframes sophomoreglow {
   to {
-      text-shadow: 0 0 10px rgb(251, 255, 38);
+      text-shadow: 0 0 10px rgb(0, 238, 255);
   }
 }
 
 .PRO {
-  /* background: gold; */
+  animation: proglow .8s infinite alternate;
+}
+@keyframes proglow {
+  to {
+    text-shadow: 0 0 10px rgb(118, 255, 38);
+  }
 }
 
+
 .VETERAN {
-  /* background: gold; */
+  animation: veteranglow .8s infinite alternate;
+}
+@keyframes veteranglow {
+  to {
+    text-shadow: 0 0 10px rgb(255, 155, 24);
+  }
 }
 
 .ALL-STAR {
-  /* background: gold; */
+  animation: allstarglow .8s infinite alternate;
 }
-
+@keyframes allstarglow {
+  to {
+    text-shadow: 0 0 10px rgb(255, 155, 24);
+  }
+}
 

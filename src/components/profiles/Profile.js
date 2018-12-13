@@ -29,11 +29,16 @@ export default class Profile extends Component {
     APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`)
       .then((workouts) => {
         this.setState({
+          allWorkouts: workouts,
           numberOfWorkouts: Number(workouts.length)
         });
         this.loggedWorkoutLevel(Number(workouts.length))
+        workouts.forEach((workout) => console.log("workout id:", workout.id))
       })
+
   }
+
+
 
   loggedWorkoutLevel = (loggedWorkouts) => {
     console.log(loggedWorkouts)
@@ -52,6 +57,7 @@ export default class Profile extends Component {
 
 
   render() {
+    console.log("allworkouts: ", this.state.allWorkouts)
     return (
       <React.Fragment>
         <div id="profile_container" className="page_container">
