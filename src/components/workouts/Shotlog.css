@@ -16,6 +16,10 @@
 
 .shotlog_hover {
   opacity: .7;
+  text-shadow: 		-1px -1px 0 rgb(43, 43, 43),
+  1px -1px 0 rgb(43, 43, 43),
+  -1px 1px 0 rgb(43, 43, 43),
+  1px 1px 0 rgb(43, 43, 43);
 }
 
 .shotlog_hover:hover {
@@ -51,11 +55,11 @@
 }
 
 .trc_7 {
-  background: rgba(167, 128, 0);
+  background: rgb(250, 219, 44);
 }
 
 .trc_8 {
-  background: rgba(167, 81, 0);
+  background: rgb(231, 117, 10);
 }
 
 .trc_9 {

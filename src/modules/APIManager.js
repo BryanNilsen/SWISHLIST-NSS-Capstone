@@ -14,7 +14,6 @@ const APIManager = {
   },
 
   deleteEntry(resource, id){
-    console.log("delete string:", `${remoteURL}/${resource}/${id}`)
     return fetch(`${remoteURL}/${resource}/${id}`, {method: "DELETE"})
     .then(data => data.json())
   },

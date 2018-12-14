@@ -60,21 +60,10 @@ export default class Profile extends Component {
       }))
   }
 
-  calculateTotalShotsAttempted = () => {
-    const totalShotsAttempted = this.state.totalShotAttemptsArray.reduce((total, amount) => { return total + amount }, 0)
-    // const totalShotsMade = this.state.totalShotsMadeArray.reduce((total, amount) => { return total + amount}, 0)
-    // const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1))
-
-    this.setState({
-      totalShotsAttempted: totalShotsAttempted,
-      // totalShotsMade: totalShotsMade,
-      // totalPercentage: totalPercentage
-    })
-  }
 
 
   loggedWorkoutLevel = (loggedWorkouts) => {
-    console.log(loggedWorkouts)
+    // console.log(loggedWorkouts)
     if (loggedWorkouts < 10) {
       this.setState({ workoutLevel: "ROOKIE" })
     } else if (loggedWorkouts < 20) {
@@ -93,8 +82,6 @@ export default class Profile extends Component {
 
     if (this.state.initialized === true) {
 
-      console.log("allworkouts: ", this.state.allWorkouts)
-      console.log("allswishlists: ", this.state.allSwishlists)
 
       const totalShotsAttempted = this.state.totalShotAttemptsArray.reduce((total, amount) => { return total + amount }, 0)
       const totalShotsMade = this.state.totalShotsMadeArray.reduce((total, amount) => { return total + amount }, 0)

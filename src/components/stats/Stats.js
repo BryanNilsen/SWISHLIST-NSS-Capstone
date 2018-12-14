@@ -18,7 +18,6 @@ export default class Stats extends Component {
 
   render() {
     return (
-      <React.Fragment>
         <div id="stats_container" className="page_container">
           {/* begin contents */}
           <h2>Stats</h2>
@@ -29,7 +28,6 @@ export default class Stats extends Component {
           }
 
         </div>
-      </React.Fragment>
     )
   }
 }

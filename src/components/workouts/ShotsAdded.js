@@ -7,7 +7,6 @@ export default class ShotsAdded extends Component {
 
 
   render() {
-    console.log("swishlists from ShotsAdded:", this.props.swishlists)
 
     return (
       <div className="shotlog_container">

@@ -126,7 +126,6 @@ export default class ShotMap extends Component {
   }
 
   render() {
-    console.log("newShotAttempts:", this.state.newShotAttempts)
     return (
       <div className="main_wrapper">
         <div className="court_wrapper">
