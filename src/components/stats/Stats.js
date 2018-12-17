@@ -5,20 +5,23 @@ import './Stats.css'
 export default class Stats extends Component {
 
   state = {
-    shotlogs: []
+    shotlogs: [],
+    users: []
   }
 
 
   componentDidMount() {
 
-    APIManager.getAllEntries("swishlists", `?_sort=user_id&_order=desc`)
-      .then((shotlogs) => {
-        this.setState({ shotlogs: shotlogs })
-      })
+    const stateToChange = {}
 
-      APIManager.getAllEntries("users")
+    APIManager.getAllEntries("swishlists")
+      .then(shotlogs => {
+        stateToChange.shotlogs = shotlogs
+        return APIManager.getAllEntries("users")
+      })
       .then((users) => {
-        this.setState({ users: users })
+        stateToChange.users = users
+        this.setState(stateToChange)
       })
 
   }
@@ -38,8 +41,12 @@ export default class Stats extends Component {
               const shotAttempts = Number(shotlog.shotAttempts)
               const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
               const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
+
+              let userFirstName = this.state.users.find(user => userId === user.id).firstName
+              let userLastName = this.state.users.find(user => userId === user.id).lastName
+              let userDisplayName = `${userFirstName.charAt(0)}${userLastName}`
               return (
-                <p key={shotlog.id}>User: {userId} / Shot Location: {shotLocation} / Att: {shotAttempts} / Made: {shotsMade} / Percent: {shootingPercentage}</p>
+                <p key={shotlog.id}>User: {userDisplayName} / Shot Location: {shotLocation} / Att: {shotAttempts} / Made: {shotsMade} / Percent: {shootingPercentage}</p>
               )
             })
           }

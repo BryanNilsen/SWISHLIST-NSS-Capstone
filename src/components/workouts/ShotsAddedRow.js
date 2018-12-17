@@ -9,6 +9,7 @@ export default class ShotsAddedRow extends Component {
     shotsMadeEdit: false,
   }
 
+
   handleAttemptsEditState = () => {
     this.setState({
       shotAttemptsEdit: true
@@ -62,10 +63,12 @@ export default class ShotsAddedRow extends Component {
     const shotAttempts = Number(shotlog.shotAttempts)
     const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
     const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
+    const locationName = this.props.locationName
 
     return (
       <tr key={shotlog.id} className={`shotlog_hover ${tableRowColor}`}>
-        <td style={{ textAlign: "left", padding: "0px 8px", fontWeight: "bold" }}>{shotlog.shotLocation}</td>
+        {/* <td style={{ textAlign: "left", padding: "0px 8px", fontWeight: "bold" }}>{shotlog.shotLocation}</td> */}
+        <td style={{ textAlign: "left", padding: "0px 8px", fontWeight: "bold" }}>{locationName}</td>
         <td style={{ textAlign: "center" }} onClick={this.handleAttemptsEditState}>
           {
             this.state.shotAttemptsEdit
