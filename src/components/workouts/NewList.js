@@ -78,7 +78,7 @@ export default class NewList extends Component {
       <React.Fragment>
         <div id="newlist_container" className="page_container">
           {/* begin contents */}
-          <h2>New Swishlist 'info icon'</h2>
+          <h2>New Swishlist</h2>
           <div className="workout_card">
 
             <p>Select date, gym, and enter any notes relevant to your workout</p>

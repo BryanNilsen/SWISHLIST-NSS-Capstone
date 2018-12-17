@@ -33,9 +33,9 @@ export default class Navbar extends Component {
             <li>
               <Link className="nav_item" to="/viewlists">VIEW LISTS</Link>
             </li>
-            {/* <li>
+            <li>
               <Link className="nav_item" to="/stats">STATS</Link>
-            </li> */}
+            </li>
             <li>
               <Link className="nav_item" to="/profile">PROFILE</Link>
             </li>

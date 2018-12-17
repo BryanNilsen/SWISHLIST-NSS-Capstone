@@ -97,7 +97,7 @@
     {
       "date": "2018-12-14",
       "gym": "WFHS",
-      "notes": "here we go!!",
+      "notes": "something else",
       "user_id": 1,
       "id": 3
     },
@@ -254,6 +254,34 @@
       "notes": "jumprope 20 min",
       "user_id": 1,
       "id": 26
+    },
+    {
+      "date": "2018-12-14",
+      "gym": "Franklin Rec Center",
+      "notes": "lifted weights played pickup after",
+      "user_id": 1,
+      "id": 27
+    },
+    {
+      "date": "2018-12-14",
+      "gym": "Franklin Rec Center",
+      "notes": "lifted weights before workout",
+      "user_id": 1,
+      "id": 29
+    },
+    {
+      "date": "2018-12-13",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 1,
+      "id": 30
+    },
+    {
+      "date": "2018-12-14",
+      "gym": "Academy Park",
+      "notes": "no warmup",
+      "user_id": 1,
+      "id": 31
     }
   ],
   "quotes": [
@@ -1251,6 +1279,70 @@
       "shotAttempts": 5,
       "shotsMade": 2,
       "id": 84
+    },
+    {
+      "workout_id": 27,
+      "user_id": 1,
+      "shotLocation": "1FT",
+      "shotAttempts": 50,
+      "shotsMade": 18,
+      "id": 85
+    },
+    {
+      "workout_id": 27,
+      "user_id": 1,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 86
+    },
+    {
+      "workout_id": 29,
+      "user_id": 1,
+      "shotLocation": "1FT",
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 87
+    },
+    {
+      "workout_id": 29,
+      "user_id": 1,
+      "shotLocation": "3PT-1",
+      "shotAttempts": 5,
+      "shotsMade": 5,
+      "id": 88
+    },
+    {
+      "workout_id": 29,
+      "user_id": 1,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 20,
+      "shotsMade": 1,
+      "id": 89
+    },
+    {
+      "workout_id": 30,
+      "user_id": 1,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 90
+    },
+    {
+      "workout_id": 31,
+      "user_id": 1,
+      "shotLocation": "3PT(NBA)-10",
+      "shotAttempts": 15,
+      "shotsMade": 9,
+      "id": 91
+    },
+    {
+      "workout_id": 31,
+      "user_id": 1,
+      "shotLocation": "3PT(NBA)-8",
+      "shotAttempts": 25,
+      "shotsMade": 16,
+      "id": 92
     }
   ]
 }
