@@ -1,13 +1,22 @@
 import React, { Component } from "react"
 import "./Shotlog.css"
 import ShotsAddedRow from './ShotsAddedRow'
+import APIManager from '../../modules/APIManager'
 
 export default class ShotsAdded extends Component {
 
+  state = {
+    shotspots: []
+  }
 
+
+  componentDidMount() {
+
+    APIManager.getAllEntries("shotSpots")
+      .then(shotspots => this.setState({ shotspots : shotspots }))
+  }
 
   render() {
-    console.log("swishlists from ShotsAdded:", this.props.swishlists)
 
     return (
       <div className="shotlog_container">
@@ -23,14 +32,10 @@ export default class ShotsAdded extends Component {
               </tr>
               {
                 this.props.swishlists.map((shotlog) => {
-                  {/* const shotsMade = Number(shotlog.shotsMade)
-                  const shotAttempts = Number(shotlog.shotAttempts)
-                  const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
-                  const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}` */}
-
+                  let locationName = this.state.shotspots.find(shotspot => shotlog.shotLocation === shotspot.id).name
                   return (
 
-                    <ShotsAddedRow shotlog={shotlog} deleteSwishlist={this.props.deleteSwishlist} editSwishlist={this.props.editSwishlist} key={shotlog.id}/>
+                    <ShotsAddedRow locationName={locationName} shotlog={shotlog} deleteSwishlist={this.props.deleteSwishlist} editSwishlist={this.props.editSwishlist} key={shotlog.id} />
 
                   )
                 })

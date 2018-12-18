@@ -4,6 +4,7 @@ import NewList from './workouts/NewList'
 import ViewList from './workouts/ViewList'
 import Motivation from './motivation/Motivation'
 import Profile from './profiles/Profile'
+import Stats from './stats/Stats'
 
 
 export default class ApplicationViews extends Component {
@@ -25,11 +26,16 @@ export default class ApplicationViews extends Component {
         }} />
         <Route path="/viewlists" render={props => {
           return (
-            <ViewList getCurrentUser={this.getCurrentUser} {...props}/>)
+            <ViewList getCurrentUser={this.getCurrentUser} {...props} />)
         }} />
         <Route path="/profile" render={props => {
           return (
             <Profile getCurrentUser={this.getCurrentUser} {...props} />)
+        }} />
+
+        <Route path="/stats" render={props => {
+          return (
+            <Stats getCurrentUser={this.getCurrentUser} {...props} />)
         }} />
         <Route path="/motivation" render={props => {
           return (

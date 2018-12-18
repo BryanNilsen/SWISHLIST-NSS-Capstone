@@ -4,7 +4,7 @@
   margin: auto;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 25px;
-	color: rgb(255, 123, 0);
+  color: rgb(255, 123, 0);
   border: 1px solid rgb(255, 123, 0, .5);
   border-radius: 10px;
   text-align: left;
@@ -13,7 +13,7 @@
   transition: all .2s ease-in-out;
 }
 
-.login_form:hover{
+.login_form:hover {
   background-color: rgba(0, 0, 0, 1);
   border: 1px solid rgb(255, 123, 0, 1);
 }
@@ -31,6 +31,7 @@
   border: 1px solid rgb(255, 123, 0, .5);
   background: rgb(3, 3, 3);
   border-radius: 10px;
+  color: gray;
   font-size: .8em;
   padding: 4px;
   font-weight: bold;
@@ -38,7 +39,6 @@
   margin-bottom: 25px;
   transition: all 0.2s ease-out;
 }
-
 
 .form_input:focus {
   background: whitesmoke;
@@ -55,15 +55,15 @@
   transition: all 0.2s ease-out;
 }
 
-.form_label{
-	display: block;
-	float: left;
-	margin-top: -19px;
-	height: 14px;
-	padding: 2px 5px 2px 5px;
-	color: rgb(255, 123, 0);
-	font-size: 14px;
-	overflow: hidden;
+.form_label {
+  display: block;
+  float: left;
+  margin-top: -19px;
+  height: 14px;
+  padding: 2px 5px 2px 5px;
+  color: rgb(255, 123, 0);
+  font-size: 14px;
+  overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
@@ -86,9 +86,32 @@
 }
 
 .basketball_bkg {
-  background-image: url("/images/basketball_bkg.png"); /* The image used */
-  background-color: black; /* Used if the image is unavailable */
-  height: 800px; /* You must set a specified height */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-image: url(../../images/basketball_bkg.png);
+  /* The image used */
+  background-color: black;
+  /* Used if the image is unavailable */
+  height: 800px;
+  /* You must set a specified height */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
+
+.shot_counter {
+  text-align: center;
+  font-size: .8em;
+  font-weight: bold;
+  color: rgb(112, 112, 112)
+}
+
+.counter_glow {
+  animation: counterglow .8s infinite alternate;
+  color: rgb(255, 17, 0)
+}
+
+@keyframes counterglow {
+  to {
+    color: rgb(255, 174, 0)
+  }
 }

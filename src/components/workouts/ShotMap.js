@@ -48,8 +48,11 @@ export default class ShotMap extends Component {
 
   handleCourtMapClick = (evt) => {
     const shotLocationId = evt.target.id
-    console.log("event:", evt.target.id)
-    this.setState({ newShotLocation: shotLocationId })
+    const shotLocationName = evt.target.title
+    this.setState({
+      newShotLocation: +shotLocationId,
+      newShotLocationName: shotLocationName
+     })
   }
 
 
@@ -57,7 +60,6 @@ export default class ShotMap extends Component {
     const stateToChange = {}
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
-    console.log("clicked:", evt.target.value)
   }
 
 
@@ -99,11 +101,11 @@ export default class ShotMap extends Component {
   constructNewSwishlist = () => {
     const newSwishlist = {
       workout_id: this.props.workoutId,
+      user_id: this.props.userId,
       shotLocation: this.state.newShotLocation,
       shotAttempts: Number(this.state.newShotAttempts),
       shotsMade: Number(this.state.newShotsMade),
     }
-    console.log("New Swishlist:", newSwishlist)
     this.createNewSwishlist(newSwishlist)
   }
 
@@ -115,9 +117,7 @@ export default class ShotMap extends Component {
       .then((swishlists) => {
         swishlistArray.push(swishlists)
         this.setState({
-          swishlists: swishlistArray,
-          newShotAttempts: "",
-          newShotsMade: ""
+          swishlists: swishlistArray
          })
       })
   }
@@ -137,7 +137,7 @@ export default class ShotMap extends Component {
 
           {/* <!-- begin court text overlay div --> */}
           <div className="court_text">
-            <p className="underline clear_padding">select shotspot: {this.state.newShotLocation}</p>
+            <p className="underline clear_padding">select shotspot: {this.state.newShotLocationName}</p>
 
 
             <p className="clear_padding">shots attempted -
@@ -170,7 +170,7 @@ export default class ShotMap extends Component {
                 }
 
                 return (
-                  <div id={shotspot.name} className="spot" style={spotStyle} key={shotspot.id}></div>
+                  <div id={shotspot.id} className="spot" style={spotStyle} key={shotspot.id} title={shotspot.name}></div>
                 )
               })
             }

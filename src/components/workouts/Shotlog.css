@@ -7,15 +7,19 @@
   box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.75);
   margin-bottom: 10px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .shotlog_rowHeader {
-  font-weight: bold;
   font-size: 1.1em;
 }
 
 .shotlog_hover {
   opacity: .7;
+  text-shadow: 		-1px -1px 0 rgb(43, 43, 43),
+  1px -1px 0 rgb(43, 43, 43),
+  -1px 1px 0 rgb(43, 43, 43),
+  1px 1px 0 rgb(43, 43, 43);
 }
 
 .shotlog_hover:hover {
@@ -51,17 +55,27 @@
 }
 
 .trc_7 {
-  background: rgba(167, 128, 0);
+  background: rgb(250, 219, 44);
 }
 
 .trc_8 {
-  background: rgba(167, 81, 0);
+  background: rgb(231, 117, 10);
 }
 
 .trc_9 {
   background: rgba(167, 25, 0);
 }
 
-.trc_10 {
+/* .trc_10 {
   background: rgba(167, 0, 0);
+} */
+
+.trc_10 {
+  animation: perfectglow .7s infinite alternate;
+  background: rgb(192, 1, 1);
+}
+@keyframes perfectglow {
+  to {
+    background: rgb(243, 109, 0);
+  }
 }

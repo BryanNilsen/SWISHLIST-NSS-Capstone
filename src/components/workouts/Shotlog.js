@@ -6,20 +6,30 @@ export default class Shotlog extends Component {
 
   state = {
     shotlogs: [],
-    totalShots: []
+    shotspots: [],
+    totalShots: [],
+    locationName: ""
   }
 
 
   componentDidMount() {
-    APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
-      .then((shotlogs) => {
-        this.setState({ shotlogs: shotlogs })
+
+    const stateToChange = {}
+
+    APIManager.getAllEntries("shotSpots")
+      .then(shotspots => {
+        stateToChange.shotspots = shotspots
+        return APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
       })
+      .then((shotlogs) => {
+        console.log("shotlogs", shotlogs)
+        stateToChange.shotlogs = shotlogs
+        this.setState(stateToChange)
+      })
+
   }
 
-  // deleteWorkout = (id) => APIManager.deleteEntry("workouts", id)
-  //   .then(() => APIManager.getAllEntries("workouts", `?userId=${this.state.currentUserId}`))
-  //   .then(workouts => this.setState({ workouts: workouts }))
+
 
   render() {
     return (
@@ -40,9 +50,12 @@ export default class Shotlog extends Component {
                   const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
                   const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
 
+                  let locationName = this.state.shotspots.find(shotspot => shotlog.shotLocation === shotspot.id).name
+
+
                   return (
                     <tr key={shotlog.id} className={`shotlog_hover ${tableRowColor}`}>
-                      <td style={{ textAlign: "left", padding: "0px 8px", fontWeight: "bold" }}>{shotlog.shotLocation}</td>
+                      <td style={{ textAlign: "left", padding: "0px 8px", fontWeight: "bold" }}>{locationName}</td>
                       <td style={{ textAlign: "center" }}>{shotlog.shotAttempts}</td>
                       <td style={{ textAlign: "center" }} >{shotlog.shotsMade}</td>
                       <td style={{ textAlign: "center" }} >{shootingPercentage}</td>
@@ -50,7 +63,7 @@ export default class Shotlog extends Component {
                   )
                 })
               }
-              <TotalGenerator workoutId={this.props.workoutId}/>
+              <TotalGenerator workoutId={this.props.workoutId} />
             </tbody>
           </table>
         </div>
