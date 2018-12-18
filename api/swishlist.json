@@ -77,6 +77,19 @@
       "photoURL": "/images/austin-nowitzki.jpg",
       "password": "austin",
       "id": 6
+    },
+    {
+      "firstName": "Jackson",
+      "lastName": "Nilsen",
+      "email": "jackson@jackson.com",
+      "nickname": "Wolfman",
+      "hometown": "Franklin, TN",
+      "age": "8",
+      "height_ft": "4",
+      "height_in": "10",
+      "photoURL": "/images/profile_default.png",
+      "password": "jackson",
+      "id": 7
     }
   ],
   "workouts": [
@@ -100,6 +113,41 @@
       "notes": "no warmup, just coffee",
       "user_id": 5,
       "id": 3
+    },
+    {
+      "date": "2018-12-19",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 6,
+      "id": 4
+    },
+    {
+      "date": "2018-12-04",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 4,
+      "id": 5
+    },
+    {
+      "date": "2018-12-19",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 2,
+      "id": 6
+    },
+    {
+      "date": "2018-12-19",
+      "gym": "Brentwood YMCA",
+      "notes": "short warmup/stretch, chest/back workout",
+      "user_id": 2,
+      "id": 7
+    },
+    {
+      "date": "2018-12-18",
+      "gym": "Franklin YMCA",
+      "notes": "no warmup",
+      "user_id": 7,
+      "id": 8
     }
   ],
   "quotes": [
@@ -428,11 +476,11 @@
   "swishlists": [
     {
       "workout_id": 1,
+      "user_id": 1,
       "shotLocation": 27,
       "shotAttempts": 20,
       "shotsMade": 19,
-      "id": 1,
-      "user_id": 1
+      "id": 1
     },
     {
       "workout_id": 2,
@@ -465,6 +513,158 @@
       "shotAttempts": 10,
       "shotsMade": 9,
       "id": 5
+    },
+    {
+      "workout_id": 4,
+      "user_id": 6,
+      "shotLocation": 1,
+      "shotAttempts": 30,
+      "shotsMade": 15,
+      "id": 6
+    },
+    {
+      "workout_id": 4,
+      "user_id": 6,
+      "shotLocation": 2,
+      "shotAttempts": 20,
+      "shotsMade": 14,
+      "id": 7
+    },
+    {
+      "workout_id": 5,
+      "user_id": 4,
+      "shotLocation": 1,
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 8
+    },
+    {
+      "workout_id": 5,
+      "user_id": 4,
+      "shotLocation": 10,
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 9
+    },
+    {
+      "workout_id": 5,
+      "user_id": 4,
+      "shotLocation": 7,
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 10
+    },
+    {
+      "workout_id": 5,
+      "user_id": 4,
+      "shotLocation": 11,
+      "shotAttempts": 20,
+      "shotsMade": 15,
+      "id": 11
+    },
+    {
+      "workout_id": 6,
+      "user_id": 2,
+      "shotLocation": 1,
+      "shotAttempts": 20,
+      "shotsMade": 14,
+      "id": 12
+    },
+    {
+      "workout_id": 6,
+      "user_id": 2,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 13
+    },
+    {
+      "workout_id": 7,
+      "user_id": 2,
+      "shotLocation": 5,
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 14
+    },
+    {
+      "workout_id": 7,
+      "user_id": 2,
+      "shotLocation": 6,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 15
+    },
+    {
+      "workout_id": 7,
+      "user_id": 2,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 16
+    },
+    {
+      "workout_id": 7,
+      "user_id": 2,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 17
+    },
+    {
+      "workout_id": 7,
+      "user_id": 2,
+      "shotLocation": 2,
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 18
+    },
+    {
+      "workout_id": 8,
+      "user_id": 7,
+      "shotLocation": 2,
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 19
+    },
+    {
+      "workout_id": 8,
+      "user_id": 7,
+      "shotLocation": 9,
+      "shotAttempts": 10,
+      "shotsMade": 4,
+      "id": 20
+    },
+    {
+      "workout_id": 8,
+      "user_id": 7,
+      "shotLocation": 8,
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 21
+    },
+    {
+      "workout_id": 8,
+      "user_id": 7,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 3,
+      "id": 22
+    },
+    {
+      "workout_id": 8,
+      "user_id": 7,
+      "shotLocation": 10,
+      "shotAttempts": 10,
+      "shotsMade": 2,
+      "id": 23
+    },
+    {
+      "workout_id": 8,
+      "user_id": 7,
+      "shotLocation": 7,
+      "shotAttempts": 10,
+      "shotsMade": 3,
+      "id": 24
     }
   ]
 }
