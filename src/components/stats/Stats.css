@@ -1,4 +1,6 @@
-
+.leaderboard {
+  font-size: 1.2em;
+}
 
 tbody.leaderboard>:nth-child(2){
   background:red;
@@ -19,3 +21,11 @@ tbody.leaderboard>:nth-child(2){
  tbody.leaderboard>:nth-child(6){
   background: rgb(24, 24, 24);
  }
+
+
+ .user_image_tiny {
+  width: 20px;
+  border: 1px solid rgb(29, 29, 29);
+  margin: 3px 5px;
+  vertical-align: middle;
+}

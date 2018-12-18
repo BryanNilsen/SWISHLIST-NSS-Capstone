@@ -29,24 +29,25 @@ export default class Stats extends Component {
 
 
   render() {
+
     let usersArray = []
     this.state.shotlogs.map((shotlog) => usersArray.push(shotlog.user_id))
-    console.log("users array:", usersArray)
-    var uniqueItems = Array.from(new Set(usersArray))
-    console.log("unique", uniqueItems)
+    // console.log("users array:", usersArray)
+    // var uniqueItems = Array.from(new Set(usersArray))
+    // console.log("unique", uniqueItems)
 
 
 
-    const shotTotalCount = {};
-    this.state.shotlogs.forEach(entry => {
-      if (!shotTotalCount[entry.user_id]) {
-        shotTotalCount[entry.user_id] = 0;
-      }
-      shotTotalCount[entry.user_id] += entry.shotsMade;
-    });
-    console.log("shot totals per user", shotTotalCount)
+    // const shotTotalCount = {};
+    // this.state.shotlogs.forEach(entry => {
+    //   if (!shotTotalCount[entry.user_id]) {
+    //     shotTotalCount[entry.user_id] = 0;
+    //   }
+    //   shotTotalCount[entry.user_id] += entry.shotsMade;
+    // });
+    // console.log("shot totals per user", shotTotalCount)
 
-    console.log("shotlogs:", this.state.shotlogs)
+    // console.log("shotlogs:", this.state.shotlogs)
 
 
 
@@ -87,7 +88,7 @@ export default class Stats extends Component {
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">
                   <td width="40%">Player</td>
-                  <td width="20%" style={{ textAlign: "center" }} >Shot Attempts</td>
+                  <td width="20%" style={{ textAlign: "center" }} >Attempts</td>
                 </tr>
 
                 {
@@ -102,10 +103,11 @@ export default class Stats extends Component {
 
                       let userFirstName = this.state.users.find(user => userId === user.id).firstName
                       let userLastName = this.state.users.find(user => userId === user.id).lastName
+                      let userPhoto = this.state.users.find(user => userId === user.id).photoURL
                       let userDisplayName = `${userFirstName.charAt(0)}${userLastName}`
                       return (
                         <tr key={user.user_id} className={`shotlog_hover ${tableRowColor}`}>
-                          <td style={{ padding: "0px 8px"}}>{userDisplayName}</td>
+                          <td> <img src={userPhoto} alt={userDisplayName} className="user_image_tiny"></img>{userDisplayName}</td>
                           <td style={{ textAlign: "center" }}>{shotAttempts} </td>
                         </tr>
                       )
