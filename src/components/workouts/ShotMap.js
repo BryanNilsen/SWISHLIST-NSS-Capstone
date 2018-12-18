@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ShotMap.css';
 import APIManager from '../../modules/APIManager'
 import ShotsAdded from './ShotsAdded'
+import swishlist_court from '../../images/swishlist_court.svg'
 
 export default class ShotMap extends Component {
 
@@ -133,7 +134,7 @@ export default class ShotMap extends Component {
         <div className="court_wrapper">
 
           {/* court image */}
-          <img src="/images/swishlist_court.svg" alt="shooting locations map"></img>
+          <img src={swishlist_court} alt="shooting locations map"></img>
 
           {/* <!-- begin court text overlay div --> */}
           <div className="court_text">
