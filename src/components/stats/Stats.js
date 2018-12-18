@@ -107,7 +107,7 @@ export default class Stats extends Component {
                       let userDisplayName = `${userFirstName.charAt(0)}${userLastName}`
                       return (
                         <tr key={user.user_id} className={`shotlog_hover ${tableRowColor}`}>
-                          <td> <img src={userPhoto} alt={userDisplayName} className="user_image_tiny"></img>{userDisplayName}</td>
+                          <td><img src={userPhoto} alt={userDisplayName} className="user_image_tiny"/>{userDisplayName}</td>
                           <td style={{ textAlign: "center" }}>{shotAttempts} </td>
                         </tr>
                       )
@@ -143,10 +143,11 @@ export default class Stats extends Component {
 
                       let userFirstName = this.state.users.find(user => userId === user.id).firstName
                       let userLastName = this.state.users.find(user => userId === user.id).lastName
+                      let userPhoto = this.state.users.find(user => userId === user.id).photoURL
                       let userDisplayName = `${userFirstName.charAt(0)}${userLastName}`
                       return (
                         <tr key={user.user_id} className={`shotlog_hover`}>
-                          <td style={{ padding: "0px 8px"}}>{userDisplayName}</td>
+                          <td style={{ padding: "0px 8px"}}><img src={userPhoto} alt={userDisplayName} className="user_image_tiny"/> {userDisplayName}</td>
                           <td style={{ textAlign: "center" }}>{shotsMade} </td>
                         </tr>
                       )
