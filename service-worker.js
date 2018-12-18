@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/BryanNilsen/Swishlist-React/precache-manifest.7e5c967d8b0a7cabfb7be7c24341f173.js"
+  "/Swishlist-React/precache-manifest.a2a1669171ef87e0c6b6a89f34ee4290.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/BryanNilsen/Swishlist-React/index.html", {
+workbox.routing.registerNavigationRoute("/Swishlist-React/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

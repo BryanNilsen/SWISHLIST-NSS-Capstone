@@ -1,14 +1,14 @@
 {
-  "main.css": "/BryanNilsen/Swishlist-React/static/css/main.991bcf47.chunk.css",
-  "main.js": "/BryanNilsen/Swishlist-React/static/js/main.8218d39b.chunk.js",
-  "main.js.map": "/BryanNilsen/Swishlist-React/static/js/main.8218d39b.chunk.js.map",
-  "static/js/1.30bcf177.chunk.js": "/BryanNilsen/Swishlist-React/static/js/1.30bcf177.chunk.js",
-  "static/js/1.30bcf177.chunk.js.map": "/BryanNilsen/Swishlist-React/static/js/1.30bcf177.chunk.js.map",
-  "runtime~main.js": "/BryanNilsen/Swishlist-React/static/js/runtime~main.b05b1207.js",
-  "runtime~main.js.map": "/BryanNilsen/Swishlist-React/static/js/runtime~main.b05b1207.js.map",
-  "static/media/Authentication.css": "/BryanNilsen/Swishlist-React/static/media/basketball_bkg.fc0de325.png",
-  "static/css/main.991bcf47.chunk.css.map": "/BryanNilsen/Swishlist-React/static/css/main.991bcf47.chunk.css.map",
-  "index.html": "/BryanNilsen/Swishlist-React/index.html",
-  "precache-manifest.7e5c967d8b0a7cabfb7be7c24341f173.js": "/BryanNilsen/Swishlist-React/precache-manifest.7e5c967d8b0a7cabfb7be7c24341f173.js",
-  "service-worker.js": "/BryanNilsen/Swishlist-React/service-worker.js"
+  "main.css": "/Swishlist-React/static/css/main.92b6bf65.chunk.css",
+  "main.js": "/Swishlist-React/static/js/main.7a4b457a.chunk.js",
+  "main.js.map": "/Swishlist-React/static/js/main.7a4b457a.chunk.js.map",
+  "static/js/1.30bcf177.chunk.js": "/Swishlist-React/static/js/1.30bcf177.chunk.js",
+  "static/js/1.30bcf177.chunk.js.map": "/Swishlist-React/static/js/1.30bcf177.chunk.js.map",
+  "runtime~main.js": "/Swishlist-React/static/js/runtime~main.9c138024.js",
+  "runtime~main.js.map": "/Swishlist-React/static/js/runtime~main.9c138024.js.map",
+  "static/media/Authentication.css": "/Swishlist-React/static/media/basketball_bkg.fc0de325.png",
+  "static/css/main.92b6bf65.chunk.css.map": "/Swishlist-React/static/css/main.92b6bf65.chunk.css.map",
+  "index.html": "/Swishlist-React/index.html",
+  "precache-manifest.a2a1669171ef87e0c6b6a89f34ee4290.js": "/Swishlist-React/precache-manifest.a2a1669171ef87e0c6b6a89f34ee4290.js",
+  "service-worker.js": "/Swishlist-React/service-worker.js"
 }
