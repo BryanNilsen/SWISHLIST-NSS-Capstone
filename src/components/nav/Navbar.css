@@ -2,6 +2,8 @@
   color: whitesmoke;
   border-bottom: 2px solid rgb(255, 123, 0);
   min-width: 400px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .logo {

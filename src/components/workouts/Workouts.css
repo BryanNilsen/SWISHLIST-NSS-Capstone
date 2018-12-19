@@ -30,7 +30,8 @@
 
 .page_container {
   padding: 0px 10px;
-  margin: 0px
+  margin: auto;
+  max-width: 900px;
 }
 
 .btn_edit {
