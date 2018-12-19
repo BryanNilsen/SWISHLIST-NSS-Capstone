@@ -42,17 +42,17 @@ You must run JSON server in another instance of your terminal so you will have a
 
 # Resources
 
+## Adobe XD
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/480px-Adobe_XD_CC_icon.svg.png" width="100" />
 
-## Adobe XD
 I used Adobe XD from the very beginning of development to design the UI/UX aspect of this app. This tool allows developers to quickly build a prototype and provides a blueprint when building the app.
 <img src="https://user-images.githubusercontent.com/43187473/50245407-fcef5880-0397-11e9-99df-4b69020be37d.png" width="300" />
 
 For more information, check out [Adobe XD](https://www.adobe.com/products/xd.html)
 
+## Moment.js and react-moment
 <img src="https://camo.githubusercontent.com/d8b1e9e8c5c730100352831ef74d7b1d6fa1a066/68747470733a2f2f7777772e626f6f7463646e2e636e2f6173736574732f696d672f6d6f6d656e746a732e7376673f31353431343038363139313637" width="100" />
 
-## Moment.js and react-moment
 I used the Moment.js and npm react-moment tools for formatting dates in this app. These tools allow the user to parse, validate, manipulate, and display dates and times in JavaScript.
 
 To use Moment.js and react-moment in your React app, use the following npm command in your terminal: 
