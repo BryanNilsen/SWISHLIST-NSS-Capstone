@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import APIManager from '../../modules/APIManager'
 import Shotlog from './Shotlog'
 import "./Workouts.css"
+import Moment from 'react-moment';
 
 export default class ViewList extends Component {
 
@@ -32,7 +33,7 @@ export default class ViewList extends Component {
 
 
   componentDidMount() {
-    APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`)
+    APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}&_sort=date&_order=desc`)
       .then((workouts) => {
         this.setState({ workouts: workouts })
       })
@@ -79,8 +80,8 @@ export default class ViewList extends Component {
               <div className="card_container" key={workout.id}>
                 <div className="workout_card">
                   {/* begin page content */}
-                  <div id={workout.id} className={`${this.state.shownForm === workout.id ? 'hide' : "workout_card"}`}>
-                    <h3 className="card_header">{workout.date}: {workout.gym}</h3>
+                  <div id={workout.id} className={`${this.state.shownForm === workout.id ? 'hide' : "workout_card_details"}`}>
+                    <h3 className="card_header"><Moment format="MM/DD/YYYY">{workout.date}</Moment>: {workout.gym}</h3>
                     <p>{workout.notes}</p>
                   </div>
                   {/* edit form hidden to start */}

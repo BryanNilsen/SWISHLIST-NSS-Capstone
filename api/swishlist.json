@@ -162,6 +162,13 @@
       "notes": "none",
       "user_id": 5,
       "id": 11
+    },
+    {
+      "date": "2018-12-18",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 1,
+      "id": 12
     }
   ],
   "quotes": [
@@ -715,6 +722,30 @@
       "shotAttempts": 20,
       "shotsMade": 11,
       "id": 26
+    },
+    {
+      "workout_id": 12,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 27
+    },
+    {
+      "workout_id": 12,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 28
+    },
+    {
+      "workout_id": 12,
+      "user_id": 1,
+      "shotLocation": 3,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 29
     }
   ]
 }
