@@ -153,15 +153,22 @@
       "date": "2018-12-18",
       "gym": "Franklin Rec Center",
       "notes": "no warmup",
-      "user_id": 1,
-      "id": 9
+      "user_id": 2,
+      "id": 10
+    },
+    {
+      "date": "2018-12-18",
+      "gym": "Franklin Rec Center",
+      "notes": "none",
+      "user_id": 5,
+      "id": 11
     },
     {
       "date": "2018-12-18",
       "gym": "Franklin Rec Center",
       "notes": "no warmup",
-      "user_id": 2,
-      "id": 10
+      "user_id": 1,
+      "id": 12
     }
   ],
   "quotes": [
@@ -294,6 +301,26 @@
       "id": 25,
       "quote": "If every basketball player worked as hard as I did, I’d be out of a job.",
       "author": "Steve Nash"
+    },
+    {
+      "id": 26,
+      "quote": "I've never lost a game I just ran out of time.",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 27,
+      "quote": "Push yourself again and again. Don’t give an inch until the final buzzer sounds.",
+      "author": "Larry Bird"
+    },
+    {
+      "id": 28,
+      "quote": "If you do the work, you get rewarded. There are no shortcuts in life.",
+      "author": "Michael Jordan"
+    },
+    {
+      "id": 29,
+      "quote": "Coaches shouldn’t have to push you to work hard, you should push yourself to work hard because you want to be a great player.",
+      "author": "Bob Knight"
     }
   ],
   "shotSpots": [
@@ -679,6 +706,46 @@
       "shotAttempts": 10,
       "shotsMade": 3,
       "id": 24
+    },
+    {
+      "workout_id": 11,
+      "user_id": 5,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 25
+    },
+    {
+      "workout_id": 11,
+      "user_id": 5,
+      "shotLocation": 1,
+      "shotAttempts": 20,
+      "shotsMade": 11,
+      "id": 26
+    },
+    {
+      "workout_id": 12,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 27
+    },
+    {
+      "workout_id": 12,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 28
+    },
+    {
+      "workout_id": 12,
+      "user_id": 1,
+      "shotLocation": 3,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 29
     }
   ]
 }

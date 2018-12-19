@@ -9,6 +9,17 @@
   margin-bottom: 15px;
 }
 
+.workout_card_details {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 10px;
+  color: whitesmoke;
+  margin: auto;
+  min-width: 320px;
+  max-width: 700px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
 .card_header {
   margin: 5px 0px;
 }
