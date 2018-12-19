@@ -142,13 +142,13 @@ export default class ShotMap extends Component {
 
 
             <p className="clear_padding">shots attempted -
-              <select id="newShotAttempts" onChange={this.handleFieldChange}>
+              <select id="newShotAttempts" className="shot_select" onChange={this.handleFieldChange}>
                 <option defaultValue="selected">Select</option>
                 {this.buildShotAttemptsSelect()}
               </select>
             </p>
             <p className="clear_padding">shots made -
-              <select id="newShotsMade" onChange={this.handleFieldChange}>
+              <select id="newShotsMade" className="shot_select" onChange={this.handleFieldChange}>
                 <option defaultValue="selected">Select</option>
                 {this.buildShotsMadeSelect()}
               </select>

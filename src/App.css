@@ -23,7 +23,7 @@ body {
   border: 3px solid rgb(34, 33, 32);
   margin: auto;
   padding-bottom: 20px;
-  box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 30px 10px black;
 }
 
 .logo_large {

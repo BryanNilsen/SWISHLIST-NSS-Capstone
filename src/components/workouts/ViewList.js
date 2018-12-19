@@ -41,7 +41,7 @@ export default class ViewList extends Component {
 
   deleteWorkout = (id) => APIManager.deleteEntry("workouts", id)
     .then(this.deleteWorkoutSwishlists(id))
-    .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`))
+    .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}&_sort=date&_order=desc`))
     .then(workouts => this.setState({ workouts: workouts }))
 
   editWorkout = (id, editedWorkout) => APIManager.editEntry("workouts", id, editedWorkout)
@@ -51,7 +51,7 @@ export default class ViewList extends Component {
 
 
   deleteWorkoutSwishlists = (workoutId) => {
-    APIManager.getAllEntries("swishlists", `?workout_id=${workoutId}`)
+    APIManager.getAllEntries("swishlists", `?workout_id=${workoutId}&_sort=date&_order=desc`)
       .then((results) =>
       results.forEach((result) => APIManager.deleteEntry("swishlists", result.id))
         )
