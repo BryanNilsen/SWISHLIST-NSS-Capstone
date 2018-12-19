@@ -59,3 +59,6 @@ To use Moment.js and react-moment in your React app, use the following npm comma
 > `npm install --save moment react-moment`
 
 For more information, check out [Moment.js](https://momentjs.com/) and [npm react-moment](https://www.npmjs.com/package/react-moment)
+
+# Acknowledgments
+Special thanks to everyone at NSS who took time away from their own projects to assist in the development of this app. You know who you are and are greatly appreciated.
