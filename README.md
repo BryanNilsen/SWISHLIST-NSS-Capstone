@@ -10,9 +10,11 @@
 
 # Getting Started
 
-To run ***swishlist*** locally, clone the project by running the following command in your terminal: git@github.com:BryanNilsen/Swishlist-React.git
+To run ***swishlist*** locally, clone the project by running the following command in your terminal:
+> `git clone git@github.com:BryanNilsen/Swishlist-React.git`
 
-Once you have the project cloned in your terminal, run: npm install
+Once you have the project cloned in your terminal, run: 
+> `npm install`
 
 This will install the libraries and other dependencies used by ***swishlist***
 
@@ -20,6 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 In the project directory, you can run:
+> `npm start`
 
 ### npm start
 Runs the app in the development mode.
@@ -35,7 +38,7 @@ To learn React, check out the [React](https://reactjs.org/) documentation.
 
 ## Database
 You must run JSON server in another instance of your terminal so you will have access to the data that ***swishlist*** is capturing. Navigate to the api directory and run the following command:
-`json-server -p 5002 -w swishlist.json`
+> `json-server -p 5002 -w swishlist.json`
 
 # Resources
 
@@ -52,6 +55,7 @@ For more information, check out [Adobe XD](https://www.adobe.com/products/xd.htm
 ## Moment.js and react-moment
 I used the Moment.js and npm react-moment tools for formatting dates in this app. These tools allow the user to parse, validate, manipulate, and display dates and times in JavaScript.
 
-To use Moment.js and react-moment in your React app, use the following npm command in your terminal: `npm install --save moment react-moment`
+To use Moment.js and react-moment in your React app, use the following npm command in your terminal: 
+> `npm install --save moment react-moment`
 
 For more information, check out [Moment.js](https://momentjs.com/) and [npm react-moment](https://www.npmjs.com/package/react-moment)
