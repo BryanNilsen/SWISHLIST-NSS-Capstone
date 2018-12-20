@@ -136,9 +136,11 @@ export default class Register extends Component {
             <button className="btn_submit"  type="submit" onClick={() => { this.handleRegister() }}>REGISTER</button>
           </div>
 
-          <div className="">
-            <p>Already Registered?</p>
-            <button className="btn_submit"  onClick={() => this.props.handleChangeForm()}>SIGN IN</button>
+          <div className="login_form">
+            <div className="center">
+              <p>Already Registered?</p>
+              <button className="btn_submit" onClick={() => this.props.handleChangeForm()}>SIGN IN</button>
+            </div>
           </div>
         </div>
       </React.Fragment>

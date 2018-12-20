@@ -41,7 +41,7 @@ export default class NewList extends Component {
       alert("No fields should be left blank")
     } else {
       this.constructNewWorkout()
-      alert("You have started a new workout! Please start logging your shots")
+      // alert("You have started a new workout! Please start logging your shots")
       this.toggleAddForm()
     }
   }
@@ -81,21 +81,21 @@ export default class NewList extends Component {
           <h2>New Swishlist</h2>
           <div className="workout_card">
 
-            <p>Select date, gym, and enter any notes relevant to your workout</p>
-            <p>Click "Start swishlist" to begin</p>
+            <p className="bold">Select date, court location, and enter any notes relevant to your workout.</p>
+            <p className="bold">Click "Start Workout" to begin logging shots.</p>
             <div id="newlist_form" className="margin_bottom">
             <table style={{ width: "100%" }}>
               <tbody>
                 <tr>
-                  <td style={{ width: "50px" }}>Date</td>
+                  <td className="bold" style={{ width: "50px" }}>Date:</td>
                   <td><input type="date" onChange={this.handleFieldChange} id="newDate" className="edit_form_input"></input></td>
                 </tr>
                 <tr>
-                  <td>Gym</td>
+                  <td className="bold">Court:</td>
                   <td><input type="text" onChange={this.handleFieldChange} id="newGym" className="edit_form_input"></input></td>
                 </tr>
                 <tr>
-                  <td>Notes</td>
+                  <td className="bold">Notes:</td>
                   <td><input type="text" onChange={this.handleFieldChange} id="newNotes" className="edit_form_input" style={{ width: "80%" }}/></td>
                 </tr>
               </tbody>
@@ -104,7 +104,6 @@ export default class NewList extends Component {
             </div>
             {/* end contents */}
             <div id="shotmap_div" className={this.state.hideAddForm ? null : 'hide'}>
-              <hr></hr>
               <ShotMap userId={this.state.currentUserId} workoutId={this.state.workoutId} clearWorkoutId={this.clearWorkoutId} toggleAddForm={this.toggleAddForm} />
             </div>
           </div>

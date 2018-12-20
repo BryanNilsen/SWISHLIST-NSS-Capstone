@@ -3,31 +3,40 @@
   margin: 0px;
 }
 
+.shot_form_table {
+  width: 100%;
+  padding: 0px;
+}
+
 .main_wrapper {
   width: 100%;
   margin: auto;
-  /* background: black; */
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top: 3px solid rgb(85, 85, 85);
+  padding-top: 10px;
+
 }
 
 .court_wrapper {
   margin: auto;
-  width: 380px;
+  width: 370px;
   position: relative;
 }
 
 .court_text {
   color: #111;
   position: absolute;
-  width: 250px;
+  width: 280px;
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid white;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
   padding: 5px 10px;
   z-index: 10;
-  top: 4%;
+  top: 0%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   -webkit-box-shadow: 0px 0px 10px 2px rgba(71, 50, 9, 0.5);
   -moz-box-shadow: 0px 0px 10px 2px rgba(71, 50, 9, 0.5);
   box-shadow: 0px 0px 10px 2px rgba(71, 50, 9, 0.5);
@@ -55,12 +64,12 @@
 }
 
 .shot_select {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 123, 0, .5);
+  background: rgb(77, 77, 77);
   border-radius: 2px;
-  background: gray;
   color: white;
   font-weight: bold;
-  font-size: .8em;
+  font-size: .7em;
   margin: 3px 5px;
 }
 

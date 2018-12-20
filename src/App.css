@@ -6,7 +6,7 @@ body {
 .background_container {
   width: 100%;
   background-color: rgb(34, 33, 32);
-  background-image: url(/images/asphalt.jpg);
+  background-image: url(/images/basketball_court_bkg.jpg);
   height: 1000px;
   /* You must set a specified height */
   background-repeat: no-repeat;
@@ -113,4 +113,8 @@ body {
 
 .test_border {
   border: 1px solid yellow
+}
+
+.bold {
+  font-weight: bold;
 }

@@ -53,7 +53,7 @@ export default class ShotMap extends Component {
     this.setState({
       newShotLocation: +shotLocationId,
       newShotLocationName: shotLocationName
-     })
+    })
   }
 
 
@@ -92,7 +92,7 @@ export default class ShotMap extends Component {
       alert("Please select a shot location on the map")
     } else {
       this.constructNewSwishlist()
-      alert("Shot recorded. Enter more or end workout to finish.")
+      alert("Shot recorded. Enter more or click 'finish' to end workout.")
       // clear state for new shots
       this.setState({ newShotLocation: "" })
     }
@@ -119,7 +119,7 @@ export default class ShotMap extends Component {
         swishlistArray.push(swishlists)
         this.setState({
           swishlists: swishlistArray
-         })
+        })
       })
   }
 
@@ -138,24 +138,49 @@ export default class ShotMap extends Component {
 
           {/* <!-- begin court text overlay div --> */}
           <div className="court_text">
-            <p className="underline clear_padding">select shotspot: {this.state.newShotLocationName}</p>
+            <table className="shot_form_table">
+              <tbody>
+                <tr>
+                  <td>shot location</td>
+                  <td>attempts</td>
+                  <td>made</td>
+                </tr>
+                <tr>
+                  <td>{this.state.newShotLocationName}</td>
+                  <td>
+                    <select id="newShotAttempts" className="shot_select" onChange={this.handleFieldChange}>
+                      <option defaultValue="selected">Select</option>
+                      {this.buildShotAttemptsSelect()}
+                    </select>
+                  </td>
+                  <td>
+                    <select id="newShotsMade" className="shot_select" onChange={this.handleFieldChange}>
+                      <option defaultValue="selected">Select</option>
+                      {this.buildShotsMadeSelect()}
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+{/*
+            <p className="underline clear_padding">shot location: {this.state.newShotLocationName}</p>
 
 
-            <p className="clear_padding">shots attempted -
+            <p className="clear_padding">attempts:
               <select id="newShotAttempts" className="shot_select" onChange={this.handleFieldChange}>
                 <option defaultValue="selected">Select</option>
                 {this.buildShotAttemptsSelect()}
               </select>
             </p>
-            <p className="clear_padding">shots made -
+            <p className="clear_padding">made:
               <select id="newShotsMade" className="shot_select" onChange={this.handleFieldChange}>
                 <option defaultValue="selected">Select</option>
                 {this.buildShotsMadeSelect()}
               </select>
-            </p>
+            </p> */}
             <p className="clear_padding">
-              <button type="submit" onClick={this.handleNewSwishlist}>Add Shots</button>
-              <button type="submit" onClick={this.finishWorkout}>Finish Workout</button>
+              <button type="submit" className="btn_edit" onClick={this.handleNewSwishlist}>Add Shots</button>
+              <button type="submit" className="btn_delete" onClick={this.finishWorkout}>Finish</button>
             </p>
           </div>
           {/* end court text div */}
@@ -177,7 +202,7 @@ export default class ShotMap extends Component {
             }
           </div>
         </div>
-        <ShotsAdded workoutId={this.props.workoutId} swishlists={this.state.swishlists} deleteSwishlist={this.deleteSwishlist} editSwishlist={this.editSwishlist}/>
+        <ShotsAdded workoutId={this.props.workoutId} swishlists={this.state.swishlists} deleteSwishlist={this.deleteSwishlist} editSwishlist={this.editSwishlist} />
       </div>
     );
   }
