@@ -14,6 +14,8 @@ export default class Navbar extends Component {
 
 
   render() {
+
+
     return (
       <React.Fragment>
         <nav className="nav">
@@ -34,7 +36,7 @@ export default class Navbar extends Component {
               <Link className="nav_item" to="/viewlists">VIEW LISTS</Link>
             </li>
             <li>
-              <Link className="nav_item" to="/stats">STATS</Link>
+              <Link className="nav_item" to="/stats">LEADERS</Link>
             </li>
             <li>
               <Link className="nav_item" to="/profile">PROFILE</Link>

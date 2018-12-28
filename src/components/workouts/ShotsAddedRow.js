@@ -98,7 +98,7 @@ export default class ShotsAddedRow extends Component {
           }
         </td>
         <td style={{ textAlign: "center" }} >{shootingPercentage}</td>
-        <td style={{ textAlign: "center" }} ><button type="submit" onClick={() => this.props.deleteSwishlist(shotlog.id)}>X</button></td>
+        <td style={{ textAlign: "center" }} ><button className="btn_delete" type="submit" onClick={() => this.props.deleteSwishlist(shotlog.id)}>X</button></td>
       </tr>
     )
   }

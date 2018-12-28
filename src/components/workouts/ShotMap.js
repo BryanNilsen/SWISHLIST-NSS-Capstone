@@ -11,6 +11,7 @@ export default class ShotMap extends Component {
     newShotAttempts: "",
     newShotsMade: "",
     newShotLocation: "",
+    newShotLocationName: "select",
     shotSpots: [],
     swishlists: [],
     swishlistArray: [],
@@ -125,7 +126,11 @@ export default class ShotMap extends Component {
 
   finishWorkout = () => {
     this.props.clearWorkoutId();
-    this.props.toggleAddForm()
+    this.props.toggleAddForm();
+    this.setState({
+      swishlistArray: [],
+      swishlists: []
+    })
   }
 
   render() {
@@ -178,7 +183,7 @@ export default class ShotMap extends Component {
                 {this.buildShotsMadeSelect()}
               </select>
             </p> */}
-            <p className="clear_padding">
+            <p className="clear_padding align_right">
               <button type="submit" className="btn_edit" onClick={this.handleNewSwishlist}>Add Shots</button>
               <button type="submit" className="btn_delete" onClick={this.finishWorkout}>Finish</button>
             </p>

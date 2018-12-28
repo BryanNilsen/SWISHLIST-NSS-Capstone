@@ -80,10 +80,10 @@ export default class Stats extends Component {
     return (
       <div id="stats_container" className="page_container">
         {/* begin contents */}
-        <h2>Stats / Leaderboard</h2>
+        <h2>Leaderboards</h2>
         <div className="card_container">
           <div className="workout_card">
-            <p>Total Shots Attempted</p>
+            <p className="bold">Total Shots Attempted</p>
             <table className="shotlog_table">
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">
@@ -123,7 +123,7 @@ export default class Stats extends Component {
 
         <div className="card_container">
           <div className="workout_card">
-            <p>Total Shots Made</p>
+            <p className="bold">Total Shots Made</p>
             <table className="shotlog_table">
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">

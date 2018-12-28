@@ -199,25 +199,25 @@
       "id": 23
     },
     {
-      "date": "2018-12-20",
+      "date": "2018-12-28",
       "gym": "Franklin Rec Center",
       "notes": "no warmup",
       "user_id": 1,
-      "id": 24
+      "id": 28
     },
     {
-      "date": "2018-12-20",
+      "date": "2018-12-25",
       "gym": "Franklin Rec Center",
       "notes": "no warmup",
       "user_id": 1,
-      "id": 25
+      "id": 32
     },
     {
-      "date": "2018-12-20",
+      "date": "2018-12-28",
       "gym": "Franklin Rec Center",
       "notes": "no warmup",
       "user_id": 1,
-      "id": 26
+      "id": 33
     }
   ],
   "quotes": [
@@ -853,28 +853,68 @@
       "id": 37
     },
     {
-      "workout_id": 24,
+      "workout_id": 28,
+      "user_id": 1,
+      "shotLocation": 2,
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 42
+    },
+    {
+      "workout_id": 28,
       "user_id": 1,
       "shotLocation": 11,
       "shotAttempts": 10,
-      "shotsMade": 8,
-      "id": 38
+      "shotsMade": 7,
+      "id": 43
     },
     {
-      "workout_id": 25,
+      "workout_id": 28,
       "user_id": 1,
-      "shotLocation": 27,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 44
+    },
+    {
+      "workout_id": 28,
+      "user_id": 1,
+      "shotLocation": 10,
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 45
+    },
+    {
+      "workout_id": 32,
+      "user_id": 1,
+      "shotLocation": 1,
       "shotAttempts": 10,
       "shotsMade": 9,
-      "id": 39
+      "id": 49
     },
     {
-      "workout_id": 26,
+      "workout_id": 32,
       "user_id": 1,
       "shotLocation": 11,
       "shotAttempts": 10,
       "shotsMade": 9,
-      "id": 40
+      "id": 50
+    },
+    {
+      "workout_id": 32,
+      "user_id": 1,
+      "shotLocation": 7,
+      "shotAttempts": 10,
+      "shotsMade": 1,
+      "id": 51
+    },
+    {
+      "workout_id": 33,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 52
     }
   ]
 }
