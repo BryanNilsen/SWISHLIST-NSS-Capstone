@@ -45,7 +45,7 @@ export default class ViewList extends Component {
     .then(workouts => this.setState({ workouts: workouts }))
 
   editWorkout = (id, editedWorkout) => APIManager.editEntry("workouts", id, editedWorkout)
-    .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}`))
+    .then(() => APIManager.getAllEntries("workouts", `?user_id=${this.state.currentUserId}&_sort=date&_order=desc`))
     .then(workouts => this.setState({ workouts: workouts }))
 
 

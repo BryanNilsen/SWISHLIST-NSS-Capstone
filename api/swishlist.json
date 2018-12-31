@@ -214,10 +214,17 @@
     },
     {
       "date": "2018-12-28",
-      "gym": "Franklin Rec Center",
-      "notes": "no warmup",
+      "gym": "YMCA",
+      "notes": "stretched and lifted weights",
       "user_id": 1,
-      "id": 33
+      "id": 34
+    },
+    {
+      "date": "2018-12-29",
+      "gym": "Franklin Rec Center",
+      "notes": "lifted weights",
+      "user_id": 1,
+      "id": 35
     }
   ],
   "quotes": [
@@ -909,12 +916,68 @@
       "id": 51
     },
     {
-      "workout_id": 33,
+      "workout_id": 34,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 53
+    },
+    {
+      "workout_id": 34,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 1,
+      "id": 54
+    },
+    {
+      "workout_id": 34,
+      "user_id": 1,
+      "shotLocation": 12,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 55
+    },
+    {
+      "workout_id": 34,
+      "user_id": 1,
+      "shotLocation": 3,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 56
+    },
+    {
+      "workout_id": 34,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 25,
+      "shotsMade": 15,
+      "id": 57
+    },
+    {
+      "workout_id": 35,
       "user_id": 1,
       "shotLocation": 1,
       "shotAttempts": 20,
-      "shotsMade": 18,
-      "id": 52
+      "shotsMade": 17,
+      "id": 58
+    },
+    {
+      "workout_id": 35,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 59
+    },
+    {
+      "workout_id": 35,
+      "user_id": 1,
+      "shotLocation": 13,
+      "shotAttempts": 10,
+      "shotsMade": 2,
+      "id": 60
     }
   ]
 }
