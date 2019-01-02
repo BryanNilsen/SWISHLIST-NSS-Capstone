@@ -19,10 +19,13 @@ export default class ViewList extends Component {
     this.setState(stateToChange)
   }
 
-  toggleEditForm = (id) => {
+  toggleEditForm = (id, date, gym, notes) => {
     if (this.state.shownForm === null) {
       this.setState({
         shownForm: id,
+        newWorkoutDate: date,
+        newWorkoutGym: gym,
+        newWorkoutNotes: notes,
       });
     } else {
       this.setState({
@@ -119,7 +122,7 @@ export default class ViewList extends Component {
                   <Shotlog workoutId={workout.id} />
 
                   <div id="workoutEditDelete" className="align_right">
-                    <button className="btn_edit" onClick={() => this.toggleEditForm(workout.id)}>Edit Workout </button>
+                    <button className="btn_edit" onClick={() => this.toggleEditForm(workout.id, workout.date, workout.gym, workout.notes)}>Edit Workout</button>
                     <button className="btn_delete" onClick={() => this.deleteWorkout(workout.id)}>Delete Workout</button>
                   </div>
                 </div>

@@ -100,28 +100,31 @@ export default class Profile extends Component {
                   </div>
                   <div className="user_details">
                     <h1 className="profile_name_header">{this.state.firstName} {this.state.lastName}</h1>
-                    <p className="oblique">aka: "{this.state.nickname}"</p>
-                    <p>Age: {this.state.age}</p>
-                    <p>Hometown: {this.state.hometown}</p>
-                    <p>Height: {this.state.height_ft}&#39;{this.state.height_in}"</p>
+                    <p className="bold">Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
+                    <p><span className="bold">AKA: </span><span className="oblique">"{this.state.nickname}"</span></p>
+                    <p><span className="bold">Age: </span>{this.state.age}</p>
+                    <p><span className="bold">Hometown: </span>{this.state.hometown}</p>
+                    <p><span className="bold">Height: </span>{this.state.height_ft}&#39;{this.state.height_in}"</p>
                   </div>
                 </div>
 
-                <p className="bold">Total Workouts Logged: {this.state.numberOfWorkouts}</p>
-                <p className="bold">Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
-                <h3>Shooting Totals</h3>
+                <h3>Swishlist Totals</h3>
                 <div className="total_card_container">
                   <div className="total_card">
                     <h1 className="total_card_digits">{totalShotsAttempted}</h1>
-                    <p className="total_card_text">Shot<br/>Attempts</p>
+                    <p className="total_card_text">Shot<br />Attempts</p>
                   </div>
                   <div className="total_card">
                     <h1 className="total_card_digits">{totalShotsMade}</h1>
-                    <p className="total_card_text">Shots<br/>Made</p>
+                    <p className="total_card_text">Shots<br />Made</p>
                   </div>
                   <div className="total_card">
                     <h1 className="total_card_digits">{totalPercentage}%</h1>
-                    <p className="total_card_text">Shooting<br/>Percentage</p>
+                    <p className="total_card_text">Shooting<br />Percentage</p>
+                  </div>
+                  <div className="total_card">
+                    <h1 className="total_card_digits">{this.state.numberOfWorkouts}</h1>
+                    <p className="total_card_text">Workouts<br />Recorded</p>
                   </div>
                 </div>
               </div>

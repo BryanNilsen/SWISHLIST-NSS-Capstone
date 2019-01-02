@@ -34,7 +34,7 @@ export default class Welcome extends Component {
 
   render() {
     const totalShots = this.state.shotAttempts.reduce((a, b) => +a + +b, 0).toLocaleString()
-    console.log("shot attempts from state", totalShots)
+    // console.log("shot attempts from state", totalShots)
     return (
       <React.Fragment>
         <h1 className="logo_large center"><span className="text_orange">swish</span><span className="text_white">list</span></h1>

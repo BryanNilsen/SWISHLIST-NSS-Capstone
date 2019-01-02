@@ -25,8 +25,9 @@ export default class Navbar extends Component {
               <p className="logo_tagline_small">YOU MISS 100% OF THE SHOTS YOU DON'T TAKE</p>
             </div>
             <p className="noTopMargin">
+            <Link className="nav_item small_nav" to="/motivation">motivation</Link>
               <Link className="nav_item small_nav" to="/" onClick={() => this.logoutUser()}>logout</Link>
-              <Link className="nav_item small_nav" to="/motivation">motivation</Link></p>
+            </p>
           </div>
           <ul className="nav_ul">
             <li>
@@ -36,10 +37,10 @@ export default class Navbar extends Component {
               <Link className="nav_item" to="/viewlists">VIEW LISTS</Link>
             </li>
             <li>
-              <Link className="nav_item" to="/stats">LEADERS</Link>
+              <Link className="nav_item" to="/profile">PROFILE</Link>
             </li>
             <li>
-              <Link className="nav_item" to="/profile">PROFILE</Link>
+              <Link className="nav_item" to="/stats">LEADERS</Link>
             </li>
           </ul>
         </nav>

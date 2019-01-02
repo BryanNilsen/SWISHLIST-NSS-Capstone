@@ -93,7 +93,7 @@ export default class ShotMap extends Component {
       alert("Please select a shot location on the map")
     } else {
       this.constructNewSwishlist()
-      alert("Shot recorded. Enter more or click 'finish' to end workout.")
+      // alert("Shot recorded. Enter more or click 'finish' to end workout.")
       // clear state for new shots
       this.setState({ newShotLocation: "" })
     }
