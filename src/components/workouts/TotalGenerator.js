@@ -43,21 +43,22 @@ render() {
   const totalShotsAttempted = this.state.shotAttempts.reduce((total, amount) => { return total + amount}, 0)
   const totalShotsMade = this.state.shotsMade.reduce((total, amount) => { return total + amount}, 0)
   const totalPercentage = Number(((totalShotsMade / totalShotsAttempted) * 100).toFixed(1)) || 0
+  const tableRowColor = `trc_${Math.floor(((totalShotsMade / totalShotsAttempted) * 10))}`
 
 
   return (
 
     <tr className="shotlog_totals" >
-      <td width="40%">Totals</td>
+      <td width="40%" className="align_right padding_right">Totals</td>
       <td width="20%" style={{ textAlign: "center" }}>{totalShotsAttempted}</td>
       <td width="20%" style={{ textAlign: "center" }}>{totalShotsMade}</td>
-      <td width="20%" style={{ textAlign: "center" }}>{totalPercentage}</td>
+      <td width="20%" className={`shotlog_hover ${tableRowColor}`} style={{ textAlign: "center" }}>{totalPercentage}</td>
     </tr>
   )
   } else {
     return (
       <tr className="shotlog_totals" >
-      <td width="40%">Totals</td>
+      <td width="40%" className="align_right padding_right">Totals</td>
       <td width="20%" style={{ textAlign: "center" }}>calculating</td>
       <td width="20%" style={{ textAlign: "center" }}>calculating</td>
       <td width="20%" style={{ textAlign: "center" }}>calculating</td>

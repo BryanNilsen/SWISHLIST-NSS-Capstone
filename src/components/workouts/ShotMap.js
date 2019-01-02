@@ -143,21 +143,24 @@ export default class ShotMap extends Component {
 
           {/* <!-- begin court text overlay div --> */}
           <div className="court_text">
+
             <table className="shot_form_table">
               <tbody>
                 <tr>
-                  <td>shot location</td>
-                  <td>attempts</td>
-                  <td>made</td>
+                  <td>1. Shot Location: </td>
+                  <td>{this.state.newShotLocationName}</td>
                 </tr>
                 <tr>
-                  <td>{this.state.newShotLocationName}</td>
+                  <td>2. Shot Attempts: </td>
                   <td>
                     <select id="newShotAttempts" className="shot_select" onChange={this.handleFieldChange}>
                       <option defaultValue="selected">Select</option>
                       {this.buildShotAttemptsSelect()}
                     </select>
                   </td>
+                </tr>
+                <tr>
+                  <td>3. Shots Made: </td>
                   <td>
                     <select id="newShotsMade" className="shot_select" onChange={this.handleFieldChange}>
                       <option defaultValue="selected">Select</option>
@@ -165,28 +168,15 @@ export default class ShotMap extends Component {
                     </select>
                   </td>
                 </tr>
+                <tr>
+                  <td></td>
+                  <td className="clear_padding auto">
+                    <button type="submit" className="btn_edit" onClick={this.handleNewSwishlist}>Add Shots</button>
+                    <button type="submit" className="btn_delete" onClick={this.finishWorkout}>Finish</button>
+                  </td>
+                </tr>
               </tbody>
             </table>
-{/*
-            <p className="underline clear_padding">shot location: {this.state.newShotLocationName}</p>
-
-
-            <p className="clear_padding">attempts:
-              <select id="newShotAttempts" className="shot_select" onChange={this.handleFieldChange}>
-                <option defaultValue="selected">Select</option>
-                {this.buildShotAttemptsSelect()}
-              </select>
-            </p>
-            <p className="clear_padding">made:
-              <select id="newShotsMade" className="shot_select" onChange={this.handleFieldChange}>
-                <option defaultValue="selected">Select</option>
-                {this.buildShotsMadeSelect()}
-              </select>
-            </p> */}
-            <p className="clear_padding align_right">
-              <button type="submit" className="btn_edit" onClick={this.handleNewSwishlist}>Add Shots</button>
-              <button type="submit" className="btn_delete" onClick={this.finishWorkout}>Finish</button>
-            </p>
           </div>
           {/* end court text div */}
 

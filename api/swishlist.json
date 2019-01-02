@@ -225,6 +225,34 @@
       "notes": "lifted weights",
       "user_id": 1,
       "id": 35
+    },
+    {
+      "date": "2019-01-01",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 1,
+      "id": 37
+    },
+    {
+      "date": "2018-12-27",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 1,
+      "id": 38
+    },
+    {
+      "date": "2018-12-30",
+      "gym": "Franklin Rec Center",
+      "notes": "no warmup",
+      "user_id": 1,
+      "id": 39
+    },
+    {
+      "date": "2019-01-02",
+      "gym": "Franklin Rec Center",
+      "notes": "bench, pullups, squats",
+      "user_id": 1,
+      "id": 40
     }
   ],
   "quotes": [
@@ -978,6 +1006,142 @@
       "shotAttempts": 10,
       "shotsMade": 2,
       "id": 60
+    },
+    {
+      "workout_id": 37,
+      "user_id": 1,
+      "shotLocation": 19,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 61
+    },
+    {
+      "workout_id": 37,
+      "user_id": 1,
+      "shotLocation": 13,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 62
+    },
+    {
+      "workout_id": 37,
+      "user_id": 1,
+      "shotLocation": 25,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 63
+    },
+    {
+      "workout_id": 38,
+      "user_id": 1,
+      "shotLocation": 25,
+      "shotAttempts": 10,
+      "shotsMade": 3,
+      "id": 64
+    },
+    {
+      "workout_id": 38,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 65
+    },
+    {
+      "workout_id": 38,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 66
+    },
+    {
+      "workout_id": 39,
+      "user_id": 1,
+      "shotLocation": 2,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 67
+    },
+    {
+      "workout_id": 39,
+      "user_id": 1,
+      "shotLocation": 4,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 68
+    },
+    {
+      "workout_id": 39,
+      "user_id": 1,
+      "shotLocation": 2,
+      "shotAttempts": 20,
+      "shotsMade": 18,
+      "id": 70
+    },
+    {
+      "workout_id": 39,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 71
+    },
+    {
+      "workout_id": 40,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 10,
+      "shotsMade": 10,
+      "id": 72
+    },
+    {
+      "workout_id": 40,
+      "user_id": 1,
+      "shotLocation": 6,
+      "shotAttempts": 10,
+      "shotsMade": 7,
+      "id": 73
+    },
+    {
+      "workout_id": 40,
+      "user_id": 1,
+      "shotLocation": 5,
+      "shotAttempts": 10,
+      "shotsMade": 8,
+      "id": 74
+    },
+    {
+      "workout_id": 40,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 9,
+      "id": 75
+    },
+    {
+      "workout_id": 40,
+      "user_id": 1,
+      "shotLocation": 20,
+      "shotAttempts": 10,
+      "shotsMade": 5,
+      "id": 76
+    },
+    {
+      "workout_id": 40,
+      "user_id": 1,
+      "shotLocation": 15,
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 77
+    },
+    {
+      "workout_id": 40,
+      "user_id": 1,
+      "shotLocation": 26,
+      "shotAttempts": 10,
+      "shotsMade": 2,
+      "id": 78
     }
   ]
 }

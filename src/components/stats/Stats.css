@@ -1,17 +1,28 @@
 .leaderboard {
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
+}
+
+.category_title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(206, 206, 206);
+  margin-top: 0px;
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 tbody.leaderboard>:nth-child(2){
   background:red;
+  font-size: 1.5em;
  }
 
  tbody.leaderboard>:nth-child(3){
   background: orange;
+  font-size: 1.3em;
  }
 
  tbody.leaderboard>:nth-child(4){
   background: yellow;
+  font-size: 1.1em;
  }
 
  tbody.leaderboard>:nth-child(5){
@@ -19,7 +30,8 @@ tbody.leaderboard>:nth-child(2){
  }
 
  tbody.leaderboard>:nth-child(6){
-  background: rgb(24, 24, 24);
+  background: rgb(12, 12, 12);
+  font-size: .9em;
  }
 
 

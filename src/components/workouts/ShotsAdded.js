@@ -24,11 +24,11 @@ export default class ShotsAdded extends Component {
           <table className="shotlog_table">
             <tbody>
               <tr className="shotlog_rowHeader">
-                <td width="30%">Shot Location</td>
-                <td width="20%" style={{ textAlign: "center" }} >Attempts</td>
+                <td width="35%">Shot Location</td>
+                <td width="25%" style={{ textAlign: "center" }} >Attempts</td>
                 <td width="20%" style={{ textAlign: "center" }} >Made</td>
-                <td width="20%" style={{ textAlign: "center" }} >%</td>
-                <td width="10%" style={{ textAlign: "center" }} >Delete</td>
+                <td width="15%" style={{ textAlign: "center" }} >%</td>
+                <td width="15%" style={{ textAlign: "center" }} >Delete</td>
               </tr>
               {
                 this.props.swishlists.map((shotlog) => {

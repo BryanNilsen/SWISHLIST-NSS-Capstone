@@ -67,7 +67,7 @@ export default class Profile extends Component {
     if (loggedWorkouts < 10) {
       this.setState({ workoutLevel: "ROOKIE" })
     } else if (loggedWorkouts < 20) {
-      this.setState({ workoutLevel: "SOPHOMORE" })
+      this.setState({ workoutLevel: "STARTER" })
     } else if (loggedWorkouts < 50) {
       this.setState({ workoutLevel: "PRO" })
     } else if (loggedWorkouts < 100) {
@@ -107,7 +107,8 @@ export default class Profile extends Component {
                   </div>
                 </div>
 
-                <p>Total Workouts Logged: {this.state.numberOfWorkouts} - Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
+                <p className="bold">Total Workouts Logged: {this.state.numberOfWorkouts}</p>
+                <p className="bold">Level: <span className={`${this.state.workoutLevel} user_level`}>{this.state.workoutLevel}</span></p>
                 <h3>Shooting Totals</h3>
                 <div className="total_card_container">
                   <div className="total_card">

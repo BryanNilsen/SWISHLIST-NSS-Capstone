@@ -80,10 +80,10 @@
   }
 }
 
-.SOPHOMORE {
-  animation: sophomoreglow .8s infinite alternate;
+.STARTER {
+  animation: starterglow .8s infinite alternate;
 }
-@keyframes sophomoreglow {
+@keyframes starterglow {
   to {
       text-shadow: 0 0 10px rgb(0, 238, 255);
   }

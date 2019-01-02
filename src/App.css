@@ -118,3 +118,7 @@ body {
 .bold {
   font-weight: bold;
 }
+
+.padding_right {
+  padding-right: 10px;
+}

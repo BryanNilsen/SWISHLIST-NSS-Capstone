@@ -73,7 +73,7 @@ export default class ViewList extends Component {
 
     return (
       <div id="viewlist_container" className="page_container">
-        <h2>View swishlists</h2>
+        <h2>View Swishlists</h2>
         {
           this.state.workouts.map((workout) => {
             return (

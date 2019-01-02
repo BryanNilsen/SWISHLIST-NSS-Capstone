@@ -60,11 +60,11 @@ export default class Stats extends Component {
     return (
       <div id="stats_container" className="page_container">
         {/* begin contents */}
-        <h2>Leaderboards</h2>
+        <h2>Swishlist Leaders</h2>
 
         <div className="card_container">
           <div className="workout_card">
-            <p className="bold">Total Shots Attempted - Top 5</p>
+            <p className="category_title">Total Shots Attempted</p>
             <table className="shotlog_table">
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">
@@ -100,7 +100,7 @@ export default class Stats extends Component {
 
         <div className="card_container">
           <div className="workout_card">
-            <p className="bold">Total Shots Made - Top 5</p>
+            <p  className="category_title">Total Shots Made</p>
             <table className="shotlog_table">
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">
@@ -136,7 +136,7 @@ export default class Stats extends Component {
 
         <div className="card_container">
           <div className="workout_card">
-            <p className="bold">Highest Shooting Percentage - Top 5</p>
+            <p className="category_title">Highest Shooting Percentage</p>
             <table className="shotlog_table">
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">

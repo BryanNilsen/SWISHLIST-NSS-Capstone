@@ -10,6 +10,10 @@
   font-weight: bold;
 }
 
+.shotlog_totals {
+  background: rgb(20, 20, 20);
+  font-size: 1.2em;
+}
 .shotlog_rowHeader {
   font-size: 1.1em;
 }
@@ -65,10 +69,6 @@
 .trc_9 {
   background: rgba(167, 25, 0);
 }
-
-/* .trc_10 {
-  background: rgba(167, 0, 0);
-} */
 
 .trc_10 {
   animation: perfectglow .7s infinite alternate;
