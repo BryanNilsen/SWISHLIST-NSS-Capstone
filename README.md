@@ -8,6 +8,9 @@
 * Leaderboard of top players in various categories
 * Motivational quotes to reinforce work ethic and determination
 
+### Demo can be viewed at https://swishlist.bryannilsen.com
+* log in with test@test.com and test
+
 # Getting Started
 
 To run ***swishlist*** locally, clone the project by running the following command in your terminal:
