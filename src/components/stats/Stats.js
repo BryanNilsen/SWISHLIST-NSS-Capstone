@@ -52,7 +52,6 @@ export default class Stats extends Component {
       newObj[shotlog.user_id]['shotAttempts'] += shotlog.shotAttempts
       newObj[shotlog.user_id]['shotsMade'] += shotlog.shotsMade
     })
-    // console.log("totals array: ", Object.values(newObj))
 
     const totalsArray = Object.values(newObj)
 

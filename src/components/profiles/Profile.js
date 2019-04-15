@@ -63,7 +63,6 @@ export default class Profile extends Component {
 
 
   loggedWorkoutLevel = (loggedWorkouts) => {
-    // console.log(loggedWorkouts)
     if (loggedWorkouts < 10) {
       this.setState({ workoutLevel: "ROOKIE" })
     } else if (loggedWorkouts < 20) {

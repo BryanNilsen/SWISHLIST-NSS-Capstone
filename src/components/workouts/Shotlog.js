@@ -22,7 +22,6 @@ export default class Shotlog extends Component {
         return APIManager.getAllEntries("swishlists", `?workout_id=${this.props.workoutId}`)
       })
       .then((shotlogs) => {
-        // console.log("shotlogs", shotlogs)
         stateToChange.shotlogs = shotlogs
         this.setState(stateToChange)
       })
