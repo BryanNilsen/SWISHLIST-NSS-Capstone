@@ -38,6 +38,15 @@ const APIManager = {
       },
       body: JSON.stringify(editedThing)
     });
+  },
+  userLogin(email, password) {
+    return fetch(`${remoteURL}/login`, {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+        password
+      })
+    });
   }
 };
 

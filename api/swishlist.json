@@ -90,6 +90,32 @@
       "photoURL": "/images/profile_default.png",
       "password": "jackson",
       "id": 7
+    },
+    {
+      "email": "adam@adam.com",
+      "password": "$2a$10$m///kkOg8qamGbGSxbG.l.8EEFu7ERqnYqE8LYJDajRQxjbgQ..Vq",
+      "firstName": "adam",
+      "lastName": "adamson",
+      "nickname": "adam",
+      "hometown": "adamland",
+      "age": "11",
+      "height_ft": "7",
+      "height_in": "2",
+      "photoURL": "/images/profile_default.png",
+      "id": 8
+    },
+    {
+      "email": "billy@billymadison.com",
+      "password": "$2a$10$5F4.mQZrqPiWH9JfsQag7us4Gwq7zPPBXM5X8j2doQo1vww0WhT6S",
+      "firstName": "billy",
+      "lastName": "madison",
+      "nickname": "happy",
+      "hometown": "123 reading rd",
+      "age": "23",
+      "height_ft": "5",
+      "height_in": "5",
+      "photoURL": "/images/profile_default.png",
+      "id": 9
     }
   ],
   "workouts": [
@@ -276,11 +302,18 @@
       "id": 43
     },
     {
-      "date": "2019-04-16",
-      "gym": "Franklin Y",
-      "notes": "ss",
+      "date": "2019-04-26",
+      "gym": "Franklin YMCA",
+      "notes": "didn't lift weights",
       "user_id": 1,
-      "id": 44
+      "id": 45
+    },
+    {
+      "date": "2019-05-08",
+      "gym": "Marvin's Court",
+      "notes": "no warmup",
+      "user_id": 1,
+      "id": 46
     }
   ],
   "quotes": [
@@ -1250,6 +1283,38 @@
       "shotAttempts": 10,
       "shotsMade": 7,
       "id": 88
+    },
+    {
+      "workout_id": 45,
+      "user_id": 1,
+      "shotLocation": 1,
+      "shotAttempts": 20,
+      "shotsMade": 17,
+      "id": 89
+    },
+    {
+      "workout_id": 45,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 10,
+      "shotsMade": 6,
+      "id": 90
+    },
+    {
+      "workout_id": 45,
+      "user_id": 1,
+      "shotLocation": 19,
+      "shotAttempts": 15,
+      "shotsMade": 12,
+      "id": 91
+    },
+    {
+      "workout_id": 46,
+      "user_id": 1,
+      "shotLocation": 11,
+      "shotAttempts": 20,
+      "shotsMade": 8,
+      "id": 92
     }
   ]
 }
