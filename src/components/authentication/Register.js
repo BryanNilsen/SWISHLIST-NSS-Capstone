@@ -61,7 +61,6 @@ export default class Register extends Component {
       password: this.state.registerPassword,
     }
     this.registerNewUser(newUser)
-      .then(() => console.log(newUser))
 
   }
 
@@ -76,7 +75,7 @@ export default class Register extends Component {
     return (
       <React.Fragment>
         <div className={this.props.hideLoginForm ? "center basketball_bkg" : "hide"}>
-        <br/><br/>
+          <br /><br />
           <div className="login_form">
             <h2 className="login_form_title">REGISTER</h2>
 
@@ -133,12 +132,12 @@ export default class Register extends Component {
             <input className="form_input" onChange={this.handleFieldChange} type="password" id="registerPassword" placeholder="Password" required="" autoFocus="" />
             <br />
 
-            <button className="btn_submit"  type="submit" onClick={() => { this.handleRegister() }}>REGISTER</button>
+            <button className="btn_submit" type="submit" onClick={() => { this.handleRegister() }}>REGISTER</button>
           </div>
 
           <div className="">
             <p>Already Registered?</p>
-            <button className="btn_submit"  onClick={() => this.props.handleChangeForm()}>SIGN IN</button>
+            <button className="btn_submit" onClick={() => this.props.handleChangeForm()}>SIGN IN</button>
           </div>
         </div>
       </React.Fragment>
