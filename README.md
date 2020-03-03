@@ -8,15 +8,15 @@
 * Leaderboard of top players in various categories
 * Motivational quotes to reinforce work ethic and determination
 
-### Demo can be viewed at https://swishlist.bryannilsen.com
-* log in with test@test.com and test
+<!-- ### Demo can be viewed at https://swishlist.bryannilsen.com
+* log in with test@test.com and test -->
 
 # Getting Started
 
 To run ***swishlist*** locally, clone the project by running the following command in your terminal:
 > `git clone git@github.com:BryanNilsen/Swishlist-React.git`
 
-Once you have the project cloned in your terminal, run: 
+Once you have the project cloned in your terminal, run:
 > `npm install`
 
 This will install the libraries and other dependencies used by ***swishlist***
@@ -58,7 +58,7 @@ For more information, check out [Adobe XD](https://www.adobe.com/products/xd.htm
 
 I used the Moment.js and npm react-moment tools for formatting dates in this app. These tools allow the user to parse, validate, manipulate, and display dates and times in JavaScript.
 
-To use Moment.js and react-moment in your React app, use the following npm command in your terminal: 
+To use Moment.js and react-moment in your React app, use the following npm command in your terminal:
 > `npm install --save moment react-moment`
 
 For more information, check out [Moment.js](https://momentjs.com/) and [npm react-moment](https://www.npmjs.com/package/react-moment)
