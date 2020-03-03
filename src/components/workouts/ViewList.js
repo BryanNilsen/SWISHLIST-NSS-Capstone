@@ -53,8 +53,8 @@ export default class ViewList extends Component {
   deleteWorkoutSwishlists = (workoutId) => {
     APIManager.getAllEntries("swishlists", `?workout_id=${workoutId}`)
       .then((results) =>
-      results.forEach((result) => APIManager.deleteEntry("swishlists", result.id))
-        )
+        results.forEach((result) => APIManager.deleteEntry("swishlists", result.id))
+      )
   }
 
 

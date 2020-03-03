@@ -57,7 +57,6 @@ export default class NewList extends Component {
       user_id: this.state.currentUserId
     }
     this.createNewWorkout(newWorkout)
-      .then(() => console.log(newWorkout))
   }
 
   //Handles creation of new workout object
@@ -65,7 +64,7 @@ export default class NewList extends Component {
     return APIManager.addEntry("workouts", newWorkout)
       .then((response) => {
         this.setState({ workoutId: response.id })
-        sessionStorage.setItem( "workoutId", response.id)
+        sessionStorage.setItem("workoutId", response.id)
       })
   }
 
@@ -84,22 +83,22 @@ export default class NewList extends Component {
             <p>Select date, gym, and enter any notes relevant to your workout</p>
             <p>Click "Start swishlist" to begin</p>
             <div id="newlist_form" className="margin_bottom">
-            <table style={{ width: "100%" }}>
-              <tbody>
-                <tr>
-                  <td style={{ width: "50px" }}>Date</td>
-                  <td><input type="date" onChange={this.handleFieldChange} id="newDate" className="edit_form_input"></input></td>
-                </tr>
-                <tr>
-                  <td>Gym</td>
-                  <td><input type="text" onChange={this.handleFieldChange} id="newGym" className="edit_form_input"></input></td>
-                </tr>
-                <tr>
-                  <td>Notes</td>
-                  <td><input type="text" onChange={this.handleFieldChange} id="newNotes" className="edit_form_input" style={{ width: "80%" }}/></td>
-                </tr>
-              </tbody>
-            </table>
+              <table style={{ width: "100%" }}>
+                <tbody>
+                  <tr>
+                    <td style={{ width: "50px" }}>Date</td>
+                    <td><input type="date" onChange={this.handleFieldChange} id="newDate" className="edit_form_input"></input></td>
+                  </tr>
+                  <tr>
+                    <td>Gym</td>
+                    <td><input type="text" onChange={this.handleFieldChange} id="newGym" className="edit_form_input"></input></td>
+                  </tr>
+                  <tr>
+                    <td>Notes</td>
+                    <td><input type="text" onChange={this.handleFieldChange} id="newNotes" className="edit_form_input" style={{ width: "80%" }} /></td>
+                  </tr>
+                </tbody>
+              </table>
               <button type="submit" className={this.state.hideAddForm ? "hide" : "btn_edit"} onClick={() => { this.handleNewWorkout() }}>Start Workout</button>
             </div>
             {/* end contents */}

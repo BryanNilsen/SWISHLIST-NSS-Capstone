@@ -32,23 +32,6 @@ export default class Stats extends Component {
 
     let usersArray = []
     this.state.shotlogs.map((shotlog) => usersArray.push(shotlog.user_id))
-    // console.log("users array:", usersArray)
-    // var uniqueItems = Array.from(new Set(usersArray))
-    // console.log("unique", uniqueItems)
-
-
-
-    // const shotTotalCount = {};
-    // this.state.shotlogs.forEach(entry => {
-    //   if (!shotTotalCount[entry.user_id]) {
-    //     shotTotalCount[entry.user_id] = 0;
-    //   }
-    //   shotTotalCount[entry.user_id] += entry.shotsMade;
-    // });
-    // console.log("shot totals per user", shotTotalCount)
-
-    // console.log("shotlogs:", this.state.shotlogs)
-
 
 
 
@@ -71,7 +54,6 @@ export default class Stats extends Component {
       newObj[shotlog.user_id]['shotAttempts'] += shotlog.shotAttempts
       newObj[shotlog.user_id]['shotsMade'] += shotlog.shotsMade
     })
-    console.log("new object", Object.values(newObj))
 
     const totalsArray = Object.values(newObj)
 
@@ -80,17 +62,18 @@ export default class Stats extends Component {
     return (
       <div id="stats_container" className="page_container">
         {/* begin contents */}
-        <h2>Stats / Leaderboard</h2>
+        <h2>SwishList Leaders</h2>
+
+        {/* BEGIN SHOT ATTEMPTS LEADERBOARD */}
         <div className="card_container">
           <div className="workout_card">
-            <p>Total Shots Attempted</p>
+            <p className="card_title">Total Shots Attempted</p>
             <table className="shotlog_table">
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">
                   <td width="40%">Player</td>
                   <td width="20%" style={{ textAlign: "center" }} >Attempts</td>
                 </tr>
-
                 {
                   totalsArray.sort((a, b) => parseFloat(b.shotAttempts) - parseFloat(a.shotAttempts))
                     .slice(0, 5)
@@ -98,39 +81,36 @@ export default class Stats extends Component {
                       const userId = user.user_id
                       const shotsMade = Number(user.shotsMade)
                       const shotAttempts = Number(user.shotAttempts)
-                      const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
                       const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
-
                       let userFirstName = this.state.users.find(user => userId === user.id).firstName
                       let userLastName = this.state.users.find(user => userId === user.id).lastName
                       let userPhoto = this.state.users.find(user => userId === user.id).photoURL
                       let userDisplayName = `${userFirstName.charAt(0)}${userLastName}`
                       return (
                         <tr key={user.user_id} className={`shotlog_hover ${tableRowColor}`}>
-                          <td><img src={userPhoto} alt={userDisplayName} className="user_image_tiny"/>{userDisplayName}</td>
+                          <td><img src={userPhoto} alt={userDisplayName} className="user_image_tiny" />{userDisplayName}</td>
                           <td style={{ textAlign: "center" }}>{shotAttempts} </td>
                         </tr>
                       )
                     })
                 }
-
               </tbody>
             </table>
           </div>
-
         </div>
+        {/* END SHOT ATTEMPTS LEADERBOARD */}
 
+        {/* BEGIN SHOTS MADE LEADERBOARD */}
 
         <div className="card_container">
           <div className="workout_card">
-            <p>Total Shots Made</p>
+            <p className="card_title">Total Shots Made</p>
             <table className="shotlog_table">
               <tbody className="leaderboard">
                 <tr className="shotlog_rowHeader">
                   <td width="40%">Player</td>
                   <td width="20%" style={{ textAlign: "center" }} >Shots Made</td>
                 </tr>
-
                 {
                   totalsArray.sort((a, b) => parseFloat(b.shotsMade) - parseFloat(a.shotsMade))
                     .slice(0, 5)
@@ -138,25 +118,63 @@ export default class Stats extends Component {
                       const userId = user.user_id
                       const shotsMade = Number(user.shotsMade)
                       const shotAttempts = Number(user.shotAttempts)
-                      const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
                       const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
-
                       let userFirstName = this.state.users.find(user => userId === user.id).firstName
                       let userLastName = this.state.users.find(user => userId === user.id).lastName
                       let userPhoto = this.state.users.find(user => userId === user.id).photoURL
                       let userDisplayName = `${userFirstName.charAt(0)}${userLastName}`
                       return (
-                        <tr key={user.user_id} className={`shotlog_hover`}>
-                          <td style={{ padding: "0px 8px"}}><img src={userPhoto} alt={userDisplayName} className="user_image_tiny"/> {userDisplayName}</td>
+                        <tr key={user.user_id} className={`shotlog_hover ${tableRowColor}`}>
+                          <td style={{ padding: "0px 8px" }}><img src={userPhoto} alt={userDisplayName} className="user_image_tiny" /> {userDisplayName}</td>
                           <td style={{ textAlign: "center" }}>{shotsMade} </td>
                         </tr>
                       )
                     })
                 }
-
               </tbody>
             </table>
           </div>
+          {/* END SHOTS MADE LEADERBOARD */}
+
+
+          {/* BEGIN SHOOTING PERCENTAGE LEADERBOARD */}
+          <div className="card_container">
+            <div className="workout_card">
+              <p className="card_title">Top Shooting Percentages</p>
+              <table className="shotlog_table">
+                <tbody className="leaderboard">
+                  <tr className="shotlog_rowHeader">
+                    <td width="40%">Player</td>
+                    <td width="20%" style={{ textAlign: "center" }} >Shooting %</td>
+                  </tr>
+
+                  {
+                    totalsArray.sort((a, b) => parseFloat(((b.shotsMade / b.shotAttempts) * 100).toFixed(1)) - parseFloat(((a.shotsMade / a.shotAttempts) * 100).toFixed(1)))
+                      .slice(0, 5)
+                      .map((user) => {
+                        const userId = user.user_id
+                        const shotsMade = Number(user.shotsMade)
+                        const shotAttempts = Number(user.shotAttempts)
+                        const shootingPercentage = Number(((shotsMade / shotAttempts) * 100).toFixed(1))
+                        const tableRowColor = `trc_${Math.floor(((shotsMade / shotAttempts) * 10))}`
+
+                        let userFirstName = this.state.users.find(user => userId === user.id).firstName
+                        let userLastName = this.state.users.find(user => userId === user.id).lastName
+                        let userPhoto = this.state.users.find(user => userId === user.id).photoURL
+                        let userDisplayName = `${userFirstName.charAt(0)}${userLastName}`
+                        return (
+                          <tr key={user.user_id} className={`shotlog_hover ${tableRowColor}`}>
+                            <td style={{ padding: "0px 8px" }}><img src={userPhoto} alt={userDisplayName} className="user_image_tiny" /> {userDisplayName}</td>
+                            <td style={{ textAlign: "center" }}>{shootingPercentage} </td>
+                          </tr>
+                        )
+                      })
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div>
+          {/* END SHOOTING PERCENTAGE LEADERBOARD */}
 
         </div>
       </div>
